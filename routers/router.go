@@ -37,28 +37,6 @@ func init() {
 			beego.NSRouter("/social", &controllers.AuthController{}, "post:Social"),
 			//beego.NSRouter("/logout", &controllers.AuthController{}, "post:Logout"),
 		),
-
-		beego.NSNamespace("/billing",
-			beego.NSRouter("/getChargeItems", &controllers.BillingController{}, "get:GetChargeItems"),
-			beego.NSRouter("/getPaymentToken", &controllers.BillingController{}, "post:GetPaymentToken"),
-			beego.NSRouter("/callbackXsolla", &controllers.BillingController{}, "post:CallbackXsolla"),
-			beego.NSRouter("/getChargeHistory/:UID", &controllers.BillingController{}, "post:GetChargeHistory"),
-			beego.NSRouter("/getUsedHistory/:UID", &controllers.BillingController{}, "post:GetUsedHistory"),
-			beego.NSRouter("/buyItem", &controllers.BillingController{}, "post:BuyItem"),
-			beego.NSRouter("/getDeductHash", &controllers.BillingController{}, "post:GetDeductHash"),
-			beego.NSRouter("/getBalance", &controllers.BillingController{}, "post:GetBalance"),
-			//beego.NSRouter("/testBuyItem", &controllers.BillingController{}, "post:TestBuyItem"),
-		),
-
-		// news
-
-		//adimn
-		beego.NSNamespace("/admin",
-			beego.NSNamespace("/service", beego.NSInclude(&controllers.ServiceController{})),
-			beego.NSNamespace("/paymentgateway", beego.NSInclude(&controllers.PaymentGatewayController{})),
-			beego.NSNamespace("/paymentcategory", beego.NSInclude(&controllers.PaymentCategoryController{})),
-			beego.NSNamespace("/paymentitem", beego.NSInclude(&controllers.PaymentItemController{})),
-		),
 	)
 	beego.AddNamespace(ns)
 }
