@@ -148,19 +148,21 @@ func AddUser(u User) (string, error) {
 		return "", err
 	}
 
-	sql = "INSERT INTO \"wallet\" (\"UID\", create_at, update_at) VALUES ($1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)"
-	_, err = o.Raw(sql, u.UID).Exec()
+	/*
+		sql = "INSERT INTO \"wallet\" (\"UID\", create_at, update_at) VALUES ($1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)"
+		_, err = o.Raw(sql, u.UID).Exec()
 
-	if err != nil {
-		beego.Error("insert into wallet: ", err)
-		_ = o.Rollback()
-		return "", err
-	}
+		if err != nil {
+			beego.Error("insert into wallet: ", err)
+			_ = o.Rollback()
+			return "", err
+		}
+	*/
 
 	err = o.Commit()
 
 	// send confirm mail async
-	go libs.MakeMail(u.Email, "confirm", u.ConfirmResetToken)
+	// go libs.MakeMail(u.Email, "confirm", u.ConfirmResetToken)
 
 	return u.UID, nil
 }
@@ -325,11 +327,11 @@ func FindByID(id string) (*UserFilter, error) {
 		" Permission, " +
 		" Status, " +
 		" \"user\".Create_At, " +
-		" \"user\".Update_At, " +
-		" \"wallet\".Balance " +
-		" FROM \"user\", \"wallet\" " +
-		" WHERE \"user\".\"UID\" = \"wallet\".\"UID\" " +
-		" and \"user\".\"UID\" = ? "
+		" \"user\".Update_At " +
+		// " \"wallet\".Balance " +
+		" FROM \"user\"  " +
+		// " WHERE \"user\".\"UID\" = \"wallet\".\"UID\" " +
+		" WHERE \"user\".\"UID\" = ? "
 
 	err := o.Raw(sql, id).QueryRow(&user)
 	return user, err

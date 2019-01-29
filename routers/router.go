@@ -22,10 +22,8 @@ func init() {
 			beego.NSRouter("/forgotPassword/:email", &controllers.UserController{}, "post:ForogtPassword"),
 			beego.NSRouter("/isValidResetPasswordToken/:resetToken", &controllers.UserController{}, "post:IsValidResetPasswordToken"),
 			beego.NSRouter("/resetPassword/", &controllers.UserController{}, "post:ResetPassword"),
-
 			beego.NSRouter("/getProfile", &controllers.UserController{}, "post:GetProfile"),
 			beego.NSRouter("/updateProfile/", &controllers.UserController{}, "post:UpdateProfile"),
-
 			beego.NSRouter("/updatePassword/", &controllers.UserController{}, "post:UpdatePassword"),
 		),
 
@@ -36,6 +34,10 @@ func init() {
 			beego.NSRouter("/checkLogin", &controllers.AuthController{}, "get:CheckLogin"),
 			beego.NSRouter("/social", &controllers.AuthController{}, "post:Social"),
 			//beego.NSRouter("/logout", &controllers.AuthController{}, "post:Logout"),
+		),
+
+		beego.NSNamespace("/s3",
+			beego.NSRouter("/uploadImage", &controllers.S3Controller{}, "post:UploadImage"),
 		),
 	)
 	beego.AddNamespace(ns)

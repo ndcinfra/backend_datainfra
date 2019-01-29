@@ -16,3 +16,4 @@ lastupdate.tmp
 # .env
 .env_real
 api-ndc
+conf/aws
