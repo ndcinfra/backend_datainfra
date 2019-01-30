@@ -39,6 +39,7 @@ type AuthedData struct {
 	Displayname string `json:"displayname"`
 	Balance     int    `json:"balance"`
 	Picture     string `json:"picture"`
+	Permiscsion string `json:"permission"`
 }
 
 // CheckDisplayName ...
@@ -177,7 +178,7 @@ func (c *AuthController) CheckLogin() {
 
 	//beego.Info(user)
 
-	c.ResponseSuccess("", AuthedData{user.UID, user.Displayname, user.Balance, user.Picture})
+	c.ResponseSuccess("", AuthedData{user.UID, user.Displayname, user.Balance, user.Picture, user.Permission})
 }
 
 // Social ...

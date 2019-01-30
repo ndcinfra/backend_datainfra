@@ -7,7 +7,6 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/astaxie/beego"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/credentials"
 	"github.com/aws/aws-sdk-go/aws/session"
@@ -24,24 +23,19 @@ const (
 	S3_BUCKET = "ndc-pm-resources"
 )
 
-//Access key ID: AKIAIOSFODNN7EXAMPLE
-//Secret access key: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
-
 func (s *S3Controller) UploadImage() {
 	fmt.Println("upload image ... ")
 
 	//var Buf bytes.Buffer
-	fileHeader, err := s.GetFiles("files")
+	fileHeader, err := s.GetFiles("file")
 	if err != nil {
-		beego.Debug(err)
+		fmt.Println("fileheader error: ", err)
 	}
-	beego.Info(fileHeader)
-	beego.Info(fileHeader[0].Filename)
 
 	f, err := fileHeader[0].Open()
 	//sess := session.Must(session.NewSession())
 	//creds := credentials.NewSharedCredentials("", "default")
-	creds := credentials.NewSharedCredentials("../conf/aws/credentials", "default")
+	creds := credentials.NewSharedCredentials("", "default")
 
 	s3, err := session.NewSession(&aws.Config{
 		Region:      aws.String(S3_REGION),
@@ -53,8 +47,14 @@ func (s *S3Controller) UploadImage() {
 
 	err = AddFilesToS3(s3, fileHeader[0].Filename, fileHeader[0].Size, f)
 	if err != nil {
+		//
 		log.Fatal(err)
+		//TODO: return error
 	}
+
+	// return url
+	// url : https://s3.ap-northeast-2.amazonaws.com/ndc-pm-resources/filename.
+	s.ResponseSuccess("", "https://s3.ap-northeast-2.amazonaws.com/ndc-pm-resources/"+fileHeader[0].Filename)
 
 }
 
@@ -65,8 +65,8 @@ func AddFilesToS3(s *session.Session, fileName string, size int64, r io.Reader) 
 
 	rObj, err := s3.New(s).PutObject(&s3.PutObjectInput{
 		Bucket: aws.String(S3_BUCKET),
-		Key:    aws.String("myfolder" + "/" + fileName),
-		ACL:    aws.String("private"),
+		Key:    aws.String(fileName),
+		ACL:    aws.String("public-read"),
 		Body:   bytes.NewReader(buffer),
 		//ContentLength:        aws.Int64(size),
 		ContentType:          aws.String(http.DetectContentType(buffer)),
