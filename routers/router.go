@@ -39,6 +39,11 @@ func init() {
 		beego.NSNamespace("/s3",
 			beego.NSRouter("/uploadImage", &controllers.S3Controller{}, "post:UploadImage"),
 		),
+
+		beego.NSNamespace("/resource",
+			beego.NSRouter("/resigster", &controllers.ResourceController{}, "post:CreateResource"),
+			beego.NSRouter("/listAll", &controllers.ResourceController{}, "get:GetResourceAll"),
+		),
 	)
 	beego.AddNamespace(ns)
 }

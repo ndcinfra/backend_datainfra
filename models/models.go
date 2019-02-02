@@ -11,9 +11,9 @@ func RegisterDB() {
 	// register model
 	orm.RegisterModel(
 		new(User),
+		new(Resource),
 	)
 
 	orm.RegisterDriver("postgres", orm.DRPostgres)
 	orm.RegisterDataBase("default", "postgres", "postgres://gauvkrkt:Et0dCgKDaY2RCu-GW9Az5JtbzAGOLcfv@stampy.db.elephantsql.com:5432/gauvkrkt")
-
 }
