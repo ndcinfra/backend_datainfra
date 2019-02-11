@@ -9,6 +9,7 @@ import (
 	"github.com/joho/godotenv"
 
 	"github.com/astaxie/beego"
+	"github.com/astaxie/beego/logs"
 	"github.com/astaxie/beego/orm"
 	"github.com/astaxie/beego/plugins/cors"
 )
@@ -20,7 +21,6 @@ func init() {
 func main() {
 	err := godotenv.Load()
 	if err != nil {
-		//log.Fatal("Error loading .env file")
 		beego.Error("Error loading .env file")
 	}
 
@@ -38,14 +38,12 @@ func main() {
 	}
 	beego.BConfig.RunMode = RUNMODE
 
-	// beego.BConfig.Listen.HTTPSPort = 10443
-
 	beego.Info("beego runmode: ", RUNMODE)
 
 	if beego.BConfig.RunMode == "dev" {
 		beego.BConfig.WebConfig.DirectoryIndex = true
 		beego.BConfig.WebConfig.StaticDir["/swagger"] = "swagger"
-		orm.Debug = true
+		orm.Debug = true // !
 	}
 
 	orm.RunSyncdb("default", false, true)
@@ -60,6 +58,16 @@ func main() {
 		//AllowOrigins:     []string{"*"},
 		AllowCredentials: true,
 	}))
+
+	/*
+		beego.InsertFilter("*", beego.BeforeExec, func(ctx *context.Context){
+			ctx.Input.Data["requestid"] = UUID() // generate uuid
+		})
+		// print
+		beego.Info(ctx.Input.Data["requestid"], xxx)
+	*/
+
+	beego.SetLogger(logs.AdapterFile, `{"filename":"project.log","level":7,"maxlines":0,"maxsize":0,"daily":true,"maxdays":10,"color":true}`)
 
 	beego.Run()
 }

@@ -55,6 +55,10 @@ var (
 	ErrLowBalance       = &ControllerError{400, "20007", "Low Balance"}
 	ErrNoPaytransaction = &ControllerError{400, "20008", "Paytransaction does not exists"}
 
+	// 30000 ~ related in S3 or aws
+	ErrS3Session = &ControllerError{400, "30001", "S3 Session connect error."}
+	ErrS3AddFile = &ControllerError{400, "30002", "Upload file to S3 error."}
+
 	// 90000 ~ related on system error
 	ErrDatabase      = &ControllerError{500, "90001", "Database operation error"}
 	ErrJSONUnmarshal = &ControllerError{500, "90002", "JSON Unmarshal error"}

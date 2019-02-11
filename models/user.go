@@ -120,23 +120,6 @@ func AddUser(u User) (string, error) {
 	o := orm.NewOrm()
 	err = o.Begin()
 
-	/*
-		_, err = o.Insert(&u)
-		if err != nil {
-			beego.Error("rollback: ", err)
-			err = o.Rollback()
-			return "", err
-		}
-
-		wallet := Wallet{UID: u.UID, Balance: 0}
-		_, err = o.Insert(&wallet)
-		if err != nil {
-			beego.Error("rollback: ", err)
-			err = o.Rollback()
-			return "", err
-		}
-	*/
-
 	sql := "INSERT INTO \"user\" " +
 		"(\"UID\", displayname, email, password, salt, confirm_reset_token, confirm_reset_expire, picture, create_at, update_at) " +
 		"VALUES ($1, $2, $3, $4, $5, $6, $7, $8, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)"
@@ -148,21 +131,7 @@ func AddUser(u User) (string, error) {
 		return "", err
 	}
 
-	/*
-		sql = "INSERT INTO \"wallet\" (\"UID\", create_at, update_at) VALUES ($1, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP)"
-		_, err = o.Raw(sql, u.UID).Exec()
-
-		if err != nil {
-			beego.Error("insert into wallet: ", err)
-			_ = o.Rollback()
-			return "", err
-		}
-	*/
-
 	err = o.Commit()
-
-	// send confirm mail async
-	// go libs.MakeMail(u.Email, "confirm", u.ConfirmResetToken)
 
 	return u.UID, nil
 }
@@ -183,21 +152,6 @@ func AddSocialUser(u User) (string, string, error) {
 	// save to db with transaction user and wallet
 	o := orm.NewOrm()
 	err := o.Begin()
-
-	/*
-		_, err = o.Insert(&u)
-		if err != nil {
-			err = o.Rollback()
-			return "", "", err
-		}
-
-		wallet := Wallet{UID: u.UID, Balance: 0}
-		_, err = o.Insert(&wallet)
-		if err != nil {
-			err = o.Rollback()
-			return "", "", err
-		}
-	*/
 
 	sql := "INSERT INTO \"user\" " +
 		"(\"UID\", displayname, email, password, salt, confirm_reset_token, confirm_reset_expire, picture, provider_access_token, \"ProviderID\", provider, Confirmed, create_at, update_at) " +
@@ -228,13 +182,6 @@ func AddSocialUser(u User) (string, string, error) {
 func UpdateSocialInfo(u User) (string, string, error) {
 
 	o := orm.NewOrm()
-
-	/*
-		if _, err := o.Update(&u, "Provider", "ProviderAccessToken", "ProviderID", "Picture", "Confirmed"); err != nil {
-
-			return "", "", err
-		}
-	*/
 
 	sql := "UPDATE \"user\" SET Provider = ?,  Provider_Access_Token = ?, \"ProviderID\" = ?,  Picture = ?, Confirmed =? WHERE \"UID\" = ?"
 	_, err := o.Raw(sql, u.Provider, u.ProviderAccessToken, u.ProviderID, u.Picture, u.Confirmed, u.UID).Exec()
@@ -313,7 +260,6 @@ func FindByEmail(email string) (User, error) {
 
 // FindByID ...
 func FindByID(id string) (*UserFilter, error) {
-	beego.Info("findByID: ", id)
 	var user *UserFilter
 
 	o := orm.NewOrm()
@@ -519,5 +465,3 @@ func UpdatePassword(u User) (User, error) {
 
 	return u, nil
 }
-
-// ---------------------------------------------------------------------------------------------------------------

@@ -16,23 +16,15 @@ type BaseController struct {
 }
 
 // ResponseError ...
-//func (b *BaseController) ResponseError(code string, err error) {
 func (b *BaseController) ResponseError(e *libs.ControllerError, err error) {
 	// TODO: logging
+	beego.Error(b.Ctx.Request.RequestURI, err)
+
 	devInfo := ""
 	if err != nil {
 		devInfo = err.Error()
 	}
-	beego.Error(b.Ctx.Request.RequestURI, e.Message, devInfo)
 
-	/*
-		response := &models.RespCode{
-			Code:    e.Code,
-			Message: e.Message,
-			DevInfo: devInfo,
-			Data:    nil,
-		}
-	*/
 	response := &models.ErrRespCode{
 		Code:    e.Code,
 		Message: e.Message,
@@ -42,10 +34,10 @@ func (b *BaseController) ResponseError(e *libs.ControllerError, err error) {
 	b.Ctx.Output.Status = e.Status
 	b.Ctx.Output.JSON(response, true, true)
 
-	// TODO: logging
 	b.StopRun()
 }
 
+// XsollaResponseError ...
 func (b *BaseController) XsollaResponseError(e *libs.ControllerError) {
 	// TODO: logging
 	beego.Error(b.Ctx.Request.RequestURI, e.Message)
@@ -70,7 +62,6 @@ func (b *BaseController) XsollaResponseError(e *libs.ControllerError) {
 func (b *BaseController) ValidDisplayname(displayname string) {
 
 	if len(displayname) < 4 || len(displayname) > 16 {
-		//beego.Error("key: displayname, value: ", displayname, ", message: ", libs.ErrDisplayname.Message)
 		b.ResponseError(libs.ErrDisplayname, nil)
 	}
 }
@@ -88,13 +79,11 @@ func (b *BaseController) ValidEmail(email string) {
 	valid := validation.Validation{}
 	v := valid.Email(email, "Email")
 	if !v.Ok {
-		//loggingValidError(v)
 		b.ResponseError(libs.ErrEmail, nil)
 	}
 
 	v = valid.MaxSize(email, 100, "Email")
 	if !v.Ok {
-		//loggingValidError(v)
 		b.ResponseError(libs.ErrMaxEmail, nil)
 	}
 }
@@ -150,15 +139,11 @@ func (b *BaseController) ResponseSuccess(key string, value interface{}) {
 			Data:    value,
 		}
 
-		//beego.Info("rr: ", mresponse)
-
 		b.Ctx.Output.JSON(mresponse, true, true)
-		//b.StopRun()
 	}
 
 	if key == "tabulator" {
 		b.Ctx.Output.JSON(value, true, true)
-		//b.StopRun()
 	}
 
 	response := &models.RespCode{
@@ -169,6 +154,4 @@ func (b *BaseController) ResponseSuccess(key string, value interface{}) {
 
 	response.Data[key] = value
 	b.Ctx.Output.JSON(response, true, true)
-	//b.StopRun()
-
 }

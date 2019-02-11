@@ -2,7 +2,6 @@ package controllers
 
 import (
 	"encoding/json"
-	"fmt"
 	"io/ioutil"
 
 	"github.com/YoungsoonLee/backend_datainfra/libs"
@@ -28,8 +27,6 @@ func (r *ResourceController) CreateResource() {
 	if err != nil || ID == -1 {
 		r.ResponseError(libs.ErrDatabase, err)
 	}
-
-	fmt.Println("CreateResource: ", ID)
 
 	// auto login
 	resource.ID = ID

@@ -1,8 +1,6 @@
 package models
 
 import (
-	"fmt"
-
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/orm"
 )
@@ -14,29 +12,14 @@ type Resource struct {
 	ImgURL    string `orm:"column(ImgURL);size(1000);null" json:"imgurl"`
 }
 
+// AddResource ...
 func AddResource(r Resource) (int64, error) {
 	result, err := orm.NewOrm().Insert(&r)
 	if err != nil {
 		beego.Error("insert into resource: ", err)
 		return -1, err
 	}
-	fmt.Println("ID: ", result)
-	/*
-		o := orm.NewOrm()
 
-		sql := "INSERT INTO \"resource\" " +
-			"(\"ImgURL\") " +
-			"VALUES ($1)"
-
-		result, err := o.Raw(sql, r.ImgURL).Exec()
-		if err != nil {
-			beego.Error("insert into resource: ", err)
-			return -1, err
-		}
-
-		ID, _ := result..LastInsertId()
-		fmt.Println("ID: ", ID)
-	*/
 	return result, nil
 }
 

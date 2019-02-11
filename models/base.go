@@ -31,18 +31,3 @@ type XRespDetailCode struct {
 type XRespCode struct {
 	Error XRespDetailCode `json:"error"`
 }
-
-/*
-func (rc *RespCode) Error() string {
-	return fmt.Sprintf("code: %s, message: %s, data: %v", rc.Code, rc.Message, rc.Data)
-}
-
-//
-func ErrorResponse(code, message string) *RespCode {
-	return &RespCode{
-		Code:    code,
-		Message: message,
-		Data:    nil,
-	}
-}
-*/

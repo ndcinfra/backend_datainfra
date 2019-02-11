@@ -2,7 +2,6 @@ package controllers
 
 import (
 	"encoding/json"
-	"fmt"
 	"io/ioutil"
 	"strings"
 
@@ -26,7 +25,6 @@ type ResetPassword struct {
 // ConfirmEmail ...
 func (u *UserController) ConfirmEmail() {
 	confirmToken := u.GetString(":confirmToken")
-	//fmt.Println(confirmToken)
 
 	if len(confirmToken) == 0 {
 		u.ResponseError(libs.ErrTokenAbsent, nil)
@@ -42,7 +40,6 @@ func (u *UserController) ConfirmEmail() {
 		}
 	} else {
 		if libErr.Code == "10008" {
-			// alaredy confirmed
 			u.ResponseSuccess("UID", user.UID)
 		} else {
 			// error
@@ -108,7 +105,6 @@ func (u *UserController) ForogtPassword() {
 // IsValidResetPasswordToken ...
 func (u *UserController) IsValidResetPasswordToken() {
 	resetToken := u.GetString(":resetToken")
-	//fmt.Println(confirmToken)
 
 	if len(resetToken) == 0 {
 		u.ResponseError(libs.ErrTokenAbsent, nil)
@@ -134,12 +130,6 @@ func (u *UserController) IsValidResetPasswordToken() {
 // ResetPassword ...
 func (u *UserController) ResetPassword() {
 	var resetPassword ResetPassword
-	/*
-		err := json.Unmarshal(u.Ctx.Input.RequestBody, &resetPassword)
-		if err != nil {
-			u.ResponseError(libs.ErrJSONUnmarshal, err)
-		}
-	*/
 
 	body, _ := ioutil.ReadAll(u.Ctx.Request.Body)
 	err := json.Unmarshal(body, &resetPassword)
@@ -157,25 +147,6 @@ func (u *UserController) ResetPassword() {
 
 // GetProfile ...
 func (u *UserController) GetProfile() {
-	//var user models.UserFilter
-	/*
-		UID := u.GetString(":UID")
-
-		beego.Info("UID: ", UID)
-		fmt.Println("UID: ", UID)
-
-		// validation
-		u.ValidID(UID)
-
-		user, err := models.FindByID(UID)
-		if err != nil {
-			u.ResponseError(libs.ErrNoUser, err)
-		}
-		u.ResponseSuccess("", user)
-	*/
-
-	//fmt.Println("test")
-
 	et := libs.EasyToken{}
 	authtoken := strings.TrimSpace(u.Ctx.Request.Header.Get("Authorization"))
 	// new add Bearer
@@ -184,9 +155,6 @@ func (u *UserController) GetProfile() {
 		u.ResponseError(libs.ErrTokenInvalid, nil)
 	}
 	valid, uid, err := et.ValidateToken(splitToken[1])
-
-	//beego.Info("Check Login: ", uid, valid)
-	//fmt.Println("Check Login: ", uid, valid)
 
 	if !valid || err != nil {
 		u.ResponseError(libs.ErrExpiredToken, err)
@@ -207,11 +175,8 @@ func (u *UserController) UpdateProfile() {
 	et := libs.EasyToken{}
 	authtoken := strings.TrimSpace(u.Ctx.Request.Header.Get("Authorization"))
 
-	fmt.Println("authtoken: ", authtoken)
-
 	// new add Bearer
 	splitToken := strings.Split(authtoken, "Bearer ")
-	fmt.Println("splitToken: ", splitToken, len(splitToken))
 
 	if len(splitToken) != 2 {
 		u.ResponseError(libs.ErrTokenInvalid, nil)
@@ -230,13 +195,6 @@ func (u *UserController) UpdateProfile() {
 	if err != nil {
 		u.ResponseError(libs.ErrJSONUnmarshal, err)
 	}
-	/*
-		err = json.Unmarshal(u.Ctx.Input.RequestBody, &user)
-		if err != nil {
-			u.ResponseError(libs.ErrJSONUnmarshal, err)
-		}
-	*/
-	fmt.Println("---3---", user)
 
 	if _, err := models.UpdateProfile(user); err != nil {
 		u.ResponseError(libs.ErrDatabase, err)
@@ -248,15 +206,13 @@ func (u *UserController) UpdateProfile() {
 func (u *UserController) UpdatePassword() {
 	et := libs.EasyToken{}
 	authtoken := strings.TrimSpace(u.Ctx.Request.Header.Get("Authorization"))
+
 	// new add Bearer
 	splitToken := strings.Split(authtoken, "Bearer ")
 	if len(splitToken) != 2 {
 		u.ResponseError(libs.ErrTokenInvalid, nil)
 	}
 	valid, uid, err := et.ValidateToken(splitToken[1])
-
-	//beego.Info("token: ", authtoken)
-	//valid, uid, err := et.ValidateToken(authtoken)
 
 	if !valid || err != nil {
 		u.ResponseError(libs.ErrExpiredToken, err)
@@ -271,18 +227,9 @@ func (u *UserController) UpdatePassword() {
 		u.ResponseError(libs.ErrJSONUnmarshal, err)
 	}
 
-	/*
-		err = json.Unmarshal(u.Ctx.Input.RequestBody, &user)
-		if err != nil {
-			u.ResponseError(libs.ErrJSONUnmarshal, err)
-		}
-	*/
-
 	if _, err := models.UpdatePassword(user); err != nil {
 		u.ResponseError(libs.ErrDatabase, err)
 	}
 	u.ResponseSuccess("", user)
 
 }
-
-// ---------------------------------------------------------------------------------------------------------------

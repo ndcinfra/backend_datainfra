@@ -102,8 +102,6 @@ func (c *AuthController) CreateUser() {
 		c.ResponseError(libs.ErrDatabase, err)
 	}
 
-	fmt.Println("CreateUser: ", UID)
-
 	// auto login
 	user.UID = UID
 	c.makeLogin(&user)
@@ -129,8 +127,6 @@ func (c *AuthController) Login() {
 	if err != nil {
 		c.ResponseError(libs.ErrPass, err)
 	}
-
-	//beego.Info(user)
 
 	if user.Provider == "facebook" && user.Password == "" {
 		c.ResponseError(libs.ErrLoginFacebook, nil)
@@ -163,7 +159,6 @@ func (c *AuthController) CheckLogin() {
 	valid, uid, err := et.ValidateToken(splitToken[1])
 
 	beego.Info("Check Login: ", uid, valid)
-	//fmt.Println("Check Login: ", uid, valid)
 
 	if !valid || err != nil {
 		c.ResponseError(libs.ErrExpiredToken, err)
@@ -177,7 +172,6 @@ func (c *AuthController) CheckLogin() {
 	}
 
 	//beego.Info(user)
-
 	c.ResponseSuccess("", AuthedData{user.UID, user.Displayname, user.Balance, user.Picture, user.Permission})
 }
 
@@ -199,8 +193,7 @@ func (c *AuthController) Social() {
 	// if err == nil, already exists Email
 	if err == nil {
 		// make login
-		//fmt.Println("already exists email ", user)
-		//update social info, it can login local and social both.
+		// update social info, it can login local and social both.
 		if len(user.Provider) == 0 || user.Provider != social.Provider {
 			user.Provider = social.Provider
 			user.ProviderAccessToken = social.ProviderAccessToken
@@ -272,7 +265,7 @@ func (c *AuthController) makeLogin(user *models.User) {
 	}
 
 	//beego.Info("makeLogin: ", user.UID)
-	//c.ResponseSuccess("", LoginToken{user.Displayname, user.UID, token})
+
 	c.ResponseSuccess("", LoginToken{user.Displayname, token})
 
 }
