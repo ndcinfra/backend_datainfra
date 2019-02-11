@@ -9,8 +9,9 @@ import (
 
 // Resource ...
 type Resource struct {
-	ID     int64  `orm:"column(ID);auto;pk" json:"id"` // id
-	ImgURL string `orm:"column(ImgURL);size(1000);null" json:"imgurl"`
+	ID        int64  `orm:"column(ID);auto;pk" json:"id"` // id
+	Character string `orm:"size(1000);null" json:"character"`
+	ImgURL    string `orm:"column(ImgURL);size(1000);null" json:"imgurl"`
 }
 
 func AddResource(r Resource) (int64, error) {
@@ -46,6 +47,7 @@ func GetResourceAll() ([]Resource, error) {
 	o := orm.NewOrm()
 	sql := "SELECT " +
 		" \"ID\" , " +
+		" Character, " +
 		" \"ImgURL\" " +
 		" FROM \"resource\"  "
 
