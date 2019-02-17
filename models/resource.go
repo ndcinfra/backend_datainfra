@@ -7,9 +7,22 @@ import (
 
 // Resource ...
 type Resource struct {
-	ID        int64  `orm:"column(ID);auto;pk" json:"id"` // id
-	Character string `orm:"size(1000);null" json:"character"`
-	ImgURL    string `orm:"column(ImgURL);size(1000);null" json:"imgurl"`
+	ID         int64  `orm:"column(ID);auto;pk" json:"id"` // id
+	Sheet      string `orm:"size(1000);null" json:"sheet"`
+	Memo       string `orm:"size(2000);null" json:"memo"`
+	Seha       string `orm:"size(2000);null" json:"seha"`
+	Sylvi      string `orm:"size(2000);null" json:"sylvi"`
+	Yuri       string `orm:"size(2000);null" json:"yuri"`
+	Misteltein string `orm:"size(2000);null" json:"misteltein"`
+	J          string `orm:"size(2000);null" json:"j"`
+	Harpy      string `orm:"size(2000);null" json:"harpy"`
+	Levia      string `orm:"size(2000);null" json:"levia"`
+	Nata       string `orm:"size(2000);null" json:"nata"`
+	Tina       string `orm:"size(2000);null" json:"tina"`
+	Violet     string `orm:"size(2000);null" json:"violet"`
+	Wolfgang   string `orm:"size(2000);null" json:"wolfgang"`
+	Soma       string `orm:"size(2000);null" json:"soma"`
+	Luna       string `orm:"size(2000);null" json:"luna"`
 }
 
 // AddResource ...
@@ -31,7 +44,21 @@ func GetResourceAll() ([]Resource, error) {
 	sql := "SELECT " +
 		" \"ID\" , " +
 		" Character, " +
-		" \"ImgURL\" " +
+		" Sheet, " +
+		" Memo, " +
+		" Seha, " +
+		" Sylvi, " +
+		" Yuri, " +
+		" Misteltein, " +
+		" J, " +
+		" Harpy, " +
+		" Levia, " +
+		" Nata, " +
+		" Tina, " +
+		" Violet, " +
+		" Wolfgang, " +
+		" Soma, " +
+		" Luna " +
 		" FROM \"resource\"  "
 
 	_, err := o.Raw(sql).QueryRows(&resource)

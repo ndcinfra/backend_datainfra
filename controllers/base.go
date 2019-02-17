@@ -18,7 +18,7 @@ type BaseController struct {
 // ResponseError ...
 func (b *BaseController) ResponseError(e *libs.ControllerError, err error) {
 	// TODO: logging
-	beego.Error(b.Ctx.Request.RequestURI, err)
+	beego.Error(b.Ctx.Request.RequestURI, b.Ctx.Request.Body, err)
 
 	devInfo := ""
 	if err != nil {
