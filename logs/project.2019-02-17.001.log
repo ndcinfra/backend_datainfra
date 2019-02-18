@@ -1,0 +1,354 @@
+2019/02/17 11:35:04.444 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 11:35:04.879 [E] [base.go:21]  /v1/auth/checkLogin {} read tcp 172.20.10.2:63842->54.163.207.112:5432: read: connection reset by peer 
+2019/02/17 12:59:03.469 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 3.332975643s|   match|[46m POST    [0m /v1/auth/login   r:/v1/auth/login
+2019/02/17 12:59:03.569 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 12:59:04.383 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|  814.58736ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 13:01:27.184 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 13:01:28.662 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 1.478040277s|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 13:01:28.769 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 13:01:29.314 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 545.188584ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 13:01:33.928 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 13:01:34.808 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 880.804219ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 13:05:17.782 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 13:05:18.961 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|  1.17961849s|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 13:05:47.620 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 13:05:48.758 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 1.138375674s|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 13:06:42.847 [I] [asm_amd64.s:1333]  http server Running on http://:8080
+2019/02/17 13:06:48.761 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 13:06:50.512 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 1.751795504s|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 13:06:55.920 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 13:06:56.460 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 540.539369ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 13:07:44.651 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 13:07:45.270 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 619.082129ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 13:07:45.357 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 13:07:46.067 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 710.742646ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 13:08:06.240 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 13:08:07.561 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 1.321301996s|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 13:08:38.305 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 13:08:39.560 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 1.255306408s|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 13:22:32.804 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 13:22:34.028 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 1.224804606s|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 13:22:34.109 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 13:22:35.208 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 1.100089532s|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 13:23:27.353 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 13:23:28.111 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 758.135211ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 13:24:33.647 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 13:24:34.650 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 1.002846512s|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 13:24:34.802 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 13:24:35.569 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 767.573902ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 13:31:47.876 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 13:31:48.733 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 857.228418ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 13:31:48.845 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 13:31:49.850 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|  1.00548301s|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 13:36:02.360 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 13:36:03.334 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 974.682792ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 13:36:03.419 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 13:36:04.434 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 1.015376383s|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 13:36:26.264 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 13:36:27.455 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 1.191667592s|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 13:36:43.752 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 13:36:44.658 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 906.780339ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 13:36:54.600 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 13:36:55.393 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 792.272829ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 15:04:44.900 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 15:04:45.981 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 1.081534278s|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 15:04:46.079 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 15:04:46.891 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 811.982145ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 15:07:35.357 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 15:07:35.944 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 586.938041ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 15:07:36.038 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 15:07:37.081 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 1.042661169s|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 15:16:11.822 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 15:16:12.405 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 583.401664ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 15:16:12.547 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 15:16:13.384 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 836.947024ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 15:19:16.146 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 15:19:17.824 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 1.678102725s|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 15:19:17.948 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 15:19:18.715 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 767.451279ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 15:22:05.288 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 15:22:06.662 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|  1.37436546s|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 15:22:06.859 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 15:22:07.891 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|  1.03144165s|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 15:22:45.086 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 15:22:46.599 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 1.512681608s|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 15:22:46.748 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 15:22:47.831 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 1.082511872s|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 15:22:47.838 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 15:22:48.503 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 665.580478ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 15:22:49.061 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 495.002133ms|   match|[44m GET     [0m /v1/resource/listAll   r:/v1/resource/listAll
+2019/02/17 15:23:16.272 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 15:23:17.626 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 1.354489754s|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 15:23:17.715 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 15:23:18.418 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 703.295933ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 15:23:21.078 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 15:23:22.133 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 1.056066203s|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 15:23:38.870 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 15:23:40.255 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 1.385405124s|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 15:24:04.208 [C] [asm_amd64.s:522]  the request url is  /v1/s3/uploadImage
+2019/02/17 15:24:04.213 [C] [asm_amd64.s:522]  Handler crashed with error runtime error: index out of range
+2019/02/17 15:24:04.213 [C] [asm_amd64.s:522]  /usr/local/Cellar/go/1.11/libexec/src/runtime/asm_amd64.s:522
+2019/02/17 15:24:04.213 [C] [asm_amd64.s:522]  /usr/local/Cellar/go/1.11/libexec/src/runtime/panic.go:513
+2019/02/17 15:24:04.213 [C] [asm_amd64.s:522]  /usr/local/Cellar/go/1.11/libexec/src/runtime/panic.go:44
+2019/02/17 15:24:04.213 [C] [asm_amd64.s:522]  /Users/leeyoungsoon/my_task/Go/src/github.com/YoungsoonLee/backend_datainfra/controllers/s3.go:34
+2019/02/17 15:24:04.213 [C] [asm_amd64.s:522]  /usr/local/Cellar/go/1.11/libexec/src/runtime/asm_amd64.s:522
+2019/02/17 15:24:04.213 [C] [asm_amd64.s:522]  /usr/local/Cellar/go/1.11/libexec/src/reflect/value.go:447
+2019/02/17 15:24:04.214 [C] [asm_amd64.s:522]  /usr/local/Cellar/go/1.11/libexec/src/reflect/value.go:308
+2019/02/17 15:24:04.227 [C] [asm_amd64.s:522]  /Users/leeyoungsoon/my_task/Go/src/github.com/astaxie/beego/router.go:847
+2019/02/17 15:24:04.227 [C] [asm_amd64.s:522]  /usr/local/Cellar/go/1.11/libexec/src/net/http/server.go:2741
+2019/02/17 15:24:04.228 [C] [asm_amd64.s:522]  /usr/local/Cellar/go/1.11/libexec/src/net/http/server.go:1847
+2019/02/17 15:24:04.228 [C] [asm_amd64.s:522]  /usr/local/Cellar/go/1.11/libexec/src/runtime/asm_amd64.s:1333
+2019/02/17 15:24:04.229 [server.go:2977]  [HTTP] http: multiple response.WriteHeader calls
+2019/02/17 15:24:45.501 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 15:24:46.418 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|  917.36828ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 15:24:46.531 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 15:24:48.011 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 1.480881584s|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 15:24:55.979 [C] [asm_amd64.s:522]  the request url is  /v1/s3/uploadImage
+2019/02/17 15:24:55.979 [C] [asm_amd64.s:522]  Handler crashed with error runtime error: index out of range
+2019/02/17 15:24:55.979 [C] [asm_amd64.s:522]  /usr/local/Cellar/go/1.11/libexec/src/runtime/asm_amd64.s:522
+2019/02/17 15:24:55.979 [C] [asm_amd64.s:522]  /usr/local/Cellar/go/1.11/libexec/src/runtime/panic.go:513
+2019/02/17 15:24:55.979 [C] [asm_amd64.s:522]  /usr/local/Cellar/go/1.11/libexec/src/runtime/panic.go:44
+2019/02/17 15:24:55.979 [C] [asm_amd64.s:522]  /Users/leeyoungsoon/my_task/Go/src/github.com/YoungsoonLee/backend_datainfra/controllers/s3.go:34
+2019/02/17 15:24:55.979 [C] [asm_amd64.s:522]  /usr/local/Cellar/go/1.11/libexec/src/runtime/asm_amd64.s:522
+2019/02/17 15:24:55.979 [C] [asm_amd64.s:522]  /usr/local/Cellar/go/1.11/libexec/src/reflect/value.go:447
+2019/02/17 15:24:55.979 [C] [asm_amd64.s:522]  /usr/local/Cellar/go/1.11/libexec/src/reflect/value.go:308
+2019/02/17 15:24:55.979 [C] [asm_amd64.s:522]  /Users/leeyoungsoon/my_task/Go/src/github.com/astaxie/beego/router.go:847
+2019/02/17 15:24:55.979 [C] [asm_amd64.s:522]  /usr/local/Cellar/go/1.11/libexec/src/net/http/server.go:2741
+2019/02/17 15:24:55.979 [C] [asm_amd64.s:522]  /usr/local/Cellar/go/1.11/libexec/src/net/http/server.go:1847
+2019/02/17 15:24:55.979 [C] [asm_amd64.s:522]  /usr/local/Cellar/go/1.11/libexec/src/runtime/asm_amd64.s:1333
+2019/02/17 15:24:55.980 [server.go:2977]  [HTTP] http: multiple response.WriteHeader calls
+2019/02/17 15:25:41.190 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 15:25:42.830 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 1.639345022s|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 15:25:42.971 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 15:25:43.750 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 778.683106ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 15:25:52.059 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 2.279670295s|   match|[46m POST    [0m /v1/s3/uploadImage   r:/v1/s3/uploadImage
+2019/02/17 15:26:00.616 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 2.182513148s|   match|[46m POST    [0m /v1/s3/uploadImage   r:/v1/s3/uploadImage
+2019/02/17 15:26:06.191 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 717.401196ms|   match|[46m POST    [0m /v1/s3/uploadImage   r:/v1/s3/uploadImage
+2019/02/17 15:26:11.593 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 176.167321ms|   match|[46m POST    [0m /v1/s3/uploadImage   r:/v1/s3/uploadImage
+2019/02/17 15:26:19.323 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 489.439023ms|   match|[46m POST    [0m /v1/s3/uploadImage   r:/v1/s3/uploadImage
+2019/02/17 15:26:27.233 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 513.989784ms|   match|[46m POST    [0m /v1/s3/uploadImage   r:/v1/s3/uploadImage
+2019/02/17 15:26:34.951 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 1.684607984s|   match|[46m POST    [0m /v1/s3/uploadImage   r:/v1/s3/uploadImage
+2019/02/17 15:26:45.659 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 1.683764919s|   match|[46m POST    [0m /v1/s3/uploadImage   r:/v1/s3/uploadImage
+2019/02/17 15:26:55.219 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 2.522048112s|   match|[46m POST    [0m /v1/s3/uploadImage   r:/v1/s3/uploadImage
+2019/02/17 15:27:01.030 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 195.891859ms|   match|[46m POST    [0m /v1/s3/uploadImage   r:/v1/s3/uploadImage
+2019/02/17 15:27:06.152 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 454.618283ms|   match|[46m POST    [0m /v1/s3/uploadImage   r:/v1/s3/uploadImage
+2019/02/17 15:27:13.384 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 691.847339ms|   match|[46m POST    [0m /v1/s3/uploadImage   r:/v1/s3/uploadImage
+2019/02/17 15:27:19.949 [D] [server.go:2741]  |            ::1|[42m 200 [0m|  575.44049ms|   match|[46m POST    [0m /v1/s3/uploadImage   r:/v1/s3/uploadImage
+2019/02/17 15:28:24.905 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 15:28:25.451 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 546.886201ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 15:28:25.584 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 15:28:26.150 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 566.524774ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 15:29:11.175 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 4.095352288s|   match|[46m POST    [0m /v1/s3/uploadImage   r:/v1/s3/uploadImage
+2019/02/17 15:29:18.883 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 519.243504ms|   match|[46m POST    [0m /v1/s3/uploadImage   r:/v1/s3/uploadImage
+2019/02/17 15:29:38.677 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 15:29:39.906 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 1.228910729s|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 15:29:40.030 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 15:29:41.530 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 1.500658909s|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 15:29:51.245 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 3.843727583s|   match|[46m POST    [0m /v1/s3/uploadImage   r:/v1/s3/uploadImage
+2019/02/17 15:29:59.682 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 1.190125615s|   match|[46m POST    [0m /v1/s3/uploadImage   r:/v1/s3/uploadImage
+2019/02/17 15:30:40.867 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 15:30:41.669 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 802.075972ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 15:30:41.818 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 15:30:42.701 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|  883.08893ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 15:30:55.088 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 3.749530227s|   match|[46m POST    [0m /v1/s3/uploadImage   r:/v1/s3/uploadImage
+2019/02/17 15:31:01.943 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 495.129476ms|   match|[46m POST    [0m /v1/s3/uploadImage   r:/v1/s3/uploadImage
+2019/02/17 15:31:38.596 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 15:31:40.178 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 1.582591874s|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 15:31:40.363 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 15:31:41.232 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 869.171378ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 16:08:11.615 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 16:08:12.548 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 933.264284ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 16:11:31.461 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 16:11:32.123 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 662.225804ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 16:15:50.118 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 1.006762547s|   match|[46m POST    [0m /v1/user/getProfile   r:/v1/user/getProfile
+2019/02/17 16:16:10.587 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 815.444918ms|   match|[46m POST    [0m /v1/auth/login   r:/v1/auth/login
+2019/02/17 16:16:10.704 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 16:16:11.334 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 629.514732ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 16:23:16.935 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 16:23:17.848 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 912.791765ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 16:23:17.975 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 16:23:18.856 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 880.533426ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 16:23:41.408 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 3.843005846s|   match|[46m POST    [0m /v1/s3/uploadImage   r:/v1/s3/uploadImage
+2019/02/17 16:23:43.539 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 418.306681ms|   match|[46m POST    [0m /v1/s3/uploadImage   r:/v1/s3/uploadImage
+2019/02/17 16:23:48.408 [D] [server.go:2741]  |            ::1|[42m 200 [0m|  670.93182ms|   match|[46m POST    [0m /v1/s3/uploadImage   r:/v1/s3/uploadImage
+2019/02/17 16:23:51.896 [D] [server.go:2741]  |            ::1|[42m 200 [0m|  89.298334ms|   match|[46m POST    [0m /v1/s3/uploadImage   r:/v1/s3/uploadImage
+2019/02/17 16:23:56.800 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 101.814883ms|   match|[46m POST    [0m /v1/s3/uploadImage   r:/v1/s3/uploadImage
+2019/02/17 16:24:02.683 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 160.142928ms|   match|[46m POST    [0m /v1/s3/uploadImage   r:/v1/s3/uploadImage
+2019/02/17 16:24:08.779 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 196.082841ms|   match|[46m POST    [0m /v1/s3/uploadImage   r:/v1/s3/uploadImage
+2019/02/17 16:24:21.014 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 559.354056ms|   match|[46m POST    [0m /v1/s3/uploadImage   r:/v1/s3/uploadImage
+2019/02/17 16:24:34.181 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 2.626110621s|   match|[46m POST    [0m /v1/s3/uploadImage   r:/v1/s3/uploadImage
+2019/02/17 16:24:35.730 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 126.270067ms|   match|[46m POST    [0m /v1/s3/uploadImage   r:/v1/s3/uploadImage
+2019/02/17 16:24:40.752 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 569.743065ms|   match|[46m POST    [0m /v1/s3/uploadImage   r:/v1/s3/uploadImage
+2019/02/17 16:24:45.681 [D] [server.go:2741]  |            ::1|[42m 200 [0m|  82.026255ms|   match|[46m POST    [0m /v1/s3/uploadImage   r:/v1/s3/uploadImage
+2019/02/17 16:24:50.843 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 180.808812ms|   match|[46m POST    [0m /v1/s3/uploadImage   r:/v1/s3/uploadImage
+2019/02/17 16:27:50.537 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 16:27:51.367 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 831.457677ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 16:27:51.519 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 16:27:58.803 [I] [asm_amd64.s:1333]  http server Running on http://:8080
+2019/02/17 16:28:05.656 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 873.090969ms|   match|[46m POST    [0m /v1/auth/login   r:/v1/auth/login
+2019/02/17 16:28:05.760 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 16:28:06.408 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 647.979151ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 16:28:17.558 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 1.026118218s|   match|[46m POST    [0m /v1/s3/uploadImage   r:/v1/s3/uploadImage
+2019/02/17 16:28:24.959 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 525.827027ms|   match|[46m POST    [0m /v1/s3/uploadImage   r:/v1/s3/uploadImage
+2019/02/17 16:29:11.713 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 16:29:13.140 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 1.427324177s|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 16:29:13.311 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 16:29:14.400 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 1.089766372s|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 16:29:26.409 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 3.913232965s|   match|[46m POST    [0m /v1/s3/uploadImage   r:/v1/s3/uploadImage
+2019/02/17 16:29:27.216 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 151.376697ms|   match|[46m POST    [0m /v1/s3/uploadImage   r:/v1/s3/uploadImage
+2019/02/17 16:29:53.694 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 16:29:55.144 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 1.449409747s|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 16:29:55.356 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 16:29:56.487 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 1.131154608s|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 16:30:09.594 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 3.690354201s|   match|[46m POST    [0m /v1/s3/uploadImage   r:/v1/s3/uploadImage
+2019/02/17 16:30:11.059 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 141.527883ms|   match|[46m POST    [0m /v1/s3/uploadImage   r:/v1/s3/uploadImage
+2019/02/17 16:30:14.129 [D] [server.go:2741]  |      127.0.0.1|[43m 404 [0m|    601.676µs| nomatch|[46m POST    [0m /v1/resource/register
+2019/02/17 16:31:32.902 [D] [server.go:2741]  |      127.0.0.1|[43m 404 [0m|   1.169547ms| nomatch|[46m POST    [0m /v1/resource/register
+2019/02/17 16:31:36.752 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 16:31:37.228 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 475.831666ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 16:31:37.355 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 16:31:38.745 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 1.389698537s|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 16:31:50.488 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 3.699535158s|   match|[46m POST    [0m /v1/s3/uploadImage   r:/v1/s3/uploadImage
+2019/02/17 16:31:51.325 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 127.563886ms|   match|[46m POST    [0m /v1/s3/uploadImage   r:/v1/s3/uploadImage
+2019/02/17 16:31:55.663 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 1.051939966s|   match|[46m POST    [0m /v1/resource/resigster   r:/v1/resource/resigster
+2019/02/17 16:34:04.710 [I] [asm_amd64.s:1333]  http server Running on http://:8080
+2019/02/17 16:34:21.053 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 1.034180522s|   match|[46m POST    [0m /v1/resource/resigster   r:/v1/resource/resigster
+2019/02/17 16:34:49.421 [I] [asm_amd64.s:1333]  http server Running on http://:8080
+2019/02/17 16:36:56.596 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 584.698948ms|   match|[46m POST    [0m /v1/resource/resigster   r:/v1/resource/resigster
+2019/02/17 16:37:20.400 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 16:37:21.785 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 1.384444328s|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 16:37:21.942 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 16:37:22.708 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 766.607546ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 16:37:36.181 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 907.260558ms|   match|[46m POST    [0m /v1/s3/uploadImage   r:/v1/s3/uploadImage
+2019/02/17 16:37:47.228 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 3.767381463s|   match|[46m POST    [0m /v1/s3/uploadImage   r:/v1/s3/uploadImage
+2019/02/17 16:37:47.497 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 443.278971ms|   match|[46m POST    [0m /v1/resource/resigster   r:/v1/resource/resigster
+2019/02/17 16:37:47.658 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 16:37:48.257 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 599.687854ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 16:37:48.572 [E] [base.go:21]  /v1/resource/listAll? {} pq: column "character" does not exist 
+2019/02/17 17:05:52.699 [I] [asm_amd64.s:1333]  http server Running on http://:8080
+2019/02/17 17:06:02.007 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 17:06:02.527 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 520.478448ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 17:06:03.100 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 265.740121ms|   match|[44m GET     [0m /v1/resource/listAll   r:/v1/resource/listAll
+2019/02/17 17:07:22.493 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 17:07:23.129 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 636.202607ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 17:07:23.532 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 319.567488ms|   match|[44m GET     [0m /v1/resource/listAll   r:/v1/resource/listAll
+2019/02/17 17:08:50.443 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 17:08:51.251 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|  808.63869ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 17:08:51.895 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 455.154297ms|   match|[44m GET     [0m /v1/resource/listAll   r:/v1/resource/listAll
+2019/02/17 17:12:06.792 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 17:12:07.437 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 645.301352ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 17:12:07.780 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 253.291348ms|   match|[44m GET     [0m /v1/resource/listAll   r:/v1/resource/listAll
+2019/02/17 17:13:06.248 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 17:13:07.160 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 912.210051ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 17:13:07.500 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 251.422251ms|   match|[44m GET     [0m /v1/resource/listAll   r:/v1/resource/listAll
+2019/02/17 17:13:40.931 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 17:13:41.485 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 553.845649ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 17:13:42.406 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 833.740893ms|   match|[44m GET     [0m /v1/resource/listAll   r:/v1/resource/listAll
+2019/02/17 17:15:09.174 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 17:15:10.263 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 1.089561611s|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 17:15:10.880 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 527.768119ms|   match|[44m GET     [0m /v1/resource/listAll   r:/v1/resource/listAll
+2019/02/17 17:15:58.805 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 17:15:59.622 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 817.093248ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 17:16:00.236 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 532.260768ms|   match|[44m GET     [0m /v1/resource/listAll   r:/v1/resource/listAll
+2019/02/17 17:16:28.257 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 17:16:29.166 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 908.527437ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 17:16:29.491 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 255.794436ms|   match|[44m GET     [0m /v1/resource/listAll   r:/v1/resource/listAll
+2019/02/17 17:17:24.677 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 17:17:25.628 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 951.521392ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 17:17:25.958 [D] [server.go:2741]  |            ::1|[42m 200 [0m|  260.29751ms|   match|[44m GET     [0m /v1/resource/listAll   r:/v1/resource/listAll
+2019/02/17 17:18:03.842 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 17:18:04.959 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 1.117796971s|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 17:18:05.303 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 246.780784ms|   match|[44m GET     [0m /v1/resource/listAll   r:/v1/resource/listAll
+2019/02/17 17:18:29.337 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 17:18:30.271 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 933.940586ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 17:18:30.766 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 421.996827ms|   match|[44m GET     [0m /v1/resource/listAll   r:/v1/resource/listAll
+2019/02/17 17:19:18.713 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 17:19:19.406 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 692.844131ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 17:19:19.790 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 275.590796ms|   match|[44m GET     [0m /v1/resource/listAll   r:/v1/resource/listAll
+2019/02/17 17:19:42.681 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 17:19:43.883 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|  1.20133417s|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 17:19:44.339 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 376.074963ms|   match|[44m GET     [0m /v1/resource/listAll   r:/v1/resource/listAll
+2019/02/17 17:19:59.630 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 17:20:00.781 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 1.150946249s|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 17:20:01.247 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 373.515196ms|   match|[44m GET     [0m /v1/resource/listAll   r:/v1/resource/listAll
+2019/02/17 17:20:10.889 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 17:20:11.867 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 977.542932ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 17:20:12.458 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 509.458444ms|   match|[44m GET     [0m /v1/resource/listAll   r:/v1/resource/listAll
+2019/02/17 17:20:34.923 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 17:20:35.892 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 969.466056ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 17:20:36.724 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 747.810708ms|   match|[44m GET     [0m /v1/resource/listAll   r:/v1/resource/listAll
+2019/02/17 17:20:51.968 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 17:20:52.579 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 610.692838ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 17:20:53.180 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 510.540632ms|   match|[44m GET     [0m /v1/resource/listAll   r:/v1/resource/listAll
+2019/02/17 17:21:22.005 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 17:21:23.407 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 1.402028493s|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 17:21:24.254 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 759.684185ms|   match|[44m GET     [0m /v1/resource/listAll   r:/v1/resource/listAll
+2019/02/17 17:21:49.296 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 17:21:50.146 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 849.654483ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 17:21:50.758 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 528.532825ms|   match|[44m GET     [0m /v1/resource/listAll   r:/v1/resource/listAll
+2019/02/17 17:22:13.475 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 17:22:14.329 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 854.423096ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 17:22:14.734 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 321.168163ms|   match|[44m GET     [0m /v1/resource/listAll   r:/v1/resource/listAll
+2019/02/17 17:23:15.207 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 17:23:15.855 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 648.202519ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 17:23:16.185 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 247.216478ms|   match|[44m GET     [0m /v1/resource/listAll   r:/v1/resource/listAll
+2019/02/17 17:23:49.685 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 17:23:50.876 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 1.190927535s|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 17:23:51.376 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 424.646139ms|   match|[44m GET     [0m /v1/resource/listAll   r:/v1/resource/listAll
+2019/02/17 17:24:28.713 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 17:24:29.583 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|  870.15252ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 17:24:30.505 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 844.318623ms|   match|[44m GET     [0m /v1/resource/listAll   r:/v1/resource/listAll
+2019/02/17 17:24:52.257 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 734.963066ms|   match|[46m POST    [0m /v1/s3/uploadImage   r:/v1/s3/uploadImage
+2019/02/17 17:24:55.079 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 1.142496782s|   match|[46m POST    [0m /v1/resource/resigster   r:/v1/resource/resigster
+2019/02/17 17:24:55.211 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 17:24:55.809 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 598.551825ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 17:24:56.312 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 461.189881ms|   match|[44m GET     [0m /v1/resource/listAll   r:/v1/resource/listAll
+2019/02/17 17:25:40.694 [I] [asm_amd64.s:1333]  http server Running on http://:8080
+2019/02/17 17:27:17.738 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 17:27:18.443 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 705.180121ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 17:27:19.363 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 844.472155ms|   match|[44m GET     [0m /v1/resource/listAll   r:/v1/resource/listAll
+2019/02/17 17:27:57.158 [I] [asm_amd64.s:1333]  http server Running on http://:8080
+2019/02/17 17:28:06.243 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 17:28:07.413 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 1.170126407s|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 17:28:07.902 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 396.790619ms|   match|[44m GET     [0m /v1/resource/listAll   r:/v1/resource/listAll
+2019/02/17 17:28:25.542 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 1.198731209s|   match|[46m POST    [0m /v1/s3/uploadImage   r:/v1/s3/uploadImage
+2019/02/17 17:28:31.490 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 277.457516ms|   match|[46m POST    [0m /v1/s3/uploadImage   r:/v1/s3/uploadImage
+2019/02/17 17:28:33.623 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 583.692793ms|   match|[46m POST    [0m /v1/resource/resigster   r:/v1/resource/resigster
+2019/02/17 17:28:33.759 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 17:28:34.935 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 1.175844073s|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 17:28:35.238 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 258.990177ms|   match|[44m GET     [0m /v1/resource/listAll   r:/v1/resource/listAll
+2019/02/17 17:29:06.735 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 17:29:07.498 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 763.887565ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 17:29:07.804 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 266.387895ms|   match|[44m GET     [0m /v1/resource/listAll   r:/v1/resource/listAll
+2019/02/17 17:29:19.148 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 421.758812ms|   match|[46m POST    [0m /v1/s3/uploadImage   r:/v1/s3/uploadImage
+2019/02/17 17:29:23.164 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 1.256749111s|   match|[46m POST    [0m /v1/resource/resigster   r:/v1/resource/resigster
+2019/02/17 17:29:23.298 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 17:29:24.569 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 1.271338324s|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 17:29:25.313 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 705.309252ms|   match|[44m GET     [0m /v1/resource/listAll   r:/v1/resource/listAll
+2019/02/17 17:29:58.118 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 17:29:59.347 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 1.228749725s|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 17:29:59.719 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 268.046177ms|   match|[44m GET     [0m /v1/resource/listAll   r:/v1/resource/listAll
+2019/02/17 17:31:15.203 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 17:31:16.111 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 908.764814ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 17:31:16.454 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 260.181488ms|   match|[44m GET     [0m /v1/resource/listAll   r:/v1/resource/listAll
+2019/02/17 17:33:37.729 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 17:33:38.653 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|  923.51438ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 17:33:39.266 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 518.633185ms|   match|[44m GET     [0m /v1/resource/listAll   r:/v1/resource/listAll
+2019/02/17 17:34:12.105 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 17:34:12.864 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 759.309614ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 17:34:13.320 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 361.095228ms|   match|[44m GET     [0m /v1/resource/listAll   r:/v1/resource/listAll
+2019/02/17 17:34:24.309 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 17:34:25.275 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 965.733911ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 17:34:25.860 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 490.362556ms|   match|[44m GET     [0m /v1/resource/listAll   r:/v1/resource/listAll
+2019/02/17 17:34:39.346 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 17:34:40.298 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m|  952.19485ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 17:34:40.913 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 527.493125ms|   match|[44m GET     [0m /v1/resource/listAll   r:/v1/resource/listAll
+2019/02/17 17:35:17.773 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 17:35:19.311 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 1.538706667s|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 17:35:19.928 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 508.491182ms|   match|[44m GET     [0m /v1/resource/listAll   r:/v1/resource/listAll
+2019/02/17 17:35:34.943 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 17:35:36.172 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 1.228713766s|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 17:35:36.656 [D] [server.go:2741]  |            ::1|[42m 200 [0m|  385.11168ms|   match|[44m GET     [0m /v1/resource/listAll   r:/v1/resource/listAll
+2019/02/17 17:35:50.388 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/17 17:35:51.384 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 996.526162ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/17 17:35:52.364 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 888.445323ms|   match|[44m GET     [0m /v1/resource/listAll   r:/v1/resource/listAll

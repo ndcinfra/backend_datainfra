@@ -14,7 +14,7 @@ type Resource struct {
 	Sylvi      string `orm:"size(2000);null" json:"sylvi"`
 	Yuri       string `orm:"size(2000);null" json:"yuri"`
 	Misteltein string `orm:"size(2000);null" json:"misteltein"`
-	J          string `orm:"size(2000);null" json:"j"`
+	Jay        string `orm:"size(2000);null" json:"jay"`
 	Harpy      string `orm:"size(2000);null" json:"harpy"`
 	Levia      string `orm:"size(2000);null" json:"levia"`
 	Nata       string `orm:"size(2000);null" json:"nata"`
@@ -43,14 +43,13 @@ func GetResourceAll() ([]Resource, error) {
 	o := orm.NewOrm()
 	sql := "SELECT " +
 		" \"ID\" , " +
-		" Character, " +
 		" Sheet, " +
 		" Memo, " +
 		" Seha, " +
 		" Sylvi, " +
 		" Yuri, " +
 		" Misteltein, " +
-		" J, " +
+		" Jay, " +
 		" Harpy, " +
 		" Levia, " +
 		" Nata, " +
