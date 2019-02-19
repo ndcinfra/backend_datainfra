@@ -55,9 +55,11 @@ var (
 	ErrLowBalance       = &ControllerError{400, "20007", "Low Balance"}
 	ErrNoPaytransaction = &ControllerError{400, "20008", "Paytransaction does not exists"}
 
-	// 30000 ~ related in S3 or aws
+	// 30000 ~ related in S3 or aws, resource
 	ErrS3Session = &ControllerError{400, "30001", "S3 Session connect error."}
 	ErrS3AddFile = &ControllerError{400, "30002", "Upload file to S3 error."}
+
+	ErrResourceIDAbsent = &ControllerError{400, "30003", "resource id absent"}
 
 	// 90000 ~ related on system error
 	ErrDatabase      = &ControllerError{500, "90001", "Database operation error"}
@@ -68,6 +70,7 @@ var (
 	ErrJSONmarshal   = &ControllerError{500, "90006", "JSON marshal error"}
 	ErrTokenRequest  = &ControllerError{500, "90007", "Token Request error with xsolla"}
 	ErrClient        = &ControllerError{500, "90008", "Get client data error with xsolla"}
+	ErrConvert       = &ControllerError{500, "90009", "Data Convdert error"}
 
 	// xsolla
 	ErrXNilSig             = &ControllerError{400, "INVALID_SIGNATURE_SIGNATURE_NULL", "INVALID_SIGNATURE_SIGNATURE_NULL"}

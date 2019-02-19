@@ -42,7 +42,10 @@ func init() {
 
 		beego.NSNamespace("/resource",
 			beego.NSRouter("/resigster", &controllers.ResourceController{}, "post:CreateResource"),
-			beego.NSRouter("/listAll", &controllers.ResourceController{}, "get:GetResourceAll"),
+			beego.NSRouter("/list", &controllers.ResourceController{}, "get:GetResources"),
+			beego.NSRouter("/detail/:id", &controllers.ResourceController{}, "post:GetResourceDetail"),
+			beego.NSRouter("/update/:id", &controllers.ResourceController{}, "post:UpdateResource"),
+			beego.NSRouter("/delete/:id", &controllers.ResourceController{}, "post:DeleteResource"),
 		),
 	)
 	beego.AddNamespace(ns)

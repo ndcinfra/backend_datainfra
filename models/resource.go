@@ -37,7 +37,7 @@ func AddResource(r Resource) (int64, error) {
 }
 
 // GetResourceAll ...
-func GetResourceAll() ([]Resource, error) {
+func GetResources() ([]Resource, error) {
 	var resource []Resource
 
 	o := orm.NewOrm()
@@ -58,7 +58,8 @@ func GetResourceAll() ([]Resource, error) {
 		" Wolfgang, " +
 		" Soma, " +
 		" Luna " +
-		" FROM \"resource\"  "
+		" FROM \"resource\"  " +
+		" ORDER BY \"ID\" ASC"
 
 	_, err := o.Raw(sql).QueryRows(&resource)
 	if err != nil {
@@ -66,4 +67,62 @@ func GetResourceAll() ([]Resource, error) {
 	}
 
 	return resource, nil
+}
+
+// GetResourceDetail ...
+func GetResourceDetail(id int) (Resource, error) {
+	var resource Resource
+
+	o := orm.NewOrm()
+	sql := "SELECT " +
+		" \"ID\" , " +
+		" Sheet, " +
+		" Memo, " +
+		" Seha, " +
+		" Sylvi, " +
+		" Yuri, " +
+		" Misteltein, " +
+		" Jay, " +
+		" Harpy, " +
+		" Levia, " +
+		" Nata, " +
+		" Tina, " +
+		" Violet, " +
+		" Wolfgang, " +
+		" Soma, " +
+		" Luna " +
+		" FROM \"resource\"  " +
+		" WHERE \"ID\" = ?"
+
+	err := o.Raw(sql, id).QueryRow(&resource)
+	if err != nil {
+		return resource, err
+	}
+
+	return resource, nil
+}
+
+// UpdateResource ...
+func UpdateResource(r Resource) (Resource, error) {
+	o := orm.NewOrm()
+
+	if _, err := o.Update(&r); err != nil {
+		return Resource{}, err
+	}
+
+	return r, nil
+}
+
+// DeleteResource ...
+func DeleteResource(id int64) error {
+
+	o := orm.NewOrm()
+	_, err := o.Raw("DELETE FROM \"resource\" WHERE \"ID\" = ?", id).Exec()
+
+	if err != nil {
+		return err
+	}
+
+	return nil
+
 }
