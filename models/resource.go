@@ -7,24 +7,24 @@ import (
 
 // Resource ...
 type Resource struct {
-	ID              int64  `orm:"column(ID);auto;pk" json:"id"` // id
-	Sheet           string `orm:"size(1000);null" json:"sheet"`
-	Memo            string `orm:"size(2000);null" json:"memo"`
-	Seha            string `orm:"size(2000);null" json:"seha"`
-	Sylvi           string `orm:"size(2000);null" json:"sylvi"`
-	Yuri            string `orm:"size(2000);null" json:"yuri"`
-	Misteltein      string `orm:"size(2000);null" json:"misteltein"`
-	Jay             string `orm:"size(2000);null" json:"jay"`
-	Harpy           string `orm:"size(2000);null" json:"harpy"`
-	Levia           string `orm:"size(2000);null" json:"levia"`
-	Nata            string `orm:"size(2000);null" json:"nata"`
-	Tina            string `orm:"size(2000);null" json:"tina"`
-	Violet          string `orm:"size(2000);null" json:"violet"`
-	Wolfgang        string `orm:"size(2000);null" json:"wolfgang"`
-	Soma            string `orm:"size(2000);null" json:"soma"`
-	Luna            string `orm:"size(2000);null" json:"luna"`
-	MaleAccessory   string `orm:"column(MaleAccessory);size(2000);null" json:"maleaccessory"`
-	FemaleAccessory string `orm:"column(FemaleAccessory);size(2000);null" json:"femaleaccessory"`
+	ID         int64  `orm:"column(ID);auto;pk" json:"id"` // id
+	Sheet      string `orm:"size(1000);null" json:"sheet"`
+	Memo       string `orm:"size(2000);null" json:"memo"`
+	Seha       string `orm:"size(2000);null" json:"seha"`
+	Sylvi      string `orm:"size(2000);null" json:"sylvi"`
+	Yuri       string `orm:"size(2000);null" json:"yuri"`
+	Misteltein string `orm:"size(2000);null" json:"misteltein"`
+	Jay        string `orm:"size(2000);null" json:"jay"`
+	Harpy      string `orm:"size(2000);null" json:"harpy"`
+	Levia      string `orm:"size(2000);null" json:"levia"`
+	Nata       string `orm:"size(2000);null" json:"nata"`
+	Tina       string `orm:"size(2000);null" json:"tina"`
+	Violet     string `orm:"size(2000);null" json:"violet"`
+	Wolfgang   string `orm:"size(2000);null" json:"wolfgang"`
+	Soma       string `orm:"size(2000);null" json:"soma"`
+	Luna       string `orm:"size(2000);null" json:"luna"`
+	Maleacc    string `orm:"size(2000);null" json:"maleacc"`
+	Femaleacc  string `orm:"size(2000);null" json:"femaleacc"`
 }
 
 // AddResource ...
@@ -60,8 +60,8 @@ func GetResources() ([]Resource, error) {
 		" Wolfgang, " +
 		" Soma, " +
 		" Luna, " +
-		" \"MaleAccessory\", " +
-		" \"FemaleAccessory\" " +
+		" Maleacc, " +
+		" FemaleAcc " +
 		" FROM \"resource\"  " +
 		" ORDER BY \"ID\" ASC"
 
@@ -95,8 +95,8 @@ func GetResourceDetail(id int) (Resource, error) {
 		" Wolfgang, " +
 		" Soma, " +
 		" Luna, " +
-		" \"MaleAccessory\", " +
-		" \"FemaleAccessory\" " +
+		" Maleacc, " +
+		" FemaleAcc " +
 		" FROM \"resource\"  " +
 		" WHERE \"ID\" = ?"
 
