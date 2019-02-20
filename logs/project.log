@@ -357,3 +357,15 @@
 2019/02/19 15:01:10.917 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 705.000414ms|   match|[46m POST    [0m /v1/auth/login   r:/v1/auth/login
 2019/02/19 15:01:11.043 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
 2019/02/19 15:01:11.763 [D] [server.go:2741]  |      127.0.0.1|[42m 200 [0m| 719.565702ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/19 17:59:13.263 [D] [server.go:2741]  |            ::1|[42m 200 [0m|   1.253252ms| nomatch|[47m OPTIONS [0m /v1/auth/login
+2019/02/19 17:59:13.572 [E] [base.go:21]  /v1/auth/login &{0xc000524040 {0xc00013a1c0} 67108816 0xc00008c030} read tcp 192.168.0.6:50852->54.163.207.112:5432: read: connection reset by peer 
+2019/02/19 17:59:54.004 [D] [server.go:2741]  |            ::1|[42m 200 [0m|     49.934µs| nomatch|[47m OPTIONS [0m /v1/auth/login
+2019/02/19 17:59:54.429 [E] [base.go:21]  /v1/auth/login &{0xc000524200 {0xc00013a0e0} 67108816 0xc00008c030} read tcp 192.168.0.6:56044->54.163.207.112:5432: read: connection reset by peer 
+2019/02/19 18:00:15.942 [I] [asm_amd64.s:1333]  http server Running on http://:8080
+2019/02/19 18:00:26.366 [D] [server.go:2741]  |            ::1|[42m 200 [0m|    119.753µs| nomatch|[47m OPTIONS [0m /v1/auth/login
+2019/02/19 18:00:27.066 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 684.471058ms|   match|[46m POST    [0m /v1/auth/login   r:/v1/auth/login
+2019/02/19 18:00:27.176 [D] [server.go:2741]  |            ::1|[42m 200 [0m|     63.907µs| nomatch|[47m OPTIONS [0m /v1/auth/checkLogin
+2019/02/19 18:00:27.187 [I] [auth.go:161]  Check Login:  U1548726948373763000 true 
+2019/02/19 18:00:27.797 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 610.022383ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/02/20 09:42:14.492 [I] [asm_amd64.s:1333]  http server Running on http://:8080
+2019/02/20 09:43:06.436 [I] [asm_amd64.s:1333]  http server Running on http://:8080
