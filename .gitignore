@@ -13,8 +13,8 @@
 
 # conf/
 lastupdate.tmp
-.env
-# .env_real
+#.env
+.env_real
 api-ndc
 conf/aws
 /logs
