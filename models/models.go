@@ -7,7 +7,6 @@ import (
 	"github.com/astaxie/beego/orm"
 	"github.com/joho/godotenv"
 	_ "github.com/lib/pq"
-	//_ "github.com/go-sql-driver/mysql" ...
 )
 
 // RegisterDB ...
