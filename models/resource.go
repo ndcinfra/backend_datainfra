@@ -60,7 +60,6 @@ func GetResources() ([]Resource, error) {
 		" Wolfgang, " +
 		" Soma, " +
 		" Luna, " +
-
 		" \"MaleAccessory\", " +
 		" \"FemaleAccessory\" " +
 		" FROM \"resource\"  " +
@@ -96,7 +95,6 @@ func GetResourceDetail(id int) (Resource, error) {
 		" Wolfgang, " +
 		" Soma, " +
 		" Luna, " +
-
 		" \"MaleAccessory\", " +
 		" \"FemaleAccessory\" " +
 		" FROM \"resource\"  " +
