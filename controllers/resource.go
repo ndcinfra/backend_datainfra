@@ -2,7 +2,6 @@ package controllers
 
 import (
 	"encoding/json"
-	"fmt"
 	"io/ioutil"
 	"strconv"
 
@@ -19,7 +18,7 @@ type ResourceController struct {
 func (r *ResourceController) CreateResource() {
 	var resource models.Resource
 	body, _ := ioutil.ReadAll(r.Ctx.Request.Body)
-	fmt.Println(body)
+	//fmt.Println(body)
 
 	err := json.Unmarshal(body, &resource)
 	if err != nil {
