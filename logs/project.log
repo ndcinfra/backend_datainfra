@@ -373,3 +373,4 @@
 2019/02/20 12:03:20.089 [D] [server.go:2741]  |            ::1|[43m 404 [0m|    587.566µs| nomatch|[44m GET     [0m /v1/auth/checkLogin
 2019/02/20 12:03:49.618 [E] [base.go:21]  /api/v1/auth/checkLogin {} <nil> 
 2019/02/20 14:35:35.478 [I] [asm_amd64.s:1333]  http server Running on http://:8080
+2019/02/20 15:33:02.314 [I] [asm_amd64.s:1333]  http server Running on http://:8080

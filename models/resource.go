@@ -38,7 +38,7 @@ func AddResource(r Resource) (int64, error) {
 	return result, nil
 }
 
-// GetResourceAll ...
+//  GetResources ...
 func GetResources() ([]Resource, error) {
 	var resource []Resource
 
