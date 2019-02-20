@@ -23,6 +23,9 @@ type Resource struct {
 	Wolfgang   string `orm:"size(2000);null" json:"wolfgang"`
 	Soma       string `orm:"size(2000);null" json:"soma"`
 	Luna       string `orm:"size(2000);null" json:"luna"`
+
+	MaleAccessory   string `orm:"column(MaleAccessory);size(2000);null" json:"maleaccessory"`
+	FemaleAccessory string `orm:"column(FemaleAccessory);size(2000);null" json:"femaleaccessory"`
 }
 
 // AddResource ...
@@ -57,7 +60,9 @@ func GetResources() ([]Resource, error) {
 		" Violet, " +
 		" Wolfgang, " +
 		" Soma, " +
-		" Luna " +
+		" Luna, " +
+		" \"MaleAccessory\", " +
+		" \"FemaleAccessory\" " +
 		" FROM \"resource\"  " +
 		" ORDER BY \"ID\" ASC"
 
@@ -90,7 +95,9 @@ func GetResourceDetail(id int) (Resource, error) {
 		" Violet, " +
 		" Wolfgang, " +
 		" Soma, " +
-		" Luna " +
+		" Luna, " +
+		" \"MaleAccessory\", " +
+		" \"FemaleAccessory\" " +
 		" FROM \"resource\"  " +
 		" WHERE \"ID\" = ?"
 
