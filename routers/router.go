@@ -47,6 +47,10 @@ func init() {
 			beego.NSRouter("/update/:id", &controllers.ResourceController{}, "post:UpdateResource"),
 			beego.NSRouter("/delete/:id", &controllers.ResourceController{}, "post:DeleteResource"),
 		),
+
+		beego.NSNamespace("/kpi",
+			beego.NSRouter("/list", &controllers.KpiController{}, "post:GetKPI"),
+		),
 	)
 	beego.AddNamespace(ns)
 }
