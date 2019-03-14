@@ -17,6 +17,7 @@ type InputDate struct {
 	From    string `json:"from"`
 	To      string `json:"to"`
 	Country string `json:"country"`
+	Kind    string `json:"kind"` // graph, table
 }
 
 // CreateResource ...
@@ -30,11 +31,15 @@ func (k *KpiController) GetKPI() {
 	}
 
 	var kpi models.Kpi
-	listKpi, err := kpi.GetKPI(inputDate.From, inputDate.To, inputDate.Country)
+
+	listKpi, gListKpi, err := kpi.GetKPI(inputDate.From, inputDate.To, inputDate.Country, inputDate.Kind)
 	if err != nil {
 		k.ResponseError(libs.ErrDatabase, err)
 	}
 
+	if inputDate.Kind == "graph" {
+		k.ResponseSuccess("", gListKpi)
+	}
 	k.ResponseSuccess("", listKpi)
 
 }

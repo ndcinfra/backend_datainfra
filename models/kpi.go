@@ -3,6 +3,7 @@ package models
 import "github.com/astaxie/beego/orm"
 
 // Kpi ...
+// for table
 type Kpi struct {
 	Territory string `json:"territory"` // territory
 	Date      string `json:"date"`
@@ -23,24 +24,56 @@ type Kpi struct {
 	Bu        string `json:"bu"`
 }
 
-// GetKPI ...
-func (k *Kpi) GetKPI(from, to, country string) ([]Kpi, error) {
-	var listKpi []Kpi
+// KpiGraph ...
+type KpiGraph struct {
+	Cdate    string `json:"cdate"`
+	China    string `json:"china"`
+	Japan    string `json:"japan"`
+	Korea    string `json:"korea"`
+	Namerica string `json:"namerica"`
+	Taiwan   string `json:"taiwan"`
+	Total    string `json:"total"`
+}
 
-	o := orm.NewOrm()
-	sql := "SELECT territory, date, mcu_d as mcu, avg_d as avg, uu_d as uu, nru_d as nru, " +
-		"rev_d as rev, rev_ur_d as rev_ur, rev_pc_d as rev_pc, pu_d as pu, pur_d as pur, " +
-		"arppu_d as arppu, dt, mrppu_d as mrppu, rev_t, rev_rate, bu " +
-		"FROM kpi WHERE date >= ? and date <= ? "
+// GetKPI ...
+func (k *Kpi) GetKPI(from, to, country, kind string) ([]Kpi, []KpiGraph, error) {
+	var listKpi []Kpi
+	var gListKpi []KpiGraph
 
 	var err error
-	if country == "all" {
-		sql = sql + " ORDER BY date desc "
-		_, err = o.Raw(sql, from, to).QueryRows(&listKpi)
-	} else {
-		sql = sql + " and territory = ? ORDER BY date desc "
-		_, err = o.Raw(sql, from, to, country).QueryRows(&listKpi)
+	var sql string
+
+	o := orm.NewOrm()
+
+	if kind == "graph" {
+		sql = " select cdate " +
+			" ,sum(case when territory = 'CHINA' then rev else 0 end) CHINA" +
+			" ,sum(case when territory = 'JAPAN' then rev else 0 end) JAPAN" +
+			" ,sum(case when territory = 'KOREA' then rev else 0 end) KOREA" +
+			" ,sum(case when territory = 'NAMERICA' then rev else 0 end) NAMERICA" +
+			" ,sum(case when territory = 'TAIWAN' then rev else 0 end) TAIWAN" +
+			" ,sum(rev) TOTAL " +
+			" from ( " +
+			"			select " +
+			"				date as cdate " +
+			"				, territory  " +
+			"				, rev_d as rev  " +
+			" 		from kpi where date >= ? and date <=  ? " +
+			"			order by date, territory asc " +
+			"		) a " +
+			" group by cdate" +
+			" order by 1;"
+		_, err = o.Raw(sql, from, to).QueryRows(&gListKpi)
 	}
 
-	return listKpi, err
+	if kind == "table" {
+		sql = "SELECT territory, to_char(date,'YYYY-MM-DD') as date, mcu_d as mcu, " +
+			"avg_d as avg, uu_d as uu, nru_d as nru, " +
+			"rev_d as rev, rev_ur_d as rev_ur, rev_pc_d as rev_pc, pu_d as pu, pur_d as pur, " +
+			"arppu_d as arppu, dt, mrppu_d as mrppu, rev_t, rev_rate, bu " +
+			"FROM kpi WHERE date >= ? and date <= ? "
+		_, err = o.Raw(sql, from, to).QueryRows(&listKpi)
+	}
+
+	return listKpi, gListKpi, err
 }

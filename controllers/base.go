@@ -155,3 +155,16 @@ func (b *BaseController) ResponseSuccess(key string, value interface{}) {
 	response.Data[key] = value
 	b.Ctx.Output.JSON(response, true, true)
 }
+
+func (b *BaseController) ResponseSuccessBI(key string, value interface{}, value2 interface{}) {
+	b.Ctx.Output.Status = 200
+
+	mresponse := &models.MrespCodeBI{
+		Code:    "ok",
+		Message: "success",
+		Data:    value,
+		Data2:   value2,
+	}
+
+	b.Ctx.Output.JSON(mresponse, true, true)
+}
