@@ -18,6 +18,7 @@ type InputDate struct {
 	To      string `json:"to"`
 	Country string `json:"country"`
 	Kind    string `json:"kind"` // graph, table
+	Radio   string `json:"radio"`
 }
 
 // CreateResource ...
@@ -32,7 +33,7 @@ func (k *KpiController) GetKPI() {
 
 	var kpi models.Kpi
 
-	listKpi, gListKpi, err := kpi.GetKPI(inputDate.From, inputDate.To, inputDate.Country, inputDate.Kind)
+	listKpi, gListKpi, err := kpi.GetKPI(inputDate.From, inputDate.To, inputDate.Country, inputDate.Kind, inputDate.Radio)
 	if err != nil {
 		k.ResponseError(libs.ErrDatabase, err)
 	}

@@ -25,6 +25,8 @@ func init() {
 			beego.NSRouter("/getProfile", &controllers.UserController{}, "post:GetProfile"),
 			beego.NSRouter("/updateProfile/", &controllers.UserController{}, "post:UpdateProfile"),
 			beego.NSRouter("/updatePassword/", &controllers.UserController{}, "post:UpdatePassword"),
+
+			beego.NSRouter("/registerIndonesia/", &controllers.UserController{}, "post:RegisterIndonesia"),
 		),
 
 		beego.NSNamespace("/auth",

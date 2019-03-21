@@ -15,6 +15,7 @@ func RegisterDB() {
 	orm.RegisterModel(
 		new(User),
 		new(Resource),
+		new(Indonesia),
 	)
 
 	orm.RegisterDriver("postgres", orm.DRPostgres)

@@ -36,7 +36,7 @@ type KpiGraph struct {
 }
 
 // GetKPI ...
-func (k *Kpi) GetKPI(from, to, country, kind string) ([]Kpi, []KpiGraph, error) {
+func (k *Kpi) GetKPI(from, to, country, kind, radio string) ([]Kpi, []KpiGraph, error) {
 	var listKpi []Kpi
 	var gListKpi []KpiGraph
 
@@ -45,19 +45,37 @@ func (k *Kpi) GetKPI(from, to, country, kind string) ([]Kpi, []KpiGraph, error) 
 
 	o := orm.NewOrm()
 
+	var scol string
+	switch radio {
+	case "rev":
+		scol = "rev_d"
+		break
+	case "avg":
+		scol = "avg_d"
+		break
+	case "mcu":
+		scol = "mcu_d"
+		break
+	case "nru":
+		scol = "nru_d"
+		break
+	default:
+		scol = "rev_d"
+	}
+
 	if kind == "graph" {
 		sql = " select cdate " +
+			" ,sum(case when territory = 'KOREA' then rev else 0 end) KOREA" +
 			" ,sum(case when territory = 'CHINA' then rev else 0 end) CHINA" +
 			" ,sum(case when territory = 'JAPAN' then rev else 0 end) JAPAN" +
-			" ,sum(case when territory = 'KOREA' then rev else 0 end) KOREA" +
-			" ,sum(case when territory = 'NAMERICA' then rev else 0 end) NAMERICA" +
 			" ,sum(case when territory = 'TAIWAN' then rev else 0 end) TAIWAN" +
+			" ,sum(case when territory = 'NAMERICA' then rev else 0 end) NAMERICA" +
 			" ,sum(rev) TOTAL " +
 			" from ( " +
 			"			select " +
 			"				date as cdate " +
 			"				, territory  " +
-			"				, rev_d as rev  " +
+			"				, " + scol + " as rev  " +
 			" 		from kpi where date >= ? and date <=  ? " +
 			"			order by date, territory asc " +
 			"		) a " +

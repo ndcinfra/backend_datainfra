@@ -233,3 +233,33 @@ func (u *UserController) UpdatePassword() {
 	u.ResponseSuccess("", user)
 
 }
+
+// registerIndonesia
+func (u *UserController) RegisterIndonesia() {
+	var data models.Indonesia
+
+	body, _ := ioutil.ReadAll(u.Ctx.Request.Body)
+	err := json.Unmarshal(body, &data)
+	if err != nil {
+		u.ResponseError(libs.ErrJSONUnmarshal, err)
+	}
+
+	// validation
+	u.ValidEmail(data.Email)
+
+	// check email
+	//var user models.User
+	_, err = models.FindByEmail(data.Email)
+	// if err == nil, already exists Email
+	if err == nil {
+		u.ResponseError(libs.ErrDupEmail, err)
+	}
+
+	id, err := models.AddIndonesiaData(data)
+	if err != nil {
+		u.ResponseError(libs.ErrDupEmail, err)
+	}
+
+	u.ResponseSuccess("", id)
+
+}
