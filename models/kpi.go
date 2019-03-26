@@ -56,6 +56,9 @@ func (k *Kpi) GetKPI(from, to, country, kind, radio string) ([]Kpi, []KpiGraph, 
 	case "mcu":
 		scol = "mcu_d"
 		break
+	case "uu":
+		scol = "uu_d"
+		break
 	case "nru":
 		scol = "nru_d"
 		break
