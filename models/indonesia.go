@@ -3,7 +3,6 @@ package models
 import (
 	"time"
 
-	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/orm"
 )
 
@@ -20,7 +19,7 @@ func AddIndonesiaData(i Indonesia) (int64, error) {
 	result, err := orm.NewOrm().Insert(&i)
 	if err != nil {
 		//beego.Error("insert into indonesia: ", err)
-		beego.Error("insert into indonesia: ", err)
+		//beego.Error("insert into indonesia: ", err)
 		return -1, err
 	}
 
