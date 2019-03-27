@@ -30,3 +30,9 @@
 2019/03/21 09:33:36.481 [D] [server.go:2741]  |            ::1|[42m 200 [0m|  19.841686ms|   match|[46m POST    [0m /v1/kpi/list   r:/v1/kpi/list
 2019/03/21 09:51:20.528 [D] [server.go:2741]  |      127.0.0.1|[43m 404 [0m|  23.536627ms| nomatch|[46m POST    [0m /v1/billing/buyItem
 2019/03/21 10:01:03.824 [I] [asm_amd64.s:1333]  http server Running on http://:8080
+2019/03/27 13:54:17.553 [I] [asm_amd64.s:1333]  http server Running on http://:8080
+2019/03/27 13:55:01.395 [D] [server.go:2741]  |            ::1|[42m 200 [0m|    295.787µs| nomatch|[47m OPTIONS [0m /v1/auth/login
+2019/03/27 13:55:01.503 [D] [server.go:2741]  |            ::1|[42m 200 [0m|  95.379847ms|   match|[46m POST    [0m /v1/auth/login   r:/v1/auth/login
+2019/03/27 13:55:01.600 [D] [server.go:2741]  |            ::1|[42m 200 [0m|    252.275µs| nomatch|[47m OPTIONS [0m /v1/auth/checkLogin
+2019/03/27 13:55:01.621 [I] [auth.go:161]  Check Login:  U1550639626724628891 true 
+2019/03/27 13:55:01.638 [D] [server.go:2741]  |            ::1|[42m 200 [0m|   17.23709ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin

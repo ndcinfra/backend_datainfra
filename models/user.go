@@ -356,7 +356,7 @@ func ResendConfirmEmail(u User) (User, error) {
 	}
 
 	// send confirm mail async
-	go libs.MakeMail(u.Email, "confirm", u.ConfirmResetToken)
+	// go libs.MakeMail(u.Email, "confirm", u.ConfirmResetToken)
 
 	return u, nil
 }
@@ -379,7 +379,7 @@ func SendPasswordResetToken(u User) (User, error) {
 	}
 
 	// send confirm mail async
-	go libs.MakeMail(u.Email, "forgotPassword", u.PasswordResetToken)
+	// go libs.MakeMail(u.Email, "forgotPassword", u.PasswordResetToken)
 
 	return u, nil
 }
