@@ -55,7 +55,7 @@ func main() {
 		AllowHeaders:    []string{"Origin", "Authorization", "Access-Control-Allow-Origin", "Content-Type"},
 		ExposeHeaders:   []string{"Content-Length", "Access-Control-Allow-Origin"},
 
-		//AllowOrigins:     []string{"*"},
+		AllowOrigins:     []string{"http://localhost", "http://*.naddic.com"},
 		AllowCredentials: true,
 	}))
 
