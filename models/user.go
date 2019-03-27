@@ -125,7 +125,7 @@ func AddUser(u User) (string, error) {
 
 	_, err = o.Raw(sql, u.UID, u.Displayname, u.Email, u.Password, u.Salt, u.ConfirmResetToken, u.ConfirmResetExpire, u.Picture).Exec()
 	if err != nil {
-		//beego.Error("insert into user: ", err)
+		beego.Error("insert into user: ", err)
 		_ = o.Rollback()
 		return "", err
 	}
