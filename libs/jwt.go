@@ -43,7 +43,8 @@ func (e EasyToken) GetToken() (string, error) {
 	token := jwt.NewWithClaims(jwt.SigningMethodHS256, claims)
 	tokenString, err := token.SignedString([]byte(verifyKey))
 	if err != nil {
-		beego.Error("Get token error: ", err)
+		//beego.Error("Get token error: ", err)
+		beego.Error("Get token error: ")
 	}
 	return tokenString, err
 }
