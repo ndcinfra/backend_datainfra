@@ -17,6 +17,6 @@ lastupdate.tmp
 .env_real
 api-ndc
 conf/aws
-project.log
-*.log
+/logs/project.log
+/logs/*.log
 
