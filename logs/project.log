@@ -36,3 +36,10 @@
 2019/03/27 13:55:01.600 [D] [server.go:2741]  |            ::1|[42m 200 [0m|    252.275µs| nomatch|[47m OPTIONS [0m /v1/auth/checkLogin
 2019/03/27 13:55:01.621 [I] [auth.go:161]  Check Login:  U1550639626724628891 true 
 2019/03/27 13:55:01.638 [D] [server.go:2741]  |            ::1|[42m 200 [0m|   17.23709ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/03/27 14:38:32.635 [I] [asm_amd64.s:1333]  http server Running on http://:8080
+2019/03/27 14:38:48.984 [I] [asm_amd64.s:1333]  http server Running on http://:8080
+2019/03/27 14:39:33.044 [I] [asm_amd64.s:1333]  http server Running on http://:8080
+2019/03/27 14:58:03.234 [I] [asm_amd64.s:1333]  http server Running on http://:8080
+2019/03/27 14:58:07.709 [I] [asm_amd64.s:1333]  http server Running on http://:8080
+2019/03/27 14:58:17.063 [I] [asm_amd64.s:1333]  http server Running on http://:8080
+2019/03/27 14:58:48.945 [I] [asm_amd64.s:1333]  http server Running on http://:8080
