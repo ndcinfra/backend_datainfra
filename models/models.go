@@ -1,9 +1,9 @@
 package models
 
 import (
+	"log"
 	"os"
 
-	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/orm"
 	"github.com/joho/godotenv"
 	_ "github.com/lib/pq"
@@ -22,8 +22,8 @@ func RegisterDB() {
 
 	err := godotenv.Load()
 	if err != nil {
-		//log.Fatal("Error loading .env file")
-		beego.Error("Error loading .env file")
+		log.Fatal("Error loading .env file")
+		//beego.Error("Error loading .env file")
 	}
 
 	DBHOST := os.Getenv("DBHOST")
