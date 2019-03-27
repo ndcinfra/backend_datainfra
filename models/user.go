@@ -9,7 +9,6 @@ import (
 	"time"
 
 	"github.com/YoungsoonLee/backend_datainfra/libs"
-	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/orm"
 	uuid "github.com/satori/go.uuid"
 	"github.com/zoonman/gravatar"
@@ -126,7 +125,7 @@ func AddUser(u User) (string, error) {
 
 	_, err = o.Raw(sql, u.UID, u.Displayname, u.Email, u.Password, u.Salt, u.ConfirmResetToken, u.ConfirmResetExpire, u.Picture).Exec()
 	if err != nil {
-		beego.Error("insert into user: ", err)
+		//beego.Error("insert into user: ", err)
 		_ = o.Rollback()
 		return "", err
 	}
@@ -159,7 +158,7 @@ func AddSocialUser(u User) (string, string, error) {
 
 	_, err = o.Raw(sql, u.UID, u.Displayname, u.Email, u.Password, u.Salt, u.ConfirmResetToken, u.ConfirmResetExpire, u.Picture, u.ProviderAccessToken, u.ProviderID, u.Provider, u.Confirmed).Exec()
 	if err != nil {
-		beego.Error("insert into user: ", err)
+		//beego.Error("insert into user: ", err)
 		_ = o.Rollback()
 		return "", "", err
 	}
@@ -168,7 +167,7 @@ func AddSocialUser(u User) (string, string, error) {
 	_, err = o.Raw(sql, u.UID).Exec()
 
 	if err != nil {
-		beego.Error("insert into wallet: ", err)
+		//beego.Error("insert into wallet: ", err)
 		_ = o.Rollback()
 		return "", "", err
 	}
