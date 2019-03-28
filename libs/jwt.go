@@ -27,6 +27,7 @@ func init() {
 	err := godotenv.Load()
 	if err != nil {
 		beego.Error("Error loading .env file")
+		//beego.Error("")
 	}
 
 	TOKEN := os.Getenv("TOKEN")

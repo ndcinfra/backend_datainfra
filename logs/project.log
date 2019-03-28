@@ -67,3 +67,20 @@
 2019/03/27 15:29:07.366 [I] [asm_amd64.s:1333]  http server Running on http://:8080
 2019/03/27 16:00:41.169 [I] [asm_amd64.s:1333]  http server Running on http://:8080
 2019/03/27 16:00:41.611 [I] [asm_amd64.s:1333]  http server Running on http://:8080
+2019/03/27 16:09:20.243 [I] [asm_amd64.s:1333]  http server Running on http://:8080
+2019/03/27 16:09:23.255 [I] [asm_amd64.s:1333]  http server Running on http://:8080
+2019/03/27 16:28:42.790 [I] [asm_amd64.s:1333]  http server Running on http://:8080
+2019/03/27 16:29:33.166 [D] [server.go:2741]  |            ::1|[42m 200 [0m|    130.805µs| nomatch|[47m OPTIONS [0m /v1/auth/checkLogin
+2019/03/27 16:29:33.463 [I] [auth.go:161]  Check Login:  U1550639626724628891 true 
+2019/03/27 16:29:33.474 [D] [server.go:2741]  |            ::1|[42m 200 [0m|  11.341434ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/03/27 16:29:33.640 [D] [server.go:2741]  |            ::1|[42m 200 [0m|    115.918µs| nomatch|[47m OPTIONS [0m /v1/kpi/list
+2019/03/27 16:29:33.725 [D] [server.go:2741]  |            ::1|[42m 200 [0m|  12.840152ms|   match|[46m POST    [0m /v1/kpi/list   r:/v1/kpi/list
+2019/03/27 16:38:24.657 [I] [asm_amd64.s:1333]  http server Running on http://:8080
+2019/03/27 16:38:47.050 [D] [server.go:2741]  |            ::1|[42m 200 [0m|    104.404µs| nomatch|[47m OPTIONS [0m /v1/auth/checkLogin
+2019/03/27 16:38:47.246 [I] [auth.go:161]  Check Login:  U1550639626724628891 true 
+2019/03/27 16:38:47.258 [D] [server.go:2741]  |            ::1|[42m 200 [0m|  12.506777ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/03/27 16:38:47.414 [D] [server.go:2741]  |            ::1|[42m 200 [0m|     67.279µs| nomatch|[47m OPTIONS [0m /v1/kpi/list
+2019/03/27 16:38:47.511 [D] [server.go:2741]  |            ::1|[42m 200 [0m|  13.283772ms|   match|[46m POST    [0m /v1/kpi/list   r:/v1/kpi/list
+2019/03/27 17:09:30.488 [I] [asm_amd64.s:1333]  http server Running on http://:8080
+2019/03/28 09:42:41.051 [I] [asm_amd64.s:1333]  http server Running on http://:8080
+2019/03/28 09:42:46.247 [I] [asm_amd64.s:1333]  http server Running on http://:8080
