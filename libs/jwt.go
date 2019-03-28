@@ -27,7 +27,6 @@ func init() {
 	err := godotenv.Load()
 	if err != nil {
 		beego.Error("Error loading .env file")
-		//beego.Error("")
 	}
 
 	TOKEN := os.Getenv("TOKEN")
@@ -44,8 +43,7 @@ func (e EasyToken) GetToken() (string, error) {
 	token := jwt.NewWithClaims(jwt.SigningMethodHS256, claims)
 	tokenString, err := token.SignedString([]byte(verifyKey))
 	if err != nil {
-		//beego.Error("Get token error: ", err)
-		beego.Error("Get token error: ")
+		beego.Error("Get token error: ", err)
 	}
 	return tokenString, err
 }
