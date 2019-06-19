@@ -11,7 +11,6 @@ import (
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/logs"
 	"github.com/astaxie/beego/orm"
-	"github.com/astaxie/beego/plugins/cors"
 )
 
 func init() {
@@ -48,20 +47,23 @@ func main() {
 
 	orm.RunSyncdb("default", false, true)
 
-	beego.InsertFilter("*", beego.BeforeRouter, cors.Allow(&cors.Options{
-		AllowOrigins:     []string{"*"},
-		AllowCredentials: true,
-		/*
-			AllowAllOrigins: true,
-			AllowMethods:    []string{"GET", "POST", "PUT", "DELETE", "OPTIONS"},
-			AllowHeaders:    []string{"Origin", "Authorization", "Access-Control-Allow-Origin", "Content-Type"},
-			ExposeHeaders:   []string{"Content-Length", "Access-Control-Allow-Origin"},
-
-			AllowOrigins: []string{"*"},
-
-			AllowCredentials: true,
-		*/
+	handler.InsertFilter("*", beego.BeforeRouter, Allow(&Options{
+		AllowAllOrigins: true,
 	}))
+
+	/*
+		beego.InsertFilter("*", beego.BeforeRouter, cors.Allow(&cors.Options{
+
+				AllowAllOrigins: true,
+				AllowMethods:    []string{"GET", "POST", "PUT", "DELETE", "OPTIONS"},
+				AllowHeaders:    []string{"Origin", "Authorization", "Access-Control-Allow-Origin", "Content-Type"},
+				ExposeHeaders:   []string{"Content-Length", "Access-Control-Allow-Origin"},
+
+				AllowOrigins: []string{"*"},
+
+				AllowCredentials: true,
+		}))
+	*/
 
 	/*
 		beego.InsertFilter("*", beego.BeforeExec, func(ctx *context.Context){
