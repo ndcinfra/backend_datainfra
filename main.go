@@ -1,7 +1,6 @@
 package main
 
 import (
-	"context"
 	"os"
 	"strconv"
 
@@ -12,6 +11,7 @@ import (
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/logs"
 	"github.com/astaxie/beego/orm"
+	"github.com/astaxie/beego/plugins/cors"
 )
 
 func init() {
@@ -47,6 +47,11 @@ func main() {
 	}
 
 	orm.RunSyncdb("default", false, true)
+
+	beego.InsertFilter("*", beego.BeforeRouter, cors.Allow(&cors.Options{
+		AllowOrigins: []string{"*"},
+	}))
+
 	/*
 		beego.InsertFilter("*", beego.BeforeRouter, cors.Allow(&cors.Options{
 			AllowAllOrigins: true,
@@ -64,14 +69,16 @@ func main() {
 		}), true)
 	*/
 
-	beego.InsertFilter("*", beego.BeforeRouter, func(ctx *context.Context) {
-		if ctx.Input.Method() == "OPTIONS" {
-			ctx.Output.Header("Access-Control-Allow-Origin", "*")
-			ctx.Output.Header("Access-Control-Allow-Methods", "GET,POST,DELETE,PUT")
-			ctx.Output.Header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept")
-			ctx.Abort(200, "Hello")
-		}
-	})
+	/*
+		beego.InsertFilter("*", beego.BeforeRouter, func(ctx *context.Context) {
+			if ctx.Input.Method() == "OPTIONS" {
+				ctx.Output.Header("Access-Control-Allow-Origin", "*")
+				ctx.Output.Header("Access-Control-Allow-Methods", "GET,POST,DELETE,PUT")
+				ctx.Output.Header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept")
+				ctx.Abort(200, "Hello")
+			}
+		})
+	*/
 
 	/*
 		beego.InsertFilter("*", beego.BeforeRouter, cors.Allow(&cors.Options{
