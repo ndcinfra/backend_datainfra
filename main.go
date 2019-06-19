@@ -48,7 +48,8 @@ func main() {
 	orm.RunSyncdb("default", false, true)
 
 	beego.BConfig.Listen.EnableHTTPS = true
-	beego.BConfig.Listen.HTTPSCertFile = "/etc/letsencrypt/live/closeindi.naddic.com/privkey.pem"
+	beego.BConfig.Listen.HTTPSCertFile = "conf/localhost.crt"
+	beego.BConfig.Listen.HTTPSKeyFile = "conf/localhost.key"
 
 	/*
 		beego.InsertFilter("*", beego.BeforeRouter, cors.Allow(&cors.Options{
