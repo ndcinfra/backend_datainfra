@@ -1,7 +1,7 @@
 package models
 
 import (
-	"github.com/astaxie/beego"
+	"github.com/astaxie/beego/logs"
 	"github.com/astaxie/beego/orm"
 )
 
@@ -31,7 +31,8 @@ type Resource struct {
 func AddResource(r Resource) (int64, error) {
 	result, err := orm.NewOrm().Insert(&r)
 	if err != nil {
-		beego.Error("insert into resource: ", err)
+		//beego.Error("insert into resource: ", err)
+		logs.Error("insert into resource: ", err)
 		return -1, err
 	}
 
