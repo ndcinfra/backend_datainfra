@@ -47,7 +47,7 @@ func main() {
 
 	orm.RunSyncdb("default", false, true)
 
-	handler.InsertFilter("*", beego.BeforeRouter, Allow(&Options{
+	beego.InsertFilter("*", beego.BeforeRouter, Allow(&Options{
 		AllowAllOrigins: true,
 	}))
 
