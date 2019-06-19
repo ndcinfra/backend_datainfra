@@ -49,15 +49,18 @@ func main() {
 	orm.RunSyncdb("default", false, true)
 
 	beego.InsertFilter("*", beego.BeforeRouter, cors.Allow(&cors.Options{
-
-		AllowAllOrigins: true,
-		AllowMethods:    []string{"GET", "POST", "PUT", "DELETE", "OPTIONS"},
-		AllowHeaders:    []string{"Origin", "Authorization", "Access-Control-Allow-Origin", "Content-Type"},
-		ExposeHeaders:   []string{"Content-Length", "Access-Control-Allow-Origin"},
-
-		AllowOrigins: []string{"*"},
-
+		AllowOrigins:     []string{"*"},
 		AllowCredentials: true,
+		/*
+			AllowAllOrigins: true,
+			AllowMethods:    []string{"GET", "POST", "PUT", "DELETE", "OPTIONS"},
+			AllowHeaders:    []string{"Origin", "Authorization", "Access-Control-Allow-Origin", "Content-Type"},
+			ExposeHeaders:   []string{"Content-Length", "Access-Control-Allow-Origin"},
+
+			AllowOrigins: []string{"*"},
+
+			AllowCredentials: true,
+		*/
 	}))
 
 	/*

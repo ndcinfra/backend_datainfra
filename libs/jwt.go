@@ -4,7 +4,8 @@ import (
 	"errors"
 	"os"
 
-	"github.com/astaxie/beego"
+	"github.com/astaxie/beego/logs"
+
 	"github.com/dgrijalva/jwt-go"
 	"github.com/joho/godotenv"
 )
@@ -26,7 +27,8 @@ var (
 func init() {
 	err := godotenv.Load()
 	if err != nil {
-		beego.Error("Error loading .env file")
+		//beego.Error("Error loading .env file")
+		logs.Info("Error loading .env file")
 	}
 
 	TOKEN := os.Getenv("TOKEN")
@@ -43,7 +45,8 @@ func (e EasyToken) GetToken() (string, error) {
 	token := jwt.NewWithClaims(jwt.SigningMethodHS256, claims)
 	tokenString, err := token.SignedString([]byte(verifyKey))
 	if err != nil {
-		beego.Error("Get token error: ", err)
+		//beego.Error("Get token error: ", err)
+		logs.Error("Get token error: ", err)
 	}
 	return tokenString, err
 }
