@@ -11,6 +11,7 @@ import (
 	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/logs"
 	"github.com/astaxie/beego/orm"
+	"github.com/astaxie/beego/plugins/cors"
 )
 
 func init() {
@@ -47,9 +48,14 @@ func main() {
 
 	orm.RunSyncdb("default", false, true)
 
-	beego.BConfig.Listen.EnableHTTPS = true
-	beego.BConfig.Listen.HTTPSCertFile = "conf/localhost.crt"
-	beego.BConfig.Listen.HTTPSKeyFile = "conf/localhost.key"
+	//beego.BConfig.Listen.EnableHTTPS = true
+	//beego.BConfig.Listen.HTTPSCertFile = "conf/localhost.crt"
+	//beego.BConfig.Listen.HTTPSKeyFile = "conf/localhost.key"
+	//beego.BConfig.Listen.ListenTCP4 = true
+
+	beego.InsertFilter("*", beego.BeforeRouter, cors.Allow(&cors.Options{
+		AllowOrigins: []string{"*"},
+	}))
 
 	/*
 		beego.InsertFilter("*", beego.BeforeRouter, cors.Allow(&cors.Options{
