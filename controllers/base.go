@@ -3,6 +3,8 @@ package controllers
 import (
 	"regexp"
 
+	"github.com/astaxie/beego/logs"
+
 	"github.com/YoungsoonLee/backend_datainfra/libs"
 	"github.com/YoungsoonLee/backend_datainfra/models"
 
@@ -18,7 +20,8 @@ type BaseController struct {
 // ResponseError ...
 func (b *BaseController) ResponseError(e *libs.ControllerError, err error) {
 	// TODO: logging
-	beego.Error(b.Ctx.Request.RequestURI, b.Ctx.Request.Body, err)
+	//beego.Error(b.Ctx.Request.RequestURI, b.Ctx.Request.Body, err)
+	logs.Error(b.Ctx.Request.RequestURI, b.Ctx.Request.Body, err)
 
 	devInfo := ""
 	if err != nil {
@@ -40,7 +43,8 @@ func (b *BaseController) ResponseError(e *libs.ControllerError, err error) {
 // XsollaResponseError ...
 func (b *BaseController) XsollaResponseError(e *libs.ControllerError) {
 	// TODO: logging
-	beego.Error(b.Ctx.Request.RequestURI, e.Message)
+	// beego.Error(b.Ctx.Request.RequestURI, e.Message)
+	logs.Error(b.Ctx.Request.RequestURI, e.Message)
 
 	eData := models.XRespDetailCode{
 		Code:    e.Code,

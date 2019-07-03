@@ -98,3 +98,16 @@ func (k *Kpi) GetKPI(from, to, country, kind, radio string) ([]Kpi, []KpiGraph, 
 
 	return listKpi, gListKpi, err
 }
+
+// GetUserKPI ...
+func (k *Kpi) GetUserKPI(from, to, country, kind, radio, kindCalendar string) ([]Kpi, error) {
+	var sql string
+
+	// day
+	if kindCalendar == 'day' {
+
+	}else{
+		
+	}
+	// others
+}

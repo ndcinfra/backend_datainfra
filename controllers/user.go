@@ -5,7 +5,7 @@ import (
 	"io/ioutil"
 	"strings"
 
-	"github.com/astaxie/beego"
+	"github.com/astaxie/beego/logs"
 
 	"github.com/YoungsoonLee/backend_datainfra/libs"
 
@@ -70,7 +70,8 @@ func (u *UserController) ResendConfirmEmail() {
 	// update token and send email with confirm token
 	user, err = models.ResendConfirmEmail(user)
 	if err != nil {
-		beego.Error("email confirm update error: ", err)
+		//beego.Error("email confirm update error: ", err)
+		logs.Error("email confirm update error: ", err)
 		u.ResponseError(libs.ErrDatabase, err)
 	}
 
@@ -138,7 +139,8 @@ func (u *UserController) ResetPassword() {
 	}
 
 	if err := models.ResetPassword(resetPassword.ResetToken, resetPassword.Password); err != nil {
-		beego.Error("reset password error: ", err)
+		//beego.Error("reset password error: ", err)
+		logs.Error("reset password error: ", err)
 		u.ResponseError(libs.ErrDatabase, err)
 	}
 

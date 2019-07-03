@@ -8,5 +8,5 @@ type SystemController struct {
 }
 
 func (s *SystemController) CheckHealthy() {
-	k.ResponseSuccess("", time.Now())
+	s.ResponseSuccess("", time.Now())
 }

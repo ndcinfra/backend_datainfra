@@ -7,9 +7,10 @@ import (
 	"strings"
 	"time"
 
+	"github.com/astaxie/beego/logs"
+
 	"github.com/YoungsoonLee/backend_datainfra/libs"
 	"github.com/YoungsoonLee/backend_datainfra/models"
-	"github.com/astaxie/beego"
 )
 
 // AuthController ...
@@ -158,7 +159,8 @@ func (c *AuthController) CheckLogin() {
 	}
 	valid, uid, err := et.ValidateToken(splitToken[1])
 
-	beego.Info("Check Login: ", uid, valid)
+	//beego.Info("Check Login: ", uid, valid)
+	logs.Info("Check Login: ", uid, valid)
 
 	if !valid || err != nil {
 		c.ResponseError(libs.ErrExpiredToken, err)
