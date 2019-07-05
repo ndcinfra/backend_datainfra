@@ -104,10 +104,10 @@ func (k *Kpi) GetUserKPI(from, to, country, kind, radio, kindCalendar string) ([
 	var sql string
 
 	// day
-	if kindCalendar == 'day' {
+	if kindCalendar == "day" {
 
 	}else{
-		
+
 	}
 	// others
 }
