@@ -101,13 +101,39 @@ func (k *Kpi) GetKPI(from, to, country, kind, radio string) ([]Kpi, []KpiGraph, 
 
 // GetUserKPI ...
 func (k *Kpi) GetUserKPI(from, to, country, kind, radio, kindCalendar string) ([]Kpi, error) {
-	var sql string
+	var listKpi []Kpi
 
+	var sql string
+	var err error
+	o := orm.NewOrm()
+
+	// make query
 	// day
 	if kindCalendar == "day" {
-
-	}else{
-
+		sql = " select date cdate " +
+			" , uu_d uu" +
+			" , nru_d nru" +
+			" , mcu_d mcu" +
+			" , avg_d avg" +
+			" from kpi " +
+			" where date >= ? and date <=  ? " +
+			" and country = ? " +
+			" order by 1;"
+		_, err = o.Raw(sql, from, to, country).QueryRows(&listKpi)
+	} else {
+		// others
+		sql = " select to_char(date_truc('?',date),'yyyy-mm-dd') cdate" +
+			" , sum(uu_d) uu" +
+			" , sum(nru_d) nru" +
+			" , sum(mcu_d) mcu" +
+			" , sum(avg_d) avg" +
+			" from kpi " +
+			" where date >= ? and date <=  ? " +
+			" and country = ? " +
+			" grop by date_truc('?',date)" +
+			" order by 1;"
+		_, err = o.Raw(sql, kindCalendar, from, to, country, kindCalendar).QueryRows(&listKpi)
 	}
-	// others
+
+	return listKpi, err
 }

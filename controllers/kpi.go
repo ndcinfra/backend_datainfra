@@ -14,14 +14,15 @@ type KpiController struct {
 }
 
 type InputDate struct {
-	From    string `json:"from"`
-	To      string `json:"to"`
-	Country string `json:"country"`
-	Kind    string `json:"kind"` // graph, table
-	Radio   string `json:"radio"`
+	From           string `json:"from"`
+	To             string `json:"to"`
+	Country        string `json:"country"`
+	Kind           string `json:"kind"`           // graph, table
+	Radio          string `json:"radio"`          // uu, mcu ...
+	KindOfCalendar string `json:"kindofcalendar"` // day, week, month
 }
 
-// CreateResource ...
+// GetKPI ...
 func (k *KpiController) GetKPI() {
 	var inputDate InputDate
 
