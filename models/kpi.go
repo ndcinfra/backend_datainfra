@@ -1,6 +1,10 @@
 package models
 
-import "github.com/astaxie/beego/orm"
+import (
+	"fmt"
+
+	"github.com/astaxie/beego/orm"
+)
 
 // Kpi ...
 // for table
@@ -33,6 +37,14 @@ type KpiGraph struct {
 	Namerica string `json:"namerica"`
 	Taiwan   string `json:"taiwan"`
 	Total    string `json:"total"`
+}
+
+type UserKPI struct {
+	Cdate string `json:"cdate"`
+	Mcu   string `json:"mcu"`
+	Avg   string `json:"avg"`
+	Uu    string `json:"uu"`
+	Nru   string `json:"nru"`
 }
 
 // GetKPI ...
@@ -100,14 +112,21 @@ func (k *Kpi) GetKPI(from, to, country, kind, radio string) ([]Kpi, []KpiGraph, 
 }
 
 // GetUserKPI ...
-func (k *Kpi) GetUserKPI(from, to, country, kind, radio, kindCalendar string) ([]Kpi, error) {
-	var listKpi []Kpi
+func (k *UserKPI) GetUserKPI(from, to, country, kind, radio, kindCalendar string) ([]UserKPI, error) {
+	var listKpi []UserKPI
 
 	var sql string
 	var err error
 	o := orm.NewOrm()
 
+	fmt.Println("input: ", from, to, country, kind, radio, kindCalendar)
+
 	// make query
+	sCounty := ""
+	if country != "all" {
+		sCounty = " and territory = ? "
+	}
+
 	// day
 	if kindCalendar == "day" {
 		sql = " select date cdate " +
@@ -117,22 +136,39 @@ func (k *Kpi) GetUserKPI(from, to, country, kind, radio, kindCalendar string) ([
 			" , avg_d avg" +
 			" from kpi " +
 			" where date >= ? and date <=  ? " +
-			" and country = ? " +
+			sCounty +
 			" order by 1;"
-		_, err = o.Raw(sql, from, to, country).QueryRows(&listKpi)
+
+		if country != "all" {
+			_, err = o.Raw(sql, from, to, country).QueryRows(&listKpi)
+		} else {
+			_, err = o.Raw(sql, from, to).QueryRows(&listKpi)
+		}
+
 	} else {
 		// others
-		sql = " select to_char(date_truc('?',date),'yyyy-mm-dd') cdate" +
+		setD := "yyyy-mm-dd"
+		if kindCalendar == "month" {
+			setD = "yyyy-mm"
+		}
+		sql = " select to_char(date_trunc('" + kindCalendar + "',date), '" + setD + "' ) cdate" +
 			" , sum(uu_d) uu" +
 			" , sum(nru_d) nru" +
 			" , sum(mcu_d) mcu" +
 			" , sum(avg_d) avg" +
 			" from kpi " +
 			" where date >= ? and date <=  ? " +
-			" and country = ? " +
-			" grop by date_truc('?',date)" +
+			sCounty +
+			//" group by date_trunc('?',date)" +
+			" group by cdate " +
 			" order by 1;"
-		_, err = o.Raw(sql, kindCalendar, from, to, country, kindCalendar).QueryRows(&listKpi)
+
+		if country != "all" {
+			_, err = o.Raw(sql, from, to, country).QueryRows(&listKpi)
+		} else {
+			_, err = o.Raw(sql, from, to).QueryRows(&listKpi)
+		}
+
 	}
 
 	return listKpi, err

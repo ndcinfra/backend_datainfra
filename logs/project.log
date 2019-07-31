@@ -1,86 +1,13 @@
-2019/03/21 09:30:34.354 [D] [server.go:2741]  |            ::1|[42m 200 [0m|   5.813541ms| nomatch|[47m OPTIONS [0m /v1/kpi/list
-2019/03/21 09:30:38.005 [D] [server.go:2741]  |            ::1|[42m 200 [0m|   3.3408307s|   match|[46m POST    [0m /v1/kpi/list   r:/v1/kpi/list
-2019/03/21 09:31:24.951 [D] [server.go:2741]  |            ::1|[42m 200 [0m|    799.727µs| nomatch|[47m OPTIONS [0m /v1/kpi/list
-2019/03/21 09:31:25.178 [D] [server.go:2741]  |            ::1|[42m 200 [0m|  39.277113ms|   match|[46m POST    [0m /v1/kpi/list   r:/v1/kpi/list
-2019/03/21 09:32:10.599 [D] [server.go:2741]  |            ::1|[42m 200 [0m|   2.285364ms| nomatch|[47m OPTIONS [0m /v1/kpi/list
-2019/03/21 09:32:10.657 [D] [server.go:2741]  |            ::1|[42m 200 [0m|  19.013229ms|   match|[46m POST    [0m /v1/kpi/list   r:/v1/kpi/list
-2019/03/21 09:32:14.575 [D] [server.go:2741]  |            ::1|[42m 200 [0m|   18.57414ms|   match|[46m POST    [0m /v1/kpi/list   r:/v1/kpi/list
-2019/03/21 09:32:16.891 [D] [server.go:2741]  |            ::1|[42m 200 [0m|     97.756µs| nomatch|[47m OPTIONS [0m /v1/kpi/list
-2019/03/21 09:32:16.923 [D] [server.go:2741]  |            ::1|[42m 200 [0m|  14.539396ms|   match|[46m POST    [0m /v1/kpi/list   r:/v1/kpi/list
-2019/03/21 09:32:18.844 [D] [server.go:2741]  |            ::1|[42m 200 [0m|  16.037107ms|   match|[46m POST    [0m /v1/kpi/list   r:/v1/kpi/list
-2019/03/21 09:32:20.634 [D] [server.go:2741]  |            ::1|[42m 200 [0m|  18.463151ms|   match|[46m POST    [0m /v1/kpi/list   r:/v1/kpi/list
-2019/03/21 09:32:35.689 [D] [server.go:2741]  |            ::1|[42m 200 [0m|     70.506µs| nomatch|[47m OPTIONS [0m /v1/kpi/list
-2019/03/21 09:32:35.776 [D] [server.go:2741]  |            ::1|[42m 200 [0m|  18.559524ms|   match|[46m POST    [0m /v1/kpi/list   r:/v1/kpi/list
-2019/03/21 09:32:57.918 [D] [server.go:2741]  |            ::1|[42m 200 [0m|    431.177µs| nomatch|[47m OPTIONS [0m /v1/kpi/list
-2019/03/21 09:32:57.999 [D] [server.go:2741]  |            ::1|[42m 200 [0m|  66.175748ms|   match|[46m POST    [0m /v1/kpi/list   r:/v1/kpi/list
-2019/03/21 09:33:01.974 [D] [server.go:2741]  |            ::1|[42m 200 [0m|  10.889884ms|   match|[46m POST    [0m /v1/kpi/list   r:/v1/kpi/list
-2019/03/21 09:33:03.688 [D] [server.go:2741]  |            ::1|[42m 200 [0m|     86.578µs| nomatch|[47m OPTIONS [0m /v1/kpi/list
-2019/03/21 09:33:04.102 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 399.650975ms|   match|[46m POST    [0m /v1/kpi/list   r:/v1/kpi/list
-2019/03/21 09:33:05.329 [D] [server.go:2741]  |            ::1|[42m 200 [0m| 289.772332ms|   match|[46m POST    [0m /v1/kpi/list   r:/v1/kpi/list
-2019/03/21 09:33:06.638 [D] [server.go:2741]  |            ::1|[42m 200 [0m|   12.91871ms|   match|[46m POST    [0m /v1/kpi/list   r:/v1/kpi/list
-2019/03/21 09:33:07.951 [D] [server.go:2741]  |            ::1|[42m 200 [0m|  10.246191ms|   match|[46m POST    [0m /v1/kpi/list   r:/v1/kpi/list
-2019/03/21 09:33:25.504 [D] [server.go:2741]  |            ::1|[42m 200 [0m|      44.63µs| nomatch|[47m OPTIONS [0m /v1/kpi/list
-2019/03/21 09:33:25.523 [D] [server.go:2741]  |            ::1|[42m 200 [0m|  11.535046ms|   match|[46m POST    [0m /v1/kpi/list   r:/v1/kpi/list
-2019/03/21 09:33:31.162 [D] [server.go:2741]  |            ::1|[42m 200 [0m|     48.976µs| nomatch|[47m OPTIONS [0m /v1/kpi/list
-2019/03/21 09:33:31.240 [D] [server.go:2741]  |            ::1|[42m 200 [0m|   10.40738ms|   match|[46m POST    [0m /v1/kpi/list   r:/v1/kpi/list
-2019/03/21 09:33:32.531 [D] [server.go:2741]  |            ::1|[42m 200 [0m|  11.429417ms|   match|[46m POST    [0m /v1/kpi/list   r:/v1/kpi/list
-2019/03/21 09:33:33.859 [D] [server.go:2741]  |            ::1|[42m 200 [0m|  19.363501ms|   match|[46m POST    [0m /v1/kpi/list   r:/v1/kpi/list
-2019/03/21 09:33:35.192 [D] [server.go:2741]  |            ::1|[42m 200 [0m|  17.324025ms|   match|[46m POST    [0m /v1/kpi/list   r:/v1/kpi/list
-2019/03/21 09:33:36.380 [D] [server.go:2741]  |            ::1|[42m 200 [0m|     57.918µs| nomatch|[47m OPTIONS [0m /v1/kpi/list
-2019/03/21 09:33:36.481 [D] [server.go:2741]  |            ::1|[42m 200 [0m|  19.841686ms|   match|[46m POST    [0m /v1/kpi/list   r:/v1/kpi/list
-2019/03/21 09:51:20.528 [D] [server.go:2741]  |      127.0.0.1|[43m 404 [0m|  23.536627ms| nomatch|[46m POST    [0m /v1/billing/buyItem
-2019/03/21 10:01:03.824 [I] [asm_amd64.s:1333]  http server Running on http://:8080
-2019/03/27 13:54:17.553 [I] [asm_amd64.s:1333]  http server Running on http://:8080
-2019/03/27 13:55:01.395 [D] [server.go:2741]  |            ::1|[42m 200 [0m|    295.787µs| nomatch|[47m OPTIONS [0m /v1/auth/login
-2019/03/27 13:55:01.503 [D] [server.go:2741]  |            ::1|[42m 200 [0m|  95.379847ms|   match|[46m POST    [0m /v1/auth/login   r:/v1/auth/login
-2019/03/27 13:55:01.600 [D] [server.go:2741]  |            ::1|[42m 200 [0m|    252.275µs| nomatch|[47m OPTIONS [0m /v1/auth/checkLogin
-2019/03/27 13:55:01.621 [I] [auth.go:161]  Check Login:  U1550639626724628891 true 
-2019/03/27 13:55:01.638 [D] [server.go:2741]  |            ::1|[42m 200 [0m|   17.23709ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
-2019/03/27 14:38:32.635 [I] [asm_amd64.s:1333]  http server Running on http://:8080
-2019/03/27 14:38:48.984 [I] [asm_amd64.s:1333]  http server Running on http://:8080
-2019/03/27 14:39:33.044 [I] [asm_amd64.s:1333]  http server Running on http://:8080
-2019/03/27 14:58:03.234 [I] [asm_amd64.s:1333]  http server Running on http://:8080
-2019/03/27 14:58:07.709 [I] [asm_amd64.s:1333]  http server Running on http://:8080
-2019/03/27 14:58:17.063 [I] [asm_amd64.s:1333]  http server Running on http://:8080
-2019/03/27 14:58:48.945 [I] [asm_amd64.s:1333]  http server Running on http://:8080
-2019/03/27 15:05:13.744 [I] [asm_amd64.s:1333]  http server Running on http://:8080
-2019/03/27 15:06:40.163 [I] [asm_amd64.s:1333]  http server Running on http://:8080
-2019/03/27 15:06:53.953 [I] [asm_amd64.s:1333]  http server Running on http://:8080
-2019/03/27 15:07:03.717 [I] [asm_amd64.s:1333]  http server Running on http://:8080
-2019/03/27 15:07:57.783 [I] [asm_amd64.s:1333]  http server Running on http://:8080
-2019/03/27 15:08:21.748 [I] [asm_amd64.s:1333]  http server Running on http://:8080
-2019/03/27 15:08:33.383 [I] [asm_amd64.s:1333]  http server Running on http://:8080
-2019/03/27 15:08:39.568 [I] [asm_amd64.s:1333]  http server Running on http://:8080
-2019/03/27 15:11:05.078 [I] [asm_amd64.s:1333]  http server Running on http://:8080
-2019/03/27 15:15:30.527 [I] [asm_amd64.s:1333]  http server Running on http://:8080
-2019/03/27 15:15:43.345 [I] [asm_amd64.s:1333]  http server Running on http://:8080
-2019/03/27 15:16:12.129 [I] [asm_amd64.s:1333]  http server Running on http://:8080
-2019/03/27 15:16:19.960 [I] [asm_amd64.s:1333]  http server Running on http://:8080
-2019/03/27 15:17:40.740 [I] [asm_amd64.s:1333]  http server Running on http://:8080
-2019/03/27 15:17:41.840 [I] [asm_amd64.s:1333]  http server Running on http://:8080
-2019/03/27 15:17:58.190 [I] [asm_amd64.s:1333]  http server Running on http://:8080
-2019/03/27 15:18:08.340 [I] [asm_amd64.s:1333]  http server Running on http://:8080
-2019/03/27 15:19:03.209 [I] [asm_amd64.s:1333]  http server Running on http://:8080
-2019/03/27 15:20:30.749 [I] [asm_amd64.s:1333]  http server Running on http://:8080
-2019/03/27 15:20:35.230 [I] [asm_amd64.s:1333]  http server Running on http://:8080
-2019/03/27 15:26:05.619 [I] [asm_amd64.s:1333]  http server Running on http://:8080
-2019/03/27 15:29:07.366 [I] [asm_amd64.s:1333]  http server Running on http://:8080
-2019/03/27 16:00:41.169 [I] [asm_amd64.s:1333]  http server Running on http://:8080
-2019/03/27 16:00:41.611 [I] [asm_amd64.s:1333]  http server Running on http://:8080
-2019/03/27 16:09:20.243 [I] [asm_amd64.s:1333]  http server Running on http://:8080
-2019/03/27 16:09:23.255 [I] [asm_amd64.s:1333]  http server Running on http://:8080
-2019/03/27 16:28:42.790 [I] [asm_amd64.s:1333]  http server Running on http://:8080
-2019/03/27 16:29:33.166 [D] [server.go:2741]  |            ::1|[42m 200 [0m|    130.805µs| nomatch|[47m OPTIONS [0m /v1/auth/checkLogin
-2019/03/27 16:29:33.463 [I] [auth.go:161]  Check Login:  U1550639626724628891 true 
-2019/03/27 16:29:33.474 [D] [server.go:2741]  |            ::1|[42m 200 [0m|  11.341434ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
-2019/03/27 16:29:33.640 [D] [server.go:2741]  |            ::1|[42m 200 [0m|    115.918µs| nomatch|[47m OPTIONS [0m /v1/kpi/list
-2019/03/27 16:29:33.725 [D] [server.go:2741]  |            ::1|[42m 200 [0m|  12.840152ms|   match|[46m POST    [0m /v1/kpi/list   r:/v1/kpi/list
-2019/03/27 16:38:24.657 [I] [asm_amd64.s:1333]  http server Running on http://:8080
-2019/03/27 16:38:47.050 [D] [server.go:2741]  |            ::1|[42m 200 [0m|    104.404µs| nomatch|[47m OPTIONS [0m /v1/auth/checkLogin
-2019/03/27 16:38:47.246 [I] [auth.go:161]  Check Login:  U1550639626724628891 true 
-2019/03/27 16:38:47.258 [D] [server.go:2741]  |            ::1|[42m 200 [0m|  12.506777ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
-2019/03/27 16:38:47.414 [D] [server.go:2741]  |            ::1|[42m 200 [0m|     67.279µs| nomatch|[47m OPTIONS [0m /v1/kpi/list
-2019/03/27 16:38:47.511 [D] [server.go:2741]  |            ::1|[42m 200 [0m|  13.283772ms|   match|[46m POST    [0m /v1/kpi/list   r:/v1/kpi/list
-2019/03/27 17:09:30.488 [I] [asm_amd64.s:1333]  http server Running on http://:8080
-2019/03/28 09:42:41.051 [I] [asm_amd64.s:1333]  http server Running on http://:8080
-2019/03/28 09:42:46.247 [I] [asm_amd64.s:1333]  http server Running on http://:8080
+2019/07/31 10:23:13.066 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    31.9035ms| nomatch|[90;47m OPTIONS [0m /v1/auth/checkLogin
+2019/07/31 10:23:13.122 [I] [value.go:447]  Check Login:  U1550639626724628891 true
+2019/07/31 10:23:13.149 [E] [auth.go:173]  /v1/auth/checkLogin {} write tcp 192.168.0.52:57149->13.209.165.230:5432: write: broken pipe
+2019/07/31 10:23:20.365 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|      97.49µs| nomatch|[90;47m OPTIONS [0m /v1/auth/login
+2019/07/31 10:23:23.684 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m| 3.308181466s|   match|[97;46m POST    [0m /v1/auth/login   r:/v1/auth/login
+2019/07/31 10:23:23.780 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   2.494491ms| nomatch|[90;47m OPTIONS [0m /v1/auth/checkLogin
+2019/07/31 10:23:23.797 [I] [value.go:447]  Check Login:  U1550639626724628891 true
+2019/07/31 10:23:23.813 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  16.007561ms|   match|[97;44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/07/31 10:23:33.381 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     911.77µs| nomatch|[90;47m OPTIONS [0m /v1/auth/checkLogin
+2019/07/31 10:23:33.410 [I] [value.go:447]  Check Login:  U1550639626724628891 true
+2019/07/31 10:23:33.421 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  13.389125ms|   match|[97;44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/07/31 10:23:33.490 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     71.262µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/listUser
+2019/07/31 10:23:33.517 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  17.406718ms|   match|[97;46m POST    [0m /v1/kpi/listUser   r:/v1/kpi/listUser
