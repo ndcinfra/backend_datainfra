@@ -136,3 +136,5 @@
 2019/08/08 11:34:41.393 [I] [asm_amd64.s:1337]  http server Running on http://:8080
 2019/08/08 11:37:47.439 [I] [asm_amd64.s:1337]  http server Running on http://:8080
 2019/08/08 11:44:13.812 [E] [kpi.go:58]  /v1/kpi/listUser &{0xc000130870 {0xc000130930} 67108864 0xc000020050} unexpected end of JSON input
+2019/08/08 11:45:02.619 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/08/08 11:46:59.873 [D] [server.go:2774]  |      127.0.0.1|[97;43m 404 [0m|    677.512µs| nomatch|[97;46m POST    [0m /v1/kpi/test
