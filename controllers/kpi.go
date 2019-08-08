@@ -4,6 +4,8 @@ import (
 	"encoding/json"
 	"io/ioutil"
 
+	"github.com/astaxie/beego/logs"
+
 	"github.com/YoungsoonLee/backend_datainfra/libs"
 	"github.com/YoungsoonLee/backend_datainfra/models"
 )
@@ -68,6 +70,34 @@ func (k *KpiController) GetUserKPI() {
 			k.ResponseSuccess("", gListKpi)
 		}
 	*/
+
+	k.ResponseSuccess("", listKpi)
+}
+
+// GetSaleKPI
+func (k *KpiController) GetSaleKPI() {
+	var inputDate InputDate
+
+	body, _ := ioutil.ReadAll(k.Ctx.Request.Body)
+	err := json.Unmarshal(body, &inputDate)
+	if err != nil {
+		k.ResponseError(libs.ErrJSONUnmarshal, err)
+	}
+
+	var kpi models.SaleKPI
+
+	listKpi, err := kpi.GetSaleKPI(inputDate.From, inputDate.To, inputDate.Country, inputDate.Kind, inputDate.Radio, inputDate.KindCalendar)
+	if err != nil {
+		k.ResponseError(libs.ErrDatabase, err)
+	}
+
+	/*
+		if inputDate.Kind == "graph" {
+			k.ResponseSuccess("", gListKpi)
+		}
+	*/
+
+	logs.Info(listKpi)
 
 	k.ResponseSuccess("", listKpi)
 }

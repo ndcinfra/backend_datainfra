@@ -47,6 +47,14 @@ type UserKPI struct {
 	Nru   string `json:"nru"`
 }
 
+type SaleKPI struct {
+	Cdate string  `json:"cdate"`
+	Rev   string  `json:"rev"`
+	Arppu string  `json:"arppu"`
+	Bu    string  `json:"bu"`
+	Prate float32 `json:"prate"`
+}
+
 // GetKPI ...
 func (k *Kpi) GetKPI(from, to, country, kind, radio string) ([]Kpi, []KpiGraph, error) {
 	var listKpi []Kpi
@@ -156,6 +164,69 @@ func (k *UserKPI) GetUserKPI(from, to, country, kind, radio, kindCalendar string
 			" , sum(nru_d) nru" +
 			" , sum(mcu_d) mcu" +
 			" , sum(avg_d) avg" +
+			" from kpi " +
+			" where date >= ? and date <=  ? " +
+			sCounty +
+			//" group by date_trunc('?',date)" +
+			" group by cdate " +
+			" order by 1;"
+
+		if country != "all" {
+			_, err = o.Raw(sql, from, to, country).QueryRows(&listKpi)
+		} else {
+			_, err = o.Raw(sql, from, to).QueryRows(&listKpi)
+		}
+
+	}
+
+	return listKpi, err
+}
+
+// GetSaleKPI ...
+func (k *SaleKPI) GetSaleKPI(from, to, country, kind, radio, kindCalendar string) ([]SaleKPI, error) {
+	var listKpi []SaleKPI
+
+	var sql string
+	var err error
+	o := orm.NewOrm()
+
+	fmt.Println("input: ", from, to, country, kind, radio, kindCalendar)
+
+	// make query
+	sCounty := ""
+	if country != "all" {
+		sCounty = " and territory = ? "
+	}
+
+	// day
+	if kindCalendar == "day" {
+		sql = " select date cdate " +
+			" , rev_d rev" +
+			" , arppu_d arppu" +
+			" , bu " +
+			" , pur_d prate" +
+			" from kpi " +
+			" where date >= ? and date <=  ? " +
+			sCounty +
+			" order by 1;"
+
+		if country != "all" {
+			_, err = o.Raw(sql, from, to, country).QueryRows(&listKpi)
+		} else {
+			_, err = o.Raw(sql, from, to).QueryRows(&listKpi)
+		}
+
+	} else {
+		// others
+		setD := "yyyy-mm-dd"
+		if kindCalendar == "month" {
+			setD = "yyyy-mm"
+		}
+		sql = " select to_char(date_trunc('" + kindCalendar + "',date), '" + setD + "' ) cdate" +
+			" , sum(rev_d) rev" +
+			" , sum(arppu_d) arppu" +
+			" , sum(bu) bu" +
+			" , sum(pur_d) pur_d" +
 			" from kpi " +
 			" where date >= ? and date <=  ? " +
 			sCounty +
