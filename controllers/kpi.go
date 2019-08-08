@@ -4,8 +4,6 @@ import (
 	"encoding/json"
 	"io/ioutil"
 
-	"github.com/astaxie/beego/logs"
-
 	"github.com/YoungsoonLee/backend_datainfra/libs"
 	"github.com/YoungsoonLee/backend_datainfra/models"
 )
@@ -97,7 +95,7 @@ func (k *KpiController) GetSaleKPI() {
 		}
 	*/
 
-	logs.Info(listKpi)
+	// logs.Info(listKpi)
 
 	k.ResponseSuccess("", listKpi)
 }

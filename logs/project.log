@@ -139,3 +139,4 @@
 2019/08/08 11:45:02.619 [I] [asm_amd64.s:1337]  http server Running on http://:8080
 2019/08/08 11:46:59.873 [D] [server.go:2774]  |      127.0.0.1|[97;43m 404 [0m|    677.512µs| nomatch|[97;46m POST    [0m /v1/kpi/test
 2019/08/08 11:47:53.552 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/08/08 12:10:00.926 [I] [asm_amd64.s:1337]  http server Running on http://:8080
