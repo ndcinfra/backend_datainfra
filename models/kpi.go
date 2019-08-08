@@ -222,11 +222,17 @@ func (k *SaleKPI) GetSaleKPI(from, to, country, kind, radio, kindCalendar string
 		if kindCalendar == "month" {
 			setD = "yyyy-mm"
 		}
+
+		setP := " , sum(pur_d) / 7 prate"
+		if kindCalendar == "month" {
+			setP = " , sum(pur_d) / 30 prate"
+		}
+
 		sql = " select to_char(date_trunc('" + kindCalendar + "',date), '" + setD + "' ) cdate" +
 			" , sum(rev_d) rev" +
 			" , sum(arppu_d) arppu" +
 			" , sum(bu) bu" +
-			" , sum(pur_d) prate" +
+			setP +
 			" from kpi " +
 			" where date >= ? and date <=  ? " +
 			sCounty +
