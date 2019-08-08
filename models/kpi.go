@@ -226,7 +226,7 @@ func (k *SaleKPI) GetSaleKPI(from, to, country, kind, radio, kindCalendar string
 			" , sum(rev_d) rev" +
 			" , sum(arppu_d) arppu" +
 			" , sum(bu) bu" +
-			" , sum(pur_d) pur_d" +
+			" , sum(pur_d) prate" +
 			" from kpi " +
 			" where date >= ? and date <=  ? " +
 			sCounty +
