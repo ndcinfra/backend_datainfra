@@ -184,3 +184,7 @@
 2019/08/21 10:04:39.152 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  12.190303ms|   match|[97;46m POST    [0m /v1/kpi/listSale   r:/v1/kpi/listSale
 2019/08/21 10:08:05.347 [I] [asm_amd64.s:1337]  http server Running on http://:8080
 2019/08/21 10:08:15.524 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/08/21 10:13:38.681 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/08/21 10:17:32.127 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/08/21 10:18:44.807 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/08/21 10:18:53.442 [I] [asm_amd64.s:1337]  http server Running on http://:8080

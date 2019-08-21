@@ -198,11 +198,17 @@ func (k *SaleKPI) GetSaleKPI(from, to, country, kind, radio, kindCalendar string
 		sCounty = " and territory = ? "
 	}
 
+	setRev := " , rev_t rev"
+	if country == "KOREA" {
+		setRev = " , rev_d rev"
+	}
+
 	// day
 	if kindCalendar == "day" {
 		sql = " select date cdate " +
 			//" , rev_d rev" +
-			" , rev_t rev" +
+			//" , rev_t rev" +
+			setRev +
 			" , arppu_d arppu" +
 			" , bu " +
 			" , pur_d prate" +
@@ -231,9 +237,15 @@ func (k *SaleKPI) GetSaleKPI(from, to, country, kind, radio, kindCalendar string
 			setP = " , sum(pur_d) / 30 prate"
 		}
 
+		setRev = " , sum(rev_t) rev"
+		if country == "KOREA" {
+			setRev = " , sum(rev_d) rev"
+		}
+
 		sql = " select to_char(date_trunc('" + kindCalendar + "',date), '" + setD + "' ) cdate" +
 			//" , sum(rev_d) rev" +
-			" , sum(rev_t) rev" +
+			//" , sum(rev_t) rev" +
+			setRev +
 			" , sum(arppu_d) arppu" +
 			" , sum(bu) bu" +
 			setP +
