@@ -140,3 +140,47 @@
 2019/08/08 11:46:59.873 [D] [server.go:2774]  |      127.0.0.1|[97;43m 404 [0m|    677.512µs| nomatch|[97;46m POST    [0m /v1/kpi/test
 2019/08/08 11:47:53.552 [I] [asm_amd64.s:1337]  http server Running on http://:8080
 2019/08/08 12:10:00.926 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/08/21 09:44:06.275 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/08/21 09:46:24.462 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    640.584µs| nomatch|[90;47m OPTIONS [0m /v1/auth/checkLogin
+2019/08/21 09:46:24.477 [I] [value.go:447]  Check Login:   false
+2019/08/21 09:46:24.477 [E] [auth.go:166]  /v1/auth/checkLogin {} Token invalid
+2019/08/21 09:46:31.169 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     61.042µs| nomatch|[90;47m OPTIONS [0m /v1/auth/login
+2019/08/21 09:46:31.276 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m| 101.974727ms|   match|[97;46m POST    [0m /v1/auth/login   r:/v1/auth/login
+2019/08/21 09:46:31.318 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     74.349µs| nomatch|[90;47m OPTIONS [0m /v1/auth/checkLogin
+2019/08/21 09:46:31.385 [I] [value.go:447]  Check Login:  U1550639626724628891 true
+2019/08/21 09:46:31.397 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  11.907721ms|   match|[97;44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/08/21 09:46:34.727 [I] [value.go:447]  Check Login:  U1550639626724628891 true
+2019/08/21 09:46:34.738 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  11.216259ms|   match|[97;44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/08/21 09:46:34.793 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    130.596µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/list
+2019/08/21 09:46:34.809 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  12.228852ms|   match|[97;46m POST    [0m /v1/kpi/list   r:/v1/kpi/list
+2019/08/21 09:46:37.980 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     67.507µs| nomatch|[90;47m OPTIONS [0m /v1/auth/checkLogin
+2019/08/21 09:46:37.997 [I] [value.go:447]  Check Login:  U1550639626724628891 true
+2019/08/21 09:46:38.014 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  16.647755ms|   match|[97;44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/08/21 09:46:38.037 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     70.489µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/listUser
+2019/08/21 09:46:38.053 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  11.902153ms|   match|[97;46m POST    [0m /v1/kpi/listUser   r:/v1/kpi/listUser
+2019/08/21 09:46:42.998 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|        106µs| nomatch|[90;47m OPTIONS [0m /v1/auth/checkLogin
+2019/08/21 09:46:43.029 [I] [value.go:447]  Check Login:  U1550639626724628891 true
+2019/08/21 09:46:43.043 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  14.140048ms|   match|[97;44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/08/21 09:46:43.060 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     86.989µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/listSale
+2019/08/21 09:46:43.076 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  12.492099ms|   match|[97;46m POST    [0m /v1/kpi/listSale   r:/v1/kpi/listSale
+2019/08/21 10:00:21.358 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/08/21 10:00:48.412 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|      174.9µs| nomatch|[90;47m OPTIONS [0m /v1/auth/checkLogin
+2019/08/21 10:00:48.416 [I] [value.go:447]  Check Login:  U1550639626724628891 true
+2019/08/21 10:00:48.427 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  11.501196ms|   match|[97;44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/08/21 10:00:48.462 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     89.262µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/listSale
+2019/08/21 10:00:48.479 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  14.764957ms|   match|[97;46m POST    [0m /v1/kpi/listSale   r:/v1/kpi/listSale
+2019/08/21 10:01:14.922 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    167.549µs| nomatch|[90;47m OPTIONS [0m /v1/auth/checkLogin
+2019/08/21 10:01:14.926 [I] [value.go:447]  Check Login:  U1550639626724628891 true
+2019/08/21 10:01:14.939 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  13.095252ms|   match|[97;44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/08/21 10:01:14.965 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|     94.289µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/listSale
+2019/08/21 10:01:14.982 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  13.886351ms|   match|[97;46m POST    [0m /v1/kpi/listSale   r:/v1/kpi/listSale
+2019/08/21 10:04:36.841 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    389.235µs| nomatch|[90;47m OPTIONS [0m /v1/auth/checkLogin
+2019/08/21 10:04:36.845 [I] [value.go:447]  Check Login:  U1550639626724628891 true
+2019/08/21 10:04:36.860 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|   15.00569ms|   match|[97;44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/08/21 10:04:36.899 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|    109.971µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/listSale
+2019/08/21 10:04:36.913 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  10.729379ms|   match|[97;46m POST    [0m /v1/kpi/listSale   r:/v1/kpi/listSale
+2019/08/21 10:04:39.102 [I] [value.go:447]  Check Login:  U1550639626724628891 true
+2019/08/21 10:04:39.117 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  14.641345ms|   match|[97;44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/08/21 10:04:39.152 [D] [server.go:2774]  |            ::1|[97;42m 200 [0m|  12.190303ms|   match|[97;46m POST    [0m /v1/kpi/listSale   r:/v1/kpi/listSale
+2019/08/21 10:08:05.347 [I] [asm_amd64.s:1337]  http server Running on http://:8080
+2019/08/21 10:08:15.524 [I] [asm_amd64.s:1337]  http server Running on http://:8080

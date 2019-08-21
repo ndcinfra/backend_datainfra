@@ -7,4 +7,5 @@ killall -9 ./backend_datainfra
 go build
 nohup ./backend_datainfra &
 cd logs
-tail -f project.log
+
+

@@ -201,10 +201,13 @@ func (k *SaleKPI) GetSaleKPI(from, to, country, kind, radio, kindCalendar string
 	// day
 	if kindCalendar == "day" {
 		sql = " select date cdate " +
-			" , rev_d rev" +
+			//" , rev_d rev" +
+			" , rev_t rev" +
 			" , arppu_d arppu" +
 			" , bu " +
 			" , pur_d prate" +
+			// " , rev_t rev_t" +
+			// " , rev_rate rev_rate" +
 			" from kpi " +
 			" where date >= ? and date <=  ? " +
 			sCounty +
@@ -229,7 +232,8 @@ func (k *SaleKPI) GetSaleKPI(from, to, country, kind, radio, kindCalendar string
 		}
 
 		sql = " select to_char(date_trunc('" + kindCalendar + "',date), '" + setD + "' ) cdate" +
-			" , sum(rev_d) rev" +
+			//" , sum(rev_d) rev" +
+			" , sum(rev_t) rev" +
 			" , sum(arppu_d) arppu" +
 			" , sum(bu) bu" +
 			setP +
