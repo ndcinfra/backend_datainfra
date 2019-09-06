@@ -37,6 +37,7 @@ type KpiGraph struct {
 	Namerica string `json:"namerica"`
 	Taiwan   string `json:"taiwan"`
 	Total    string `json:"total"`
+	Thailand string `json:"thailand"`
 }
 
 type UserKPI struct {
@@ -48,11 +49,20 @@ type UserKPI struct {
 }
 
 type SaleKPI struct {
-	Cdate string  `json:"cdate"`
-	Rev   string  `json:"rev"`
-	Arppu string  `json:"arppu"`
-	Bu    string  `json:"bu"`
-	Prate float32 `json:"prate"`
+	Cdate    string  `json:"cdate"`
+	Rev      string  `json:"rev"`
+	Arppu    string  `json:"arppu"`
+	Bu       string  `json:"bu"`
+	Prate    float32 `json:"prate"`
+	Charge   float32 `json:"charge"`
+	Chargeuu float32 `json:"chargeuu"`
+}
+
+type SaleItemKPI struct {
+	Cdate    string  `json:"cdate"`
+	Itemid   string  `json:"itemid"`
+	Itemname string  `json:"itemname"`
+	Count    float32 `json:"count"`
 }
 
 // GetKPI ...
@@ -93,6 +103,7 @@ func (k *Kpi) GetKPI(from, to, country, kind, radio string) ([]Kpi, []KpiGraph, 
 			" ,sum(case when territory = 'JAPAN' then rev else 0 end) JAPAN" +
 			" ,sum(case when territory = 'TAIWAN' then rev else 0 end) TAIWAN" +
 			" ,sum(case when territory = 'NAMERICA' then rev else 0 end) NAMERICA" +
+			" ,sum(case when territory = 'THAILAND' then rev else 0 end) THAILAND" +
 			" ,sum(rev) TOTAL " +
 			" from ( " +
 			"			select " +
@@ -214,6 +225,8 @@ func (k *SaleKPI) GetSaleKPI(from, to, country, kind, radio, kindCalendar string
 			" , pur_d prate" +
 			// " , rev_t rev_t" +
 			// " , rev_rate rev_rate" +
+			" , coalesce(charge_d, 0) charge " +
+			" , coalesce(charge_unique_user_d, 0) chargeuu " +
 			" from kpi " +
 			" where date >= ? and date <=  ? " +
 			sCounty +
@@ -249,12 +262,82 @@ func (k *SaleKPI) GetSaleKPI(from, to, country, kind, radio, kindCalendar string
 			" , sum(arppu_d) arppu" +
 			" , sum(bu) bu" +
 			setP +
+			" , coalesce(sum(charge_d), 0) charge " +
+			" , coalesce(sum(charge_unique_user_d), 0) chargeuu " +
 			" from kpi " +
 			" where date >= ? and date <=  ? " +
 			sCounty +
 			//" group by date_trunc('?',date)" +
 			" group by cdate " +
 			" order by 1;"
+
+		if country != "all" {
+			_, err = o.Raw(sql, from, to, country).QueryRows(&listKpi)
+		} else {
+			_, err = o.Raw(sql, from, to).QueryRows(&listKpi)
+		}
+
+	}
+
+	return listKpi, err
+}
+
+// GetSaleItemKPI ...
+func (k *SaleItemKPI) GetSaleItemKPI(from, to, country, kind, radio, kindCalendar string) ([]SaleItemKPI, error) {
+	var listKpi []SaleItemKPI
+
+	var sql string
+	var err error
+	o := orm.NewOrm()
+
+	fmt.Println("input: ", from, to, country, kind, radio, kindCalendar)
+
+	// make query
+	sCounty := ""
+	if country != "all" {
+		sCounty = " and country = ? "
+	}
+
+	// day
+	if kindCalendar == "day" {
+		sql = " select  " +
+			"  \"ExternalItemID\" itemid " +
+			" , external_item_name_eng itemname " +
+			" , sum(sales_count) count" +
+			" from item_kpi " +
+			" where date >= ? and date <=  ? " +
+			sCounty +
+			" group by itemid, itemname " +
+			" order by 3 desc " +
+			" limit 50 "
+
+		if country != "all" {
+			_, err = o.Raw(sql, from, to, country).QueryRows(&listKpi)
+		} else {
+			_, err = o.Raw(sql, from, to).QueryRows(&listKpi)
+		}
+
+	} else {
+		// others
+		/*
+			setD := "yyyy-mm-dd"
+			if kindCalendar == "month" {
+				setD = "yyyy-mm"
+			}
+		*/
+
+		sql = //" select to_char(date_trunc('" + kindCalendar + "',date), '" + setD + "' ) cdate" +
+			" select " +
+				"  \"ExternalItemID\" itemid " +
+				" , external_item_name_eng itemname " +
+				" , sum(sales_count) count" +
+				" from item_kpi " +
+				" where date >= ? and date <=  ? " +
+				sCounty +
+				//" group by date_trunc('?',date)" +
+				" group by itemid, itemname " +
+				" order by 3 desc " +
+				" limit 50 "
 
 		if country != "all" {
 			_, err = o.Raw(sql, from, to, country).QueryRows(&listKpi)

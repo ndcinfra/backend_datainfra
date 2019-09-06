@@ -99,3 +99,22 @@ func (k *KpiController) GetSaleKPI() {
 
 	k.ResponseSuccess("", listKpi)
 }
+
+func (k *KpiController) GetSaleItemKPI() {
+	var inputDate InputDate
+
+	body, _ := ioutil.ReadAll(k.Ctx.Request.Body)
+	err := json.Unmarshal(body, &inputDate)
+	if err != nil {
+		k.ResponseError(libs.ErrJSONUnmarshal, err)
+	}
+
+	var kpi models.SaleItemKPI
+
+	listKpi, err := kpi.GetSaleItemKPI(inputDate.From, inputDate.To, inputDate.Country, inputDate.Kind, inputDate.Radio, inputDate.KindCalendar)
+	if err != nil {
+		k.ResponseError(libs.ErrDatabase, err)
+	}
+
+	k.ResponseSuccess("", listKpi)
+}

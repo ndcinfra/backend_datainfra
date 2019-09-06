@@ -55,6 +55,7 @@ func init() {
 			//beego.NSRouter("/test", &controllers.SystemController{}, "get:CheckHealthy"),
 			beego.NSRouter("/listUser", &controllers.KpiController{}, "post:GetUserKPI"),
 			beego.NSRouter("/listSale", &controllers.KpiController{}, "post:GetSaleKPI"),
+			beego.NSRouter("/listSaleItem", &controllers.KpiController{}, "post:GetSaleItemKPI"),
 		),
 
 		beego.NSNamespace("/system",
