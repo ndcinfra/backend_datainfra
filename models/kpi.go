@@ -46,6 +46,7 @@ type UserKPI struct {
 	Avg   string `json:"avg"`
 	Uu    string `json:"uu"`
 	Nru   string `json:"nru"`
+	Gnru  string `json:"gnru"`
 }
 
 type SaleKPI struct {
@@ -153,6 +154,7 @@ func (k *UserKPI) GetUserKPI(from, to, country, kind, radio, kindCalendar string
 			" , nru_d nru" +
 			" , mcu_d mcu" +
 			" , avg_d avg" +
+			" , gnru_d gnru" +
 			" from kpi " +
 			" where date >= ? and date <=  ? " +
 			sCounty +
@@ -175,6 +177,7 @@ func (k *UserKPI) GetUserKPI(from, to, country, kind, radio, kindCalendar string
 			" , sum(nru_d) nru" +
 			" , sum(mcu_d) mcu" +
 			" , sum(avg_d) avg" +
+			" , sum(gnru_d) gnru" +
 			" from kpi " +
 			" where date >= ? and date <=  ? " +
 			sCounty +
