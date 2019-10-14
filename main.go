@@ -4,8 +4,9 @@ import (
 	"os"
 	"strconv"
 
-	"github.com/YoungsoonLee/backend_datainfra/models"
-	_ "github.com/YoungsoonLee/backend_datainfra/routers"
+	"github.com/ndcinfra/backend_datainfra/models"
+	_ "github.com/ndcinfra/backend_datainfra/routers"
+
 	"github.com/joho/godotenv"
 
 	"github.com/astaxie/beego"

@@ -10,7 +10,10 @@ import (
 
 	"github.com/astaxie/beego/logs"
 
-	"github.com/YoungsoonLee/backend_datainfra/libs"
+	//"github.com/YoungsoonLee/backend_datainfra/libs"
+
+	"github.com/ndcinfra/backend_datainfra/libs"
+
 	"github.com/astaxie/beego/orm"
 	uuid "github.com/satori/go.uuid"
 	"github.com/zoonman/gravatar"

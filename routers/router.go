@@ -8,7 +8,7 @@
 package routers
 
 import (
-	"github.com/YoungsoonLee/backend_datainfra/controllers"
+	"github.com/ndcinfra/backend_datainfra/controllers"
 
 	"github.com/astaxie/beego"
 )

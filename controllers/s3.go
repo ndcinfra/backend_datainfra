@@ -6,7 +6,11 @@ import (
 	"io"
 	"net/http"
 
-	"github.com/YoungsoonLee/backend_datainfra/libs"
+	//"github.com/YoungsoonLee/backend_datainfra/libs"
+	//"github.com/YoungsoonLee/backend_datainfra/models"
+
+	"github.com/ndcinfra/backend_datainfra/libs"
+
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/credentials"
 	"github.com/aws/aws-sdk-go/aws/session"
