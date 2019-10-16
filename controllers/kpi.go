@@ -26,6 +26,7 @@ type InputDate struct {
 }
 
 // GetKPI ...
+// Dashboard 용
 func (k *KpiController) GetKPI() {
 	var inputDate InputDate
 
@@ -50,6 +51,7 @@ func (k *KpiController) GetKPI() {
 }
 
 // GetUserKPI
+// 유저 통계 용
 func (k *KpiController) GetUserKPI() {
 	var inputDate InputDate
 
@@ -76,6 +78,7 @@ func (k *KpiController) GetUserKPI() {
 }
 
 // GetSaleKPI
+// 매출 통계 용
 func (k *KpiController) GetSaleKPI() {
 	var inputDate InputDate
 
@@ -103,6 +106,8 @@ func (k *KpiController) GetSaleKPI() {
 	k.ResponseSuccess("", listKpi)
 }
 
+// 기타
+// 아이템 Top 50
 func (k *KpiController) GetSaleItemKPI() {
 	var inputDate InputDate
 

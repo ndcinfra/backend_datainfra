@@ -23,8 +23,6 @@ func RegisterDB() {
 
 	err := godotenv.Load()
 	if err != nil {
-		//log.Fatal("Error loading .env file")
-		//beego.Error("Error loading .env file")
 		logs.Error("Error loading .env file")
 	}
 
