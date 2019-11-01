@@ -23,6 +23,7 @@ type InputDate struct {
 	Kind         string `json:"kind"`         // graph, table
 	Radio        string `json:"radio"`        // uu, mcu ...
 	KindCalendar string `json:"kindCalendar"` // day, week, month
+	Period 		 string `json:"period"` 	  // day, week, month
 }
 
 // GetKPI ...
@@ -39,6 +40,30 @@ func (k *KpiController) GetKPI() {
 	var kpi models.Kpi
 
 	listKpi, gListKpi, err := kpi.GetKPI(inputDate.From, inputDate.To, inputDate.Country, inputDate.Kind, inputDate.Radio)
+	if err != nil {
+		k.ResponseError(libs.ErrDatabase, err)
+	}
+
+	if inputDate.Kind == "graph" {
+		k.ResponseSuccess("", gListKpi)
+	}
+	k.ResponseSuccess("", listKpi)
+
+}
+
+// Dashboard 용
+func (k *KpiController) GetNewKPI() {
+	var inputDate InputDate
+
+	body, _ := ioutil.ReadAll(k.Ctx.Request.Body)
+	err := json.Unmarshal(body, &inputDate)
+	if err != nil {
+		k.ResponseError(libs.ErrJSONUnmarshal, err)
+	}
+
+	var kpi models.Kpi
+
+	listKpi, gListKpi, err := kpi.GetNewKPI(inputDate.From, inputDate.To, inputDate.Country, inputDate.Kind, inputDate.Radio, inputDate.Period)
 	if err != nil {
 		k.ResponseError(libs.ErrDatabase, err)
 	}
