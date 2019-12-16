@@ -16,7 +16,7 @@ type InputDate struct {
 	Kind         string `json:"kind"`         // graph, table
 	Radio        string `json:"radio"`        // uu, mcu ...
 	KindCalendar string `json:"kindCalendar"` // day, week, month
-	Period 		 string `json:"period"`
+	Period       string `json:"period"`
 }
 
 // Kpi ...
@@ -51,6 +51,7 @@ type KpiGraph struct {
 	Taiwan   string `json:"taiwan"`
 	Total    string `json:"total"`
 	Thailand string `json:"thailand"`
+	Vietnam  string `json:"vietnam"`
 }
 
 type UserKPI struct {
@@ -80,11 +81,11 @@ type SaleItemKPI struct {
 }
 
 type CountryShare struct {
-	ID         	int64  `orm:"column(ID);auto;pk" json:"id"` 					// id, key
-	Territory  	string `orm:"size(1000);null" json:"territory"`					// country
-	StartDate 	time.Time `orm:"type(datetime);auto_now_add" json:"start_date"` // start date
-	EndDate 	time.Time `orm:"type(datetime);auto_now_add" json:"end_date"` 	// end date
-	CountryRate string `orm:"size(10);null" json:"c_reate"`						// rate
+	ID          int64     `orm:"column(ID);auto;pk" json:"id"`                  // id, key
+	Territory   string    `orm:"size(1000);null" json:"territory"`              // country
+	StartDate   time.Time `orm:"type(datetime);auto_now_add" json:"start_date"` // start date
+	EndDate     time.Time `orm:"type(datetime);auto_now_add" json:"end_date"`   // end date
+	CountryRate string    `orm:"size(10);null" json:"c_reate"`                  // rate
 }
 
 // GetKPI ...
@@ -200,6 +201,7 @@ func (k *Kpi) GetNewKPI(from, to, country, kind, radio string, period string) ([
 					" ,sum(case when territory = 'TAIWAN' then rev else 0 end) TAIWAN" +
 					" ,sum(case when territory = 'NAMERICA' then rev else 0 end) NAMERICA" +
 					" ,sum(case when territory = 'THAILAND' then rev else 0 end) THAILAND" +
+					" ,sum(case when territory = 'VIETNAM' then rev else 0 end) VIETNAM" +
 					" ,sum(rev) TOTAL " +
 					" from ( " +
 					"           SELECT " +
@@ -241,6 +243,7 @@ func (k *Kpi) GetNewKPI(from, to, country, kind, radio string, period string) ([
 					" ,sum(case when territory = 'TAIWAN' then rev else 0 end) TAIWAN" +
 					" ,sum(case when territory = 'NAMERICA' then rev else 0 end) NAMERICA" +
 					" ,sum(case when territory = 'THAILAND' then rev else 0 end) THAILAND" +
+					" ,sum(case when territory = 'VIETNAM' then rev else 0 end) VIETNAM" +
 					" ,sum(rev) TOTAL " +
 					" from ( " +
 					"           SELECT " +
@@ -252,7 +255,7 @@ func (k *Kpi) GetNewKPI(from, to, country, kind, radio string, period string) ([
 					"               ON kpi.territory = shar.territory  " +
 					"               AND to_char(kpi.date,'YYYYMMDD') >= to_char(shar.start_date,'YYYYMMDD')  " +
 					"               AND to_char(kpi.date,'YYYYMMDD') <= to_char(shar.end_date,'YYYYMMDD') " +
-					"               where to_char(kpi.date,'YYYYMM') >= ? and to_char(kpi.date,'YYYYMM') <=  ? " + 
+					"               where to_char(kpi.date,'YYYYMM') >= ? and to_char(kpi.date,'YYYYMM') <=  ? " +
 					"               ORDER BY kpi.date, kpi.territory asc " +
 					"		) a " +
 					" group by ROLLUP(cdate)" +
@@ -268,7 +271,7 @@ func (k *Kpi) GetNewKPI(from, to, country, kind, radio string, period string) ([
 					"FROM kpi WHERE date >= ? and date <= ? "
 				_, err = o.Raw(sql, from, to).QueryRows(&listKpi)
 			}
-		} else   {
+		} else {
 			if kind == "graph" {
 
 				//DAILY SEARCH
@@ -279,6 +282,7 @@ func (k *Kpi) GetNewKPI(from, to, country, kind, radio string, period string) ([
 					" ,sum(case when territory = 'TAIWAN' then rev else 0 end) TAIWAN" +
 					" ,sum(case when territory = 'NAMERICA' then rev else 0 end) NAMERICA" +
 					" ,sum(case when territory = 'THAILAND' then rev else 0 end) THAILAND" +
+					" ,sum(case when territory = 'VIETNAM' then rev else 0 end) VIETNAM" +
 					" ,sum(rev) TOTAL " +
 					" from ( " +
 					"           SELECT " +
@@ -308,8 +312,8 @@ func (k *Kpi) GetNewKPI(from, to, country, kind, radio string, period string) ([
 			}
 		}
 	} else {
-	//나딕 매출 통계 프로세스 끝====================================================================================
-	//일반 매출 통계 프로세스 시작==================================================================================
+		//나딕 매출 통계 프로세스 끝====================================================================================
+		//일반 매출 통계 프로세스 시작==================================================================================
 		//PERIOD SEARCH (1:DAILY, 2:WEEKLY, 3:MONTHLY)
 		if period == "2" {
 
@@ -322,6 +326,7 @@ func (k *Kpi) GetNewKPI(from, to, country, kind, radio string, period string) ([
 					" ,sum(case when territory = 'TAIWAN' then rev else 0 end) TAIWAN" +
 					" ,sum(case when territory = 'NAMERICA' then rev else 0 end) NAMERICA" +
 					" ,sum(case when territory = 'THAILAND' then rev else 0 end) THAILAND" +
+					" ,sum(case when territory = 'VIETNAM' then rev else 0 end) VIETNAM" +
 					" ,sum(rev) TOTAL " +
 					" from ( " +
 					"			select " +
@@ -358,6 +363,7 @@ func (k *Kpi) GetNewKPI(from, to, country, kind, radio string, period string) ([
 					" ,sum(case when territory = 'TAIWAN' then rev else 0 end) TAIWAN" +
 					" ,sum(case when territory = 'NAMERICA' then rev else 0 end) NAMERICA" +
 					" ,sum(case when territory = 'THAILAND' then rev else 0 end) THAILAND" +
+					" ,sum(case when territory = 'VIETNAM' then rev else 0 end) VIETNAM" +
 					" ,sum(rev) TOTAL " +
 					" from ( " +
 					"			select " +
@@ -380,7 +386,7 @@ func (k *Kpi) GetNewKPI(from, to, country, kind, radio string, period string) ([
 					"FROM kpi WHERE date >= ? and date <= ? "
 				_, err = o.Raw(sql, from, to).QueryRows(&listKpi)
 			}
-		} else   {
+		} else {
 			if kind == "graph" {
 
 				//DAILY SEARCH
@@ -391,6 +397,7 @@ func (k *Kpi) GetNewKPI(from, to, country, kind, radio string, period string) ([
 					" ,sum(case when territory = 'TAIWAN' then rev else 0 end) TAIWAN" +
 					" ,sum(case when territory = 'NAMERICA' then rev else 0 end) NAMERICA" +
 					" ,sum(case when territory = 'THAILAND' then rev else 0 end) THAILAND" +
+					" ,sum(case when territory = 'VIETNAM' then rev else 0 end) VIETNAM" +
 					" ,sum(rev) TOTAL " +
 					" from ( " +
 					"			select " +
