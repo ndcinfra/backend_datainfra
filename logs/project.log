@@ -2570,3 +2570,209 @@
 2019/11/01 13:22:56.058 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     6.9805ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
 2019/11/01 13:22:56.062 [D] [server.go:2802]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/kpi/listnew
 2019/11/01 13:22:56.071 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     5.9652ms|   match|[46m POST    [0m /v1/kpi/listnew   r:/v1/kpi/listnew
+2019/12/16 17:25:55.074 [I] [asm_amd64.s:1357]  http server Running on http://:8080
+2019/12/16 17:26:32.431 [D] [server.go:2802]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/auth/login
+2019/12/16 17:26:32.486 [D] [server.go:2802]  |            ::1|[42m 200 [0m|    51.8872ms|   match|[46m POST    [0m /v1/auth/login   r:/v1/auth/login
+2019/12/16 17:26:32.495 [D] [server.go:2802]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/auth/checkLogin
+2019/12/16 17:26:32.499 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2019/12/16 17:26:32.508 [D] [server.go:2802]  |            ::1|[42m 200 [0m|      8.976ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/12/16 17:26:34.766 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2019/12/16 17:26:34.771 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     4.9805ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/12/16 17:26:34.780 [D] [server.go:2802]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/kpi/listnew
+2019/12/16 17:26:34.794 [D] [server.go:2802]  |            ::1|[42m 200 [0m|    10.9704ms|   match|[46m POST    [0m /v1/kpi/listnew   r:/v1/kpi/listnew
+2019/12/16 17:28:22.842 [D] [server.go:2802]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/auth/checkLogin
+2019/12/16 17:28:22.854 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2019/12/16 17:28:22.916 [D] [server.go:2802]  |            ::1|[42m 200 [0m|    62.3082ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/12/16 17:28:22.923 [D] [server.go:2802]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/kpi/listnew
+2019/12/16 17:28:22.931 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     5.9883ms|   match|[46m POST    [0m /v1/kpi/listnew   r:/v1/kpi/listnew
+2019/12/16 17:28:27.472 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2019/12/16 17:28:27.477 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     5.0113ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/12/16 17:28:27.494 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     9.9972ms|   match|[46m POST    [0m /v1/kpi/listnew   r:/v1/kpi/listnew
+2019/12/16 17:28:29.231 [D] [server.go:2802]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/auth/checkLogin
+2019/12/16 17:28:29.240 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2019/12/16 17:28:29.246 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     5.9836ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/12/16 17:28:29.251 [D] [server.go:2802]  |            ::1|[42m 200 [0m|      999.3µs| nomatch|[47m OPTIONS [0m /v1/kpi/listnew
+2019/12/16 17:28:29.259 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     5.9838ms|   match|[46m POST    [0m /v1/kpi/listnew   r:/v1/kpi/listnew
+2019/12/16 17:30:53.899 [D] [server.go:2802]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/auth/checkLogin
+2019/12/16 17:30:53.905 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2019/12/16 17:30:53.910 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     4.9879ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/12/16 17:30:53.918 [D] [server.go:2802]  |            ::1|[42m 200 [0m|      998.2µs| nomatch|[47m OPTIONS [0m /v1/kpi/list
+2019/12/16 17:30:53.930 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     8.9757ms|   match|[46m POST    [0m /v1/kpi/list   r:/v1/kpi/list
+2019/12/16 17:31:03.913 [D] [server.go:2802]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/auth/checkLogin
+2019/12/16 17:31:03.924 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2019/12/16 17:31:03.929 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     4.9864ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/12/16 17:31:03.936 [D] [server.go:2802]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/kpi/listnew
+2019/12/16 17:31:03.945 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     5.9844ms|   match|[46m POST    [0m /v1/kpi/listnew   r:/v1/kpi/listnew
+2019/12/16 17:31:05.807 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2019/12/16 17:31:05.812 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     5.0154ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/12/16 17:31:05.818 [D] [server.go:2802]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/kpi/list
+2019/12/16 17:31:05.827 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     5.9843ms|   match|[46m POST    [0m /v1/kpi/list   r:/v1/kpi/list
+2019/12/16 17:35:23.656 [D] [server.go:2802]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/auth/checkLogin
+2019/12/16 17:35:23.758 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2019/12/16 17:35:23.766 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     7.9789ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/12/16 17:35:27.756 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2019/12/16 17:35:27.760 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     4.0166ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/12/16 17:35:27.774 [D] [server.go:2802]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/kpi/listnew
+2019/12/16 17:35:27.786 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     7.9787ms|   match|[46m POST    [0m /v1/kpi/listnew   r:/v1/kpi/listnew
+2019/12/16 17:35:36.724 [D] [server.go:2802]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/auth/login
+2019/12/16 17:35:36.776 [D] [server.go:2802]  |            ::1|[42m 200 [0m|    46.8768ms|   match|[46m POST    [0m /v1/auth/login   r:/v1/auth/login
+2019/12/16 17:35:36.788 [D] [server.go:2802]  |            ::1|[42m 200 [0m|        997µs| nomatch|[47m OPTIONS [0m /v1/auth/checkLogin
+2019/12/16 17:35:36.792 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2019/12/16 17:35:36.796 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     4.9864ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/12/16 17:35:40.130 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2019/12/16 17:35:40.134 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     3.9891ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/12/16 17:35:40.143 [D] [server.go:2802]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/kpi/listnew
+2019/12/16 17:35:40.152 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     5.9838ms|   match|[46m POST    [0m /v1/kpi/listnew   r:/v1/kpi/listnew
+2019/12/16 17:36:18.589 [D] [server.go:2802]  |            ::1|[42m 200 [0m|      998.5µs| nomatch|[47m OPTIONS [0m /v1/auth/checkLogin
+2019/12/16 17:36:18.601 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2019/12/16 17:36:18.606 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     4.9872ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/12/16 17:36:18.612 [D] [server.go:2802]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/kpi/listnew
+2019/12/16 17:36:18.620 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     6.0073ms|   match|[46m POST    [0m /v1/kpi/listnew   r:/v1/kpi/listnew
+2019/12/16 17:36:25.147 [D] [server.go:2802]  |            ::1|[42m 200 [0m|      996.9µs| nomatch|[47m OPTIONS [0m /v1/auth/checkLogin
+2019/12/16 17:36:25.158 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2019/12/16 17:36:25.163 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     5.0102ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/12/16 17:36:25.169 [D] [server.go:2802]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/kpi/listnew
+2019/12/16 17:36:25.180 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     9.0055ms|   match|[46m POST    [0m /v1/kpi/listnew   r:/v1/kpi/listnew
+2019/12/16 17:36:26.684 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2019/12/16 17:36:26.689 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     4.9808ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/12/16 17:36:26.705 [D] [server.go:2802]  |            ::1|[42m 200 [0m|      4.987ms|   match|[46m POST    [0m /v1/kpi/listnew   r:/v1/kpi/listnew
+2019/12/16 17:36:29.491 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2019/12/16 17:36:29.496 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     5.0167ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/12/16 17:36:29.511 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     8.9759ms|   match|[46m POST    [0m /v1/kpi/listnew   r:/v1/kpi/listnew
+2019/12/16 17:36:30.796 [D] [server.go:2802]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/auth/checkLogin
+2019/12/16 17:36:30.807 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2019/12/16 17:36:30.811 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     4.9868ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/12/16 17:36:30.817 [D] [server.go:2802]  |            ::1|[42m 200 [0m|      996.4µs| nomatch|[47m OPTIONS [0m /v1/kpi/listnew
+2019/12/16 17:36:30.824 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     5.0086ms|   match|[46m POST    [0m /v1/kpi/listnew   r:/v1/kpi/listnew
+2019/12/16 17:36:57.159 [D] [server.go:2802]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/auth/checkLogin
+2019/12/16 17:36:57.173 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2019/12/16 17:36:57.177 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     3.9883ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/12/16 17:36:57.184 [D] [server.go:2802]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/kpi/listnew
+2019/12/16 17:36:57.192 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     6.0052ms|   match|[46m POST    [0m /v1/kpi/listnew   r:/v1/kpi/listnew
+2019/12/16 17:37:02.722 [D] [server.go:2802]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/auth/checkLogin
+2019/12/16 17:37:02.731 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2019/12/16 17:37:02.736 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     5.9831ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/12/16 17:37:02.742 [D] [server.go:2802]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/kpi/listnew
+2019/12/16 17:37:02.754 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     8.9762ms|   match|[46m POST    [0m /v1/kpi/listnew   r:/v1/kpi/listnew
+2019/12/16 17:37:04.531 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2019/12/16 17:37:04.535 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     4.9728ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/12/16 17:37:04.553 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     9.9723ms|   match|[46m POST    [0m /v1/kpi/listnew   r:/v1/kpi/listnew
+2019/12/16 17:37:07.515 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2019/12/16 17:37:07.520 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     4.9958ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/12/16 17:37:07.536 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     5.9754ms|   match|[46m POST    [0m /v1/kpi/listnew   r:/v1/kpi/listnew
+2019/12/16 17:40:43.081 [D] [server.go:2802]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/auth/checkLogin
+2019/12/16 17:40:43.172 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2019/12/16 17:40:43.177 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     4.9869ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/12/16 17:40:43.199 [D] [server.go:2802]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/kpi/listnew
+2019/12/16 17:40:43.207 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     4.9858ms|   match|[46m POST    [0m /v1/kpi/listnew   r:/v1/kpi/listnew
+2019/12/16 17:41:06.231 [D] [server.go:2802]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/auth/checkLogin
+2019/12/16 17:41:06.233 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2019/12/16 17:41:06.238 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     4.9862ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/12/16 17:41:06.254 [D] [server.go:2802]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/kpi/listnew
+2019/12/16 17:41:06.264 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     5.9852ms|   match|[46m POST    [0m /v1/kpi/listnew   r:/v1/kpi/listnew
+2019/12/16 17:56:33.917 [D] [server.go:2802]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/auth/checkLogin
+2019/12/16 17:56:33.991 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2019/12/16 17:56:33.996 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     4.9862ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/12/16 17:56:34.034 [D] [server.go:2802]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/kpi/listnew
+2019/12/16 17:56:34.044 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     5.9855ms|   match|[46m POST    [0m /v1/kpi/listnew   r:/v1/kpi/listnew
+2019/12/16 17:56:42.533 [D] [server.go:2802]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/auth/checkLogin
+2019/12/16 17:56:42.546 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2019/12/16 17:56:42.551 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     4.9857ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/12/16 17:56:42.557 [D] [server.go:2802]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/kpi/listnew
+2019/12/16 17:56:42.565 [D] [server.go:2802]  |            ::1|[42m 200 [0m|      4.986ms|   match|[46m POST    [0m /v1/kpi/listnew   r:/v1/kpi/listnew
+2019/12/16 18:06:50.711 [D] [server.go:2802]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/auth/checkLogin
+2019/12/16 18:06:50.786 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2019/12/16 18:06:50.791 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     4.9864ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/12/16 18:06:50.813 [D] [server.go:2802]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/kpi/listnew
+2019/12/16 18:06:50.822 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     4.9861ms|   match|[46m POST    [0m /v1/kpi/listnew   r:/v1/kpi/listnew
+2019/12/16 18:07:49.448 [D] [server.go:2802]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/auth/checkLogin
+2019/12/16 18:07:49.471 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2019/12/16 18:07:49.475 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     4.0947ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/12/16 18:07:49.483 [D] [server.go:2802]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/kpi/listnew
+2019/12/16 18:07:49.494 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     5.9831ms|   match|[46m POST    [0m /v1/kpi/listnew   r:/v1/kpi/listnew
+2019/12/16 18:10:50.314 [D] [server.go:2802]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/auth/checkLogin
+2019/12/16 18:10:50.390 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2019/12/16 18:10:50.400 [D] [server.go:2802]  |            ::1|[42m 200 [0m|    10.9701ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/12/16 18:10:50.419 [D] [server.go:2802]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/kpi/listnew
+2019/12/16 18:10:50.429 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     5.9831ms|   match|[46m POST    [0m /v1/kpi/listnew   r:/v1/kpi/listnew
+2019/12/16 18:11:01.975 [D] [server.go:2802]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/auth/checkLogin
+2019/12/16 18:11:01.978 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2019/12/16 18:11:01.983 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     4.9865ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/12/16 18:11:01.998 [D] [server.go:2802]  |            ::1|[42m 200 [0m|      998.9µs| nomatch|[47m OPTIONS [0m /v1/kpi/listnew
+2019/12/16 18:11:02.007 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     4.9867ms|   match|[46m POST    [0m /v1/kpi/listnew   r:/v1/kpi/listnew
+2019/12/16 18:12:10.682 [D] [server.go:2802]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/auth/checkLogin
+2019/12/16 18:12:10.685 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2019/12/16 18:12:10.690 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     4.9863ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/12/16 18:12:10.701 [D] [server.go:2802]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/kpi/listnew
+2019/12/16 18:12:10.711 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     5.9835ms|   match|[46m POST    [0m /v1/kpi/listnew   r:/v1/kpi/listnew
+2019/12/16 18:12:14.892 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2019/12/16 18:12:14.897 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     5.0118ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/12/16 18:12:14.911 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     5.9842ms|   match|[46m POST    [0m /v1/kpi/listnew   r:/v1/kpi/listnew
+2019/12/16 18:12:15.716 [D] [server.go:2802]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/auth/checkLogin
+2019/12/16 18:12:15.719 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2019/12/16 18:12:15.723 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     3.9928ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/12/16 18:12:15.737 [D] [server.go:2802]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/kpi/listnew
+2019/12/16 18:12:15.745 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     4.9868ms|   match|[46m POST    [0m /v1/kpi/listnew   r:/v1/kpi/listnew
+2019/12/16 18:12:16.292 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2019/12/16 18:12:16.297 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     4.9843ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/12/16 18:12:16.311 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     4.9794ms|   match|[46m POST    [0m /v1/kpi/listnew   r:/v1/kpi/listnew
+2019/12/16 18:12:20.087 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2019/12/16 18:12:20.093 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     5.9844ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/12/16 18:12:20.106 [D] [server.go:2802]  |            ::1|[42m 200 [0m|      5.983ms|   match|[46m POST    [0m /v1/kpi/listnew   r:/v1/kpi/listnew
+2019/12/16 18:16:08.465 [D] [server.go:2802]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/auth/checkLogin
+2019/12/16 18:16:08.540 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2019/12/16 18:16:08.545 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     4.9857ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/12/16 18:16:08.583 [D] [server.go:2802]  |            ::1|[42m 200 [0m|      996.7µs| nomatch|[47m OPTIONS [0m /v1/kpi/listnew
+2019/12/16 18:16:08.590 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     4.9867ms|   match|[46m POST    [0m /v1/kpi/listnew   r:/v1/kpi/listnew
+2019/12/16 18:16:17.029 [D] [server.go:2802]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/auth/checkLogin
+2019/12/16 18:16:17.043 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2019/12/16 18:16:17.049 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     5.9825ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/12/16 18:16:17.054 [D] [server.go:2802]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/kpi/listnew
+2019/12/16 18:16:17.063 [D] [server.go:2802]  |            ::1|[42m 200 [0m|      4.987ms|   match|[46m POST    [0m /v1/kpi/listnew   r:/v1/kpi/listnew
+2019/12/16 18:16:58.117 [D] [server.go:2802]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/auth/checkLogin
+2019/12/16 18:16:58.188 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2019/12/16 18:16:58.195 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     6.9805ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/12/16 18:16:58.225 [D] [server.go:2802]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/kpi/listnew
+2019/12/16 18:16:58.236 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     5.9828ms|   match|[46m POST    [0m /v1/kpi/listnew   r:/v1/kpi/listnew
+2019/12/16 18:17:25.205 [D] [server.go:2802]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/auth/checkLogin
+2019/12/16 18:17:25.217 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2019/12/16 18:17:25.222 [D] [server.go:2802]  |            ::1|[42m 200 [0m|      4.986ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/12/16 18:17:25.229 [D] [server.go:2802]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/kpi/listnew
+2019/12/16 18:17:25.238 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     5.9834ms|   match|[46m POST    [0m /v1/kpi/listnew   r:/v1/kpi/listnew
+2019/12/16 18:17:30.944 [D] [server.go:2802]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/auth/checkLogin
+2019/12/16 18:17:30.947 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2019/12/16 18:17:30.951 [D] [server.go:2802]  |            ::1|[42m 200 [0m|      4.986ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/12/16 18:17:30.965 [D] [server.go:2802]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/kpi/listnew
+2019/12/16 18:17:30.975 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     4.9902ms|   match|[46m POST    [0m /v1/kpi/listnew   r:/v1/kpi/listnew
+2019/12/16 18:18:54.825 [D] [server.go:2802]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/auth/checkLogin
+2019/12/16 18:18:54.837 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2019/12/16 18:18:54.842 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     4.9855ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/12/16 18:18:54.850 [D] [server.go:2802]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/kpi/listnew
+2019/12/16 18:18:54.859 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     4.9863ms|   match|[46m POST    [0m /v1/kpi/listnew   r:/v1/kpi/listnew
+2019/12/16 19:15:05.506 [I] [asm_amd64.s:1357]  http server Running on http://:8080
+2019/12/16 19:16:34.978 [D] [server.go:2802]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/auth/checkLogin
+2019/12/16 19:16:35.009 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2019/12/16 19:16:35.018 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     9.9742ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/12/16 19:16:35.035 [D] [server.go:2802]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/kpi/listnew
+2019/12/16 19:16:35.053 [D] [server.go:2802]  |            ::1|[42m 200 [0m|    11.9653ms|   match|[46m POST    [0m /v1/kpi/listnew   r:/v1/kpi/listnew
+2019/12/16 19:16:39.397 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2019/12/16 19:16:39.401 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     4.0163ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/12/16 19:16:39.417 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     8.9783ms|   match|[46m POST    [0m /v1/kpi/listnew   r:/v1/kpi/listnew
+2019/12/16 19:17:01.919 [D] [server.go:2802]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/auth/checkLogin
+2019/12/16 19:17:01.931 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2019/12/16 19:17:01.935 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     5.0835ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/12/16 19:17:01.941 [D] [server.go:2802]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/kpi/listnew
+2019/12/16 19:17:01.950 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     5.0147ms|   match|[46m POST    [0m /v1/kpi/listnew   r:/v1/kpi/listnew
+2019/12/17 10:44:55.739 [I] [asm_amd64.s:1357]  http server Running on http://:8080
+2019/12/17 10:45:10.553 [D] [server.go:2802]  |            ::1|[42m 200 [0m|        998µs| nomatch|[47m OPTIONS [0m /v1/auth/checkLogin
+2019/12/17 10:45:10.601 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2019/12/17 10:45:10.610 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     8.9754ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/12/17 10:45:14.253 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2019/12/17 10:45:14.257 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     3.9888ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/12/17 10:45:14.278 [D] [server.go:2802]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/kpi/listnew
+2019/12/17 10:45:14.290 [D] [server.go:2802]  |            ::1|[42m 200 [0m|      8.975ms|   match|[46m POST    [0m /v1/kpi/listnew   r:/v1/kpi/listnew
+2019/12/17 10:45:21.049 [D] [server.go:2802]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/auth/checkLogin
+2019/12/17 10:45:21.052 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2019/12/17 10:45:21.056 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     3.9893ms|   match|[44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2019/12/17 10:45:21.069 [D] [server.go:2802]  |            ::1|[42m 200 [0m|           0s| nomatch|[47m OPTIONS [0m /v1/kpi/listnew
+2019/12/17 10:45:21.081 [D] [server.go:2802]  |            ::1|[42m 200 [0m|     8.9762ms|   match|[46m POST    [0m /v1/kpi/listnew   r:/v1/kpi/listnew
