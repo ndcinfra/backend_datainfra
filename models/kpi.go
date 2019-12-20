@@ -349,7 +349,7 @@ func (k *Kpi) GetNewKPI(from, to, country, kind, radio string, period string) ([
 					"FROM kpi WHERE date >= ? and date <= ? "
 				_, err = o.Raw(sql, from, to).QueryRows(&listKpi)
 			}
-		} else if period == "3" {//test
+		} else if period == "3" {
 			//테스트 주석
 			if kind == "graph" {
 
