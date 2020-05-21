@@ -78,6 +78,7 @@ type SaleItemKPI struct {
 	Itemid   string  `json:"itemid"`
 	Itemname string  `json:"itemname"`
 	Count    float32 `json:"count"`
+	Amount   float32 `json:"amount"`
 }
 
 type CountryShare struct {
@@ -623,8 +624,9 @@ func (k *SaleItemKPI) GetSaleItemKPI(from, to, country, kind, radio, kindCalenda
 
 	fmt.Println("input: ", from, to, country, kind, radio, kindCalendar)
 
-	// make query
+	// make querysCounty := ""
 	sCounty := ""
+
 	if country != "all" {
 		sCounty = " and country = ? "
 	}
@@ -634,13 +636,13 @@ func (k *SaleItemKPI) GetSaleItemKPI(from, to, country, kind, radio, kindCalenda
 		sql = " select  " +
 			"  \"ExternalItemID\" itemid " +
 			" , external_item_name_eng itemname " +
-			" , sum(sales_count) count" +
+			" , sum(sales_count) count " +
+			" , sum(item_amount) amount " +
 			" from item_kpi " +
 			" where date >= ? and date <=  ? " +
 			sCounty +
 			" group by itemid, itemname " +
-			" order by 3 desc " +
-			" limit 50 "
+			" order by 3 desc "
 
 		if country != "all" {
 			_, err = o.Raw(sql, from, to, country).QueryRows(&listKpi)
@@ -662,13 +664,13 @@ func (k *SaleItemKPI) GetSaleItemKPI(from, to, country, kind, radio, kindCalenda
 				"  \"ExternalItemID\" itemid " +
 				" , external_item_name_eng itemname " +
 				" , sum(sales_count) count" +
+				" , sum(item_amount) amount " +
 				" from item_kpi " +
 				" where date >= ? and date <=  ? " +
 				sCounty +
 				//" group by date_trunc('?',date)" +
 				" group by itemid, itemname " +
-				" order by 3 desc " +
-				" limit 50 "
+				" order by 3 desc "
 
 		if country != "all" {
 			_, err = o.Raw(sql, from, to, country).QueryRows(&listKpi)

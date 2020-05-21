@@ -23,7 +23,7 @@ type InputDate struct {
 	Kind         string `json:"kind"`         // graph, table
 	Radio        string `json:"radio"`        // uu, mcu ...
 	KindCalendar string `json:"kindCalendar"` // day, week, month
-	Period 		 string `json:"period"` 	  // day, week, month
+	Period       string `json:"period"`       // day, week, month
 }
 
 // GetKPI ...
@@ -149,5 +149,6 @@ func (k *KpiController) GetSaleItemKPI() {
 		k.ResponseError(libs.ErrDatabase, err)
 	}
 
+	//logs.Info(listKpi)
 	k.ResponseSuccess("", listKpi)
 }

@@ -3020,3 +3020,292 @@
 2019/12/20 14:50:26.581 [I] [asm_amd64.s:1357]  http server Running on http://:8080
 2019/12/20 15:27:27.612 [I] [asm_amd64.s:1357]  http server Running on http://:8080
 2019/12/20 15:31:34.873 [I] [asm_amd64.s:1357]  http server Running on http://:8080
+2020/05/20 14:50:23.111 [I] [asm_amd64.s:1357]  http server Running on http://:8080
+2020/05/20 15:02:46.000 [D] [server.go:2802]  |            ::1|[97;43m 404 [0m|    250.816µs| nomatch|[97;44m GET     [0m /  
+2020/05/20 15:02:46.099 [D] [server.go:2802]  |            ::1|[97;43m 404 [0m|   1.276089ms| nomatch|[97;44m GET     [0m /favicon.ico
+2020/05/20 15:03:13.013 [D] [server.go:2802]  |            ::1|[97;43m 404 [0m|    125.248µs| nomatch|[97;44m GET     [0m /  
+2020/05/20 16:00:18.032 [I] [asm_amd64.s:1357]  http server Running on http://:8080
+2020/05/21 11:07:00.133 [I] [asm_amd64.s:1357]  http server Running on http://:8080
+2020/05/21 18:01:41.538 [I] [asm_amd64.s:1357]  http server Running on http://:8080
+2020/05/21 18:38:22.178 [I] [asm_amd64.s:1357]  http server Running on http://:8080
+2020/05/21 18:39:08.553 [I] [asm_amd64.s:1357]  http server Running on http://:8080
+2020/05/21 18:39:43.873 [I] [asm_amd64.s:1357]  http server Running on http://:8080
+2020/05/21 18:39:44.354 [I] [asm_amd64.s:1357]  http server Running on http://:8080
+2020/05/21 18:52:17.635 [I] [asm_amd64.s:1357]  http server Running on http://:8080
+2020/05/21 18:53:17.591 [I] [asm_amd64.s:1357]  http server Running on http://:8080
+2020/05/21 18:54:57.836 [I] [asm_amd64.s:1357]  http server Running on http://:8080
+2020/05/21 19:19:25.412 [I] [asm_amd64.s:1357]  http server Running on http://:8080
+2020/05/21 19:30:34.797 [I] [asm_amd64.s:1357]  http server Running on http://:8080
+2020/05/21 19:30:35.335 [I] [asm_amd64.s:1357]  http server Running on http://:8080
+2020/05/21 19:31:59.274 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|      79.36µs| nomatch|[90;47m OPTIONS [0m /v1/auth/checkLogin
+2020/05/21 19:31:59.275 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2020/05/21 19:31:59.281 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   5.799544ms|   match|[97;44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2020/05/21 19:31:59.288 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     54.659µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/listnew
+2020/05/21 19:31:59.297 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   8.283486ms|   match|[97;46m POST    [0m /v1/kpi/listnew   r:/v1/kpi/listnew
+2020/05/21 19:32:01.390 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2020/05/21 19:32:01.393 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   3.133738ms|   match|[97;44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2020/05/21 19:32:01.400 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     54.242µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/listSaleItem
+2020/05/21 19:32:01.413 [I] [value.go:460]  [{ 1000000000 퀘스트 상품 379 0} { 1939  66 0} { 1960  64 0} { 1000000193  61 0} { 1000000194  60 0} { 1000000178  51 0} { 1000000184  43 0} { 112 일반 강화기 연료 X 10 41 0} { 1000000185  41 0} { 1000000180  37 0} { 2038  34 0} { 1296 하이퍼클럭 이퀄라이저(Lv.71~80) 32 0} { 1961  29 0} { 730 VIP 30일 이용권 28 0} { 2033  28 0} { 1000000186  26 0} { 1000000167 티나 해변의 랩소디 [A, B, C] 25 0} { 1000000189  24 0} { 1000000158 루나 슈레딩거의 고양이 [A, B ,C] 23 0} { 114 행운 강화기 연료 23 0} { 1000000172  23 0} { 127 최고급 D주얼 컴포넌트 스페셜 22 0} { 1000000165 레비아 해변의 랩소디 [A, B, C] 21 0} { 1000000195  21 0} { 115 강화기 백신 21 0} { 128 최고급 D주얼 컴포넌트 21 0} { 1000000173  20 0} { 950 최고급 D 컴포넌트 19 0} { 26 코스튬 하의 VISUAL SLOT 해제 19 0} { 1000000182  19 0} { 1000000179  19 0} { 28 코스튬 신발 VISUAL SLOT 해제 18 0} { 35 코스튬 허리 액세서리 VISUAL SLOT 해제 18 0} { 25 코스튬 상의 VISUAL SLOT 해제 18 0} { 33 코스튬 날개 액세서리 VISUAL SLOT 해제 17 0} { 949 찬란한 D 컴포넌트 17 0} { 1000000187  17 0} { 51 재료 인벤토리 3 번째 확장 17 0} { 46 소모 인벤토리 3 번째 확장 17 0} { 1942  16 0} { 1000000196  15 0} { 120 싱크로 섬유 15 0} { 2029  14 0} { 24 코스튬 헤어 VISUAL SLOT 해제 14 0} { 1941  14 0} { 30 코스튬 눈 액세서리 VISUAL SLOT 해제 14 0} { 1254 슬롯 타입 변경툴 14 0} { 1261 칩 프로텍터 13 0} { 113 일반 강화기 연료 X 520 13 0} { 34 코스튬 가슴 액세서리 VISUAL SLOT 해제 12 0} { 27 코스튬 장갑 VISUAL SLOT 해제 12 0} { 20 계정 창고 2 번째 확장 11 0} { 19 계정 창고 1 번째 확장 11 0} { 29 코스튬 헤어 액세서리 VISUAL SLOT 해제 11 0} { 1000000177  11 0} { 1324 레벨 서포트 패키지 11 0} { 1000000171  10 0} { 1325 레벨 라이즈 패키지 9 0} { 1000000183  9 0} { 23 코스튬 무기 VISUAL SLOT 해제 8 0} { 52 재료 인벤토리 4 번째 확장 8 0} { 109 유니온 기어 윤활제 X 1 8 0} { 39 코스튬 콤비네이션파츠 VISUAL SLOT 해제 8 0} { 38 코스튬 눈동자 액세서리 VISUAL SLOT 해제 8 0} { 1311 [★추천★] 유니온 에센셜 스타터팩 8 0} { 32 코스튬 입 액세서리 VISUAL SLOT 해제 8 0} { 31 코스튬 귀 액세서리 VISUAL SLOT 해제 8 0} { 1000000190  7 0} { 138 차원 세계의 투명 허리 코스튬 7 0} { 1000000166 하피 해변의 랩소디 [A, B, C] 7 0} { 382 차원 세계의 투명 코스튬 콤비네이션 파츠 [비쥬얼] 7 0} { 2018  7 0} { 2035  6 0} { 2031  6 0} { 2 퀵슬롯 해제 6 0} { 41 장비 인벤토리 3 번째 확장  6 0} { 137 차원 세계의 투명 팔 코스튬 6 0} { 1000000168 바이올렛 해변의 랩소디 [A, B, C] 6 0} { 47 소모 인벤토리 4 번째 확장 6 0} { 132 차원 세계의 투명 모자 코스튬 5 0} { 37 코스튬 이펙트 액세서리 VISUAL SLOT 해제 5 0} { 118 강화기 백신 X 27 5 0} { 139 차원 세계의 투명 다리 코스튬 5 0} { 723 시스템-유니온캠프 메이드 오세린 5 0} { 1000000161 서유리 해변의 랩소디 [A, B, C] 5 0} { 1000000157 볼프강 로열로즈 [A, B ,C] 5 0} { 1000000170 루나 선샤인 웨이브 [A, B, C] 5 0} { 2037  5 0} { 2034  5 0} { 1945  5 0} { 2027  5 0} { 36 코스튬 다리 액세서리 VISUAL SLOT 해제 4 0} { 1000000164 나타 해변의 랩소디 [A, B, C] 4 0} { 2022  4 0} { 1000000192  4 0} { 135 차원 세계의 투명 얼굴하 코스튬 3 0} { 1000000163 미스틸 해변의 랩소디 [A, B, C] 3 0} { 1000000174  3 0} { 1000000175  3 0} { 1000000181  3 0} { 1000000197  3 0} { 133 차원 세계의 투명 얼굴상 코스튬 3 0} { 136 차원 세계의 투명 등 코스튬 3 0} { 165 차원 세계의 투명 코스튬 장갑 [비쥬얼] (공용) 3 0} { 1943  3 0} { 1944  3 0} { 2021  3 0} { 2023  3 0} { 2024  3 0} { 2025  3 0} { 2036  3 0} { 53 재료 인벤토리 5 번째 확장 3 0} { 54 재료 인벤토리 6 번째 확장 3 0} { 705 메이드 오세린 30일 계약권 3 0} { 706 숲의 요정 알라우네 30일 계약권 3 0} { 18 유닛 창고 4 번째 확장 2 0} { 1995  2 0} { 17 유닛 창고 3 번째 확장 2 0} { 2020  2 0} { 1000000191  2 0} { 1654  2 0} { 724 시스템-유니온캠프 알라우네 2 0} { 1000000188  2 0} { 2028  2 0} { 21 계정 창고 3 번째 확장 2 0} { 22 계정 창고 4 번째 확장 2 0} { 1528  2 0} { 1321 [★추천★] 티나 스타터팩 2 0} { 1312 [★추천★] 유니온 육성 스타터팩 2 0} { 1258 그린 드라이버 2 0} { 110 유니온 기어 윤활제 X 11 2 0} { 397 이세하 비욘드 크로스 반장갑 [C타입] 2 0} { 108 영롱한 주얼 이퀄라이저 2 0} { 48 소모 인벤토리 5 번째 확장 2 0} { 49 소모 인벤토리 6 번째 확장 2 0} { 1000000198  2 0} { 64 아바타 인벤토리 6 번째 확장 2 0} { 1833  2 0} { 1946  2 0} { 1573  1 0} { 854 미스틸 베리타 여단의 리더 헤어 1 0} { 1562  1 0} { 1540  1 0} { 1952  1 0} { 65 아바타 인벤토리 7 번째 확장 1 0} { 695 이세하 곰돌이 잠옷 1 0} { 1491  1 0} { 1480  1 0} { 1449  1 0} { 1446  1 0} { 143 도드라진 부끄부끄 홍조 1 0} { 1378 미니 바이올렛 펫의 성체 패키지 1 0} { 134 차원 세계의 투명 얼굴중 코스튬 1 0} { 700 서유리 팬더 잠옷 1 0} { 191 이세하 샤프한 올백머리 [D타입] 1 0} { 1259 퍼플 드라이버 1 0} { 1899  1 0} { 1257 옐로우 드라이버 1 0} { 123 품질보증 씰 X 10 1 0} { 122 위상 트레이드 실크 1 0} { 119 고급 강화 이전기 1 0} { 111 유니온 네임택 1 0} { 1000000147 제이 밤의 귀족 [A, B ,C] 1 0} { 97 부활 캡슐 X 1 1 0} { 1954  1 0} { 42 장비 인벤토리 4 번째 확장 1 0} { 43 장비 인벤토리 5 번째 확장 1 0} { 1039 나타 한휘성 상의 1 0} { 1029 나타 선우란의 하늘색 삐침 헤어 1 0} { 1962  1 0} { 1970  1 0} { 1979  1 0} { 1828  1 0} { 1741  1 0} { 1947  1 0} { 2014  1 0} { 1683  1 0} { 2019  1 0} { 501 서유리 댄디 스포티룩 하이탑 슈즈 [C타입] 1 0} { 1008 나타 샤기 미들헤어 [D타입] 1 0} { 1951  1 0} { 860 이세하 신강고 스쿨룩 하복 상의 [A타입] 1 0} { 533 이세하 파워 익스텐션 건 블레이드 [A타입] 1 0} { 83 펫 이름 변경 티켓 1 0} { 2026  1 0} { 161 차원 세계의 투명 코스튬 헤어 [비쥬얼] (공용) 1 0} { 1000000176  1 0} { 158 차원 세계의 투명 코스튬 이펙트 [비쥬얼] 1 0} { 2030  1 0} { 1577  1 0} { 1575  1 0} { 1574  1 0}]
+2020/05/21 19:32:01.415 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|  14.122583ms|   match|[97;46m POST    [0m /v1/kpi/listSaleItem   r:/v1/kpi/listSaleItem
+2020/05/21 19:39:00.338 [I] [asm_amd64.s:1357]  http server Running on http://:8080
+2020/05/21 19:40:31.518 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|    126.703µs| nomatch|[90;47m OPTIONS [0m /v1/auth/checkLogin
+2020/05/21 19:40:31.519 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2020/05/21 19:40:31.525 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   6.266934ms|   match|[97;44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2020/05/21 19:40:31.531 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     69.779µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/listSaleItem
+2020/05/21 19:40:31.542 [I] [value.go:460]  [{ 1000000000  93 0} { 112  61 0} { 1939  37 0} { 1000000192  37 0} { 1960  30 0} { 730  23 0} { 1000000178  23 0} { 1941  22 0} { 2038  21 0} { 1000000171  20 0} { 1000000193  20 0} { 1000000187  19 0} { 1000000185  18 0} { 114  14 0} { 1000000174  14 0} { 1000000196  13 0} { 35  13 0} { 2029  12 0} { 1254  12 0} { 24  12 0} { 25  12 0} { 26  12 0} { 28  12 0} { 29  10 0} { 2027  10 0} { 382  10 0} { 115  10 0} { 113  9 0} { 3  9 0} { 2033  9 0} { 1296  9 0} { 1000000190  9 0} { 23  8 0} { 39  8 0} { 27  8 0} { 38  8 0} { 1961  7 0} { 128  6 0} { 1942  6 0} { 32  6 0} { 31  6 0} { 116  6 0} { 51  6 0} { 30  6 0} { 46  6 0} { 37  5 0} { 36  5 0} { 2035  5 0} { 1000000173  5 0} { 139  5 0} { 2018  5 0} { 47  4 0} { 41  4 0} { 1000000198  4 0} { 132  4 0} { 1577  4 0} { 1000000194  4 0} { 17  4 0} { 1324  4 0} { 33  4 0} { 1325  4 0} { 48  4 0} { 135  4 0} { 136  4 0} { 137  4 0} { 138  4 0} { 52  3 0} { 1259  3 0} { 1261  3 0} { 2028  3 0} { 2031  3 0} { 1311  3 0} { 49  3 0} { 1000000188  3 0} { 34  3 0} { 1000000184  3 0} { 1000000182  3 0} { 1000000180  3 0} { 1945  3 0} { 1000000179  3 0} { 2024  2 0} { 109  2 0} { 1321  2 0} { 133  2 0} { 158  2 0} { 19  2 0} { 1962  2 0} { 2  2 0} { 20  2 0} { 2019  2 0} { 2020  2 0} { 2021  2 0} { 2022  2 0} { 2023  2 0} { 2025  2 0} { 2034  2 0} { 2037  2 0} { 1000000168  2 0} { 1000000165  2 0} { 42  2 0} { 43  2 0} { 50  2 0} { 54  2 0} { 64  2 0} { 65  2 0} { 1000000191  2 0} { 1000000195  2 0} { 18  1 0} { 1765  1 0} { 707  1 0} { 1688  1 0} { 165  1 0} { 1580  1 0} { 1530  1 0} { 153  1 0} { 1521  1 0} { 723  1 0} { 1000000161  1 0} { 44  1 0} { 45  1 0} { 1447  1 0} { 1422  1 0} { 134  1 0} { 1319  1 0} { 807  1 0} { 1258  1 0} { 1256  1 0} { 53  1 0} { 122  1 0} { 55  1 0} { 83  1 0} { 111  1 0} { 66  1 0} { 705  1 0} { 927  1 0} { 963  1 0} { 925  1 0} { 980  1 0} { 2036  1 0} { 2026  1 0} { 1089  1 0} { 1963  1 0} { 1950  1 0}]
+2020/05/21 19:40:31.543 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|  10.739588ms|   match|[97;46m POST    [0m /v1/kpi/listSaleItem   r:/v1/kpi/listSaleItem
+2020/05/21 19:43:59.996 [I] [asm_amd64.s:1357]  http server Running on http://:8080
+2020/05/21 19:48:36.580 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|    119.687µs| nomatch|[90;47m OPTIONS [0m /v1/auth/checkLogin
+2020/05/21 19:48:36.585 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2020/05/21 19:48:36.594 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|  12.448558ms|   match|[97;44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2020/05/21 19:48:36.598 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     57.196µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/listSaleItem
+2020/05/21 19:48:36.615 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|  16.052707ms|   match|[97;46m POST    [0m /v1/kpi/listSaleItem   r:/v1/kpi/listSaleItem
+2020/05/21 19:50:17.027 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     50.254µs| nomatch|[90;47m OPTIONS [0m /v1/auth/checkLogin
+2020/05/21 19:50:17.028 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2020/05/21 19:50:17.035 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   6.613234ms|   match|[97;44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2020/05/21 19:50:17.047 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     55.347µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/listSaleItem
+2020/05/21 19:50:17.057 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   8.966159ms|   match|[97;46m POST    [0m /v1/kpi/listSaleItem   r:/v1/kpi/listSaleItem
+2020/05/21 19:52:44.526 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|      53.64µs| nomatch|[90;47m OPTIONS [0m /v1/auth/checkLogin
+2020/05/21 19:52:44.527 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2020/05/21 19:52:44.531 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   3.928777ms|   match|[97;44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2020/05/21 19:52:44.538 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     48.327µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/listSaleItem
+2020/05/21 19:52:44.551 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   12.13614ms|   match|[97;46m POST    [0m /v1/kpi/listSaleItem   r:/v1/kpi/listSaleItem
+2020/05/21 19:54:02.904 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     48.936µs| nomatch|[90;47m OPTIONS [0m /v1/auth/checkLogin
+2020/05/21 19:54:02.905 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2020/05/21 19:54:02.909 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   4.006549ms|   match|[97;44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2020/05/21 19:54:02.922 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     60.104µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/listSaleItem
+2020/05/21 19:54:02.932 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   9.185448ms|   match|[97;46m POST    [0m /v1/kpi/listSaleItem   r:/v1/kpi/listSaleItem
+2020/05/21 19:54:07.070 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2020/05/21 19:54:07.074 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   3.927836ms|   match|[97;44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2020/05/21 19:54:07.090 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|  12.083962ms|   match|[97;46m POST    [0m /v1/kpi/listSaleItem   r:/v1/kpi/listSaleItem
+2020/05/21 19:54:10.769 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     46.682µs| nomatch|[90;47m OPTIONS [0m /v1/auth/checkLogin
+2020/05/21 19:54:10.770 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2020/05/21 19:54:10.774 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   3.888258ms|   match|[97;44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2020/05/21 19:54:10.780 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     47.001µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/listSaleItem
+2020/05/21 19:54:10.790 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   8.665833ms|   match|[97;46m POST    [0m /v1/kpi/listSaleItem   r:/v1/kpi/listSaleItem
+2020/05/21 19:54:21.639 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     50.796µs| nomatch|[90;47m OPTIONS [0m /v1/auth/checkLogin
+2020/05/21 19:54:21.640 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2020/05/21 19:54:21.644 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|    3.98588ms|   match|[97;44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2020/05/21 19:54:21.649 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     54.677µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/listSaleItem
+2020/05/21 19:54:21.662 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|  12.213484ms|   match|[97;46m POST    [0m /v1/kpi/listSaleItem   r:/v1/kpi/listSaleItem
+2020/05/21 20:05:51.237 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     55.727µs| nomatch|[90;47m OPTIONS [0m /v1/auth/checkLogin
+2020/05/21 20:05:51.239 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2020/05/21 20:05:51.243 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|    3.67319ms|   match|[97;44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2020/05/21 20:05:51.251 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     45.055µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/listSaleItem
+2020/05/21 20:05:51.264 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|  13.110284ms|   match|[97;46m POST    [0m /v1/kpi/listSaleItem   r:/v1/kpi/listSaleItem
+2020/05/21 20:05:54.718 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2020/05/21 20:05:54.722 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   4.162969ms|   match|[97;44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2020/05/21 20:05:54.816 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|  14.006434ms|   match|[97;46m POST    [0m /v1/kpi/listSaleItem   r:/v1/kpi/listSaleItem
+2020/05/21 20:06:53.953 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     75.093µs| nomatch|[90;47m OPTIONS [0m /v1/auth/checkLogin
+2020/05/21 20:06:53.955 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2020/05/21 20:06:53.959 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   4.050049ms|   match|[97;44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2020/05/21 20:06:54.022 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     39.796µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/listSaleItem
+2020/05/21 20:06:54.032 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   9.965993ms|   match|[97;46m POST    [0m /v1/kpi/listSaleItem   r:/v1/kpi/listSaleItem
+2020/05/21 20:07:27.293 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     37.875µs| nomatch|[90;47m OPTIONS [0m /v1/auth/checkLogin
+2020/05/21 20:07:27.294 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2020/05/21 20:07:27.298 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   3.795477ms|   match|[97;44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2020/05/21 20:07:27.371 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     41.078µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/listSaleItem
+2020/05/21 20:07:27.386 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|  13.360739ms|   match|[97;46m POST    [0m /v1/kpi/listSaleItem   r:/v1/kpi/listSaleItem
+2020/05/21 20:17:52.019 [I] [asm_amd64.s:1357]  http server Running on http://:8080
+2020/05/21 20:18:11.204 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|    118.237µs| nomatch|[90;47m OPTIONS [0m /v1/auth/checkLogin
+2020/05/21 20:18:11.205 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2020/05/21 20:18:11.212 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   7.112983ms|   match|[97;44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2020/05/21 20:18:11.221 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     45.178µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/listnew
+2020/05/21 20:18:11.229 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   7.943021ms|   match|[97;46m POST    [0m /v1/kpi/listnew   r:/v1/kpi/listnew
+2020/05/21 20:18:14.208 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2020/05/21 20:18:14.211 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   2.842228ms|   match|[97;44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2020/05/21 20:18:14.216 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     60.542µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/listSaleItem
+2020/05/21 20:18:14.230 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|  13.551134ms|   match|[97;46m POST    [0m /v1/kpi/listSaleItem   r:/v1/kpi/listSaleItem
+2020/05/21 20:18:39.571 [I] [asm_amd64.s:1357]  http server Running on http://:8080
+2020/05/21 20:18:51.223 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     85.769µs| nomatch|[90;47m OPTIONS [0m /v1/auth/checkLogin
+2020/05/21 20:18:51.224 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2020/05/21 20:18:51.230 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   5.801637ms|   match|[97;44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2020/05/21 20:18:51.345 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     96.227µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/listSaleItem
+2020/05/21 20:18:51.359 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|  13.013538ms|   match|[97;46m POST    [0m /v1/kpi/listSaleItem   r:/v1/kpi/listSaleItem
+2020/05/21 20:19:32.738 [I] [asm_amd64.s:1357]  http server Running on http://:8080
+2020/05/21 20:19:40.052 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|    183.421µs| nomatch|[90;47m OPTIONS [0m /v1/auth/checkLogin
+2020/05/21 20:19:40.053 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2020/05/21 20:19:40.061 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     8.0629ms|   match|[97;44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2020/05/21 20:19:40.139 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     57.868µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/listSaleItem
+2020/05/21 20:19:40.153 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|  12.800388ms|   match|[97;46m POST    [0m /v1/kpi/listSaleItem   r:/v1/kpi/listSaleItem
+2020/05/21 20:20:19.361 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     98.846µs| nomatch|[90;47m OPTIONS [0m /v1/auth/checkLogin
+2020/05/21 20:20:19.362 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2020/05/21 20:20:19.366 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   3.536446ms|   match|[97;44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2020/05/21 20:20:19.428 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     48.869µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/listSaleItem
+2020/05/21 20:20:19.438 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   9.479984ms|   match|[97;46m POST    [0m /v1/kpi/listSaleItem   r:/v1/kpi/listSaleItem
+2020/05/21 20:20:40.871 [I] [asm_amd64.s:1357]  http server Running on http://:8080
+2020/05/21 20:20:50.877 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|    119.598µs| nomatch|[90;47m OPTIONS [0m /v1/auth/checkLogin
+2020/05/21 20:20:50.878 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2020/05/21 20:20:50.885 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   7.540734ms|   match|[97;44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2020/05/21 20:20:50.944 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     44.465µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/listSaleItem
+2020/05/21 20:20:50.961 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|  16.376176ms|   match|[97;46m POST    [0m /v1/kpi/listSaleItem   r:/v1/kpi/listSaleItem
+2020/05/21 20:27:20.401 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     52.169µs| nomatch|[90;47m OPTIONS [0m /v1/auth/checkLogin
+2020/05/21 20:27:20.403 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2020/05/21 20:27:20.406 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   3.760221ms|   match|[97;44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2020/05/21 20:27:20.471 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     43.682µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/listSaleItem
+2020/05/21 20:27:20.482 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|  10.538673ms|   match|[97;46m POST    [0m /v1/kpi/listSaleItem   r:/v1/kpi/listSaleItem
+2020/05/21 20:30:00.337 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     45.748µs| nomatch|[90;47m OPTIONS [0m /v1/auth/checkLogin
+2020/05/21 20:30:00.338 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2020/05/21 20:30:00.342 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   3.673013ms|   match|[97;44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2020/05/21 20:30:00.356 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     48.086µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/listnew
+2020/05/21 20:30:00.365 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   8.767153ms|   match|[97;46m POST    [0m /v1/kpi/listnew   r:/v1/kpi/listnew
+2020/05/21 20:30:07.839 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     51.547µs| nomatch|[90;47m OPTIONS [0m /v1/auth/checkLogin
+2020/05/21 20:30:07.840 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2020/05/21 20:30:07.843 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   3.754286ms|   match|[97;44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2020/05/21 20:30:07.848 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     55.532µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/listSaleItem
+2020/05/21 20:30:07.861 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|  12.310236ms|   match|[97;46m POST    [0m /v1/kpi/listSaleItem   r:/v1/kpi/listSaleItem
+2020/05/21 20:30:51.008 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|    117.626µs| nomatch|[90;47m OPTIONS [0m /v1/auth/checkLogin
+2020/05/21 20:30:51.009 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2020/05/21 20:30:51.013 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   3.826562ms|   match|[97;44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2020/05/21 20:30:51.077 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|      65.75µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/listSaleItem
+2020/05/21 20:30:51.088 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|  10.280612ms|   match|[97;46m POST    [0m /v1/kpi/listSaleItem   r:/v1/kpi/listSaleItem
+2020/05/21 20:31:14.249 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     98.424µs| nomatch|[90;47m OPTIONS [0m /v1/auth/checkLogin
+2020/05/21 20:31:14.250 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2020/05/21 20:31:14.254 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   3.898134ms|   match|[97;44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2020/05/21 20:31:14.331 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     39.011µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/listSaleItem
+2020/05/21 20:31:14.342 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   9.919314ms|   match|[97;46m POST    [0m /v1/kpi/listSaleItem   r:/v1/kpi/listSaleItem
+2020/05/21 20:31:41.816 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     43.587µs| nomatch|[90;47m OPTIONS [0m /v1/auth/checkLogin
+2020/05/21 20:31:41.817 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2020/05/21 20:31:41.820 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   3.413511ms|   match|[97;44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2020/05/21 20:31:41.830 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     78.932µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/listnew
+2020/05/21 20:31:41.836 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|    4.56953ms|   match|[97;46m POST    [0m /v1/kpi/listnew   r:/v1/kpi/listnew
+2020/05/21 20:31:45.143 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2020/05/21 20:31:45.147 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|    3.62007ms|   match|[97;44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2020/05/21 20:31:45.152 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     76.182µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/listSaleItem
+2020/05/21 20:31:45.166 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|  12.735173ms|   match|[97;46m POST    [0m /v1/kpi/listSaleItem   r:/v1/kpi/listSaleItem
+2020/05/21 20:32:13.821 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     47.019µs| nomatch|[90;47m OPTIONS [0m /v1/auth/checkLogin
+2020/05/21 20:32:13.821 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2020/05/21 20:32:13.825 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   3.951527ms|   match|[97;44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2020/05/21 20:32:13.943 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|      47.18µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/listSaleItem
+2020/05/21 20:32:13.953 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|    9.36785ms|   match|[97;46m POST    [0m /v1/kpi/listSaleItem   r:/v1/kpi/listSaleItem
+2020/05/21 20:32:29.928 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     49.622µs| nomatch|[90;47m OPTIONS [0m /v1/auth/checkLogin
+2020/05/21 20:32:29.929 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2020/05/21 20:32:29.932 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   3.460892ms|   match|[97;44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2020/05/21 20:32:29.941 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     45.276µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/listSale
+2020/05/21 20:32:29.948 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   6.952267ms|   match|[97;46m POST    [0m /v1/kpi/listSale   r:/v1/kpi/listSale
+2020/05/21 20:32:33.870 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2020/05/21 20:32:33.873 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   3.531796ms|   match|[97;44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2020/05/21 20:32:33.879 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     48.529µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/listUser
+2020/05/21 20:32:33.887 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|    7.21502ms|   match|[97;46m POST    [0m /v1/kpi/listUser   r:/v1/kpi/listUser
+2020/05/21 20:32:37.320 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     44.461µs| nomatch|[90;47m OPTIONS [0m /v1/auth/checkLogin
+2020/05/21 20:32:37.321 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2020/05/21 20:32:37.324 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   3.456402ms|   match|[97;44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2020/05/21 20:32:37.333 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|    248.693µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/listnew
+2020/05/21 20:32:37.338 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   4.636782ms|   match|[97;46m POST    [0m /v1/kpi/listnew   r:/v1/kpi/listnew
+2020/05/21 20:32:52.204 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     56.577µs| nomatch|[90;47m OPTIONS [0m /v1/auth/checkLogin
+2020/05/21 20:32:52.205 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2020/05/21 20:32:52.208 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   3.616264ms|   match|[97;44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2020/05/21 20:32:52.212 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     90.053µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/listSaleItem
+2020/05/21 20:32:52.223 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   9.467103ms|   match|[97;46m POST    [0m /v1/kpi/listSaleItem   r:/v1/kpi/listSaleItem
+2020/05/21 20:33:22.883 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     42.339µs| nomatch|[90;47m OPTIONS [0m /v1/auth/checkLogin
+2020/05/21 20:33:22.883 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2020/05/21 20:33:22.887 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   3.508886ms|   match|[97;44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2020/05/21 20:33:22.895 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     92.081µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/listSaleItem
+2020/05/21 20:33:22.905 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   8.901538ms|   match|[97;46m POST    [0m /v1/kpi/listSaleItem   r:/v1/kpi/listSaleItem
+2020/05/21 20:33:25.135 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2020/05/21 20:33:25.138 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   3.566081ms|   match|[97;44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2020/05/21 20:33:25.218 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|  10.898066ms|   match|[97;46m POST    [0m /v1/kpi/listSaleItem   r:/v1/kpi/listSaleItem
+2020/05/21 20:35:01.411 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|    100.862µs| nomatch|[90;47m OPTIONS [0m /v1/auth/checkLogin
+2020/05/21 20:35:01.412 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2020/05/21 20:35:01.416 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|    3.64664ms|   match|[97;44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2020/05/21 20:35:01.482 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     44.235µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/listSaleItem
+2020/05/21 20:35:01.492 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   9.501908ms|   match|[97;46m POST    [0m /v1/kpi/listSaleItem   r:/v1/kpi/listSaleItem
+2020/05/21 20:35:50.598 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|      46.27µs| nomatch|[90;47m OPTIONS [0m /v1/auth/checkLogin
+2020/05/21 20:35:50.600 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2020/05/21 20:35:50.603 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   3.555037ms|   match|[97;44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2020/05/21 20:35:50.614 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     39.314µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/listSaleItem
+2020/05/21 20:35:50.625 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|  10.615907ms|   match|[97;46m POST    [0m /v1/kpi/listSaleItem   r:/v1/kpi/listSaleItem
+2020/05/21 20:37:24.883 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     66.151µs| nomatch|[90;47m OPTIONS [0m /v1/auth/checkLogin
+2020/05/21 20:37:24.884 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2020/05/21 20:37:24.888 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   3.629473ms|   match|[97;44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2020/05/21 20:37:24.946 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     50.036µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/listSaleItem
+2020/05/21 20:37:24.956 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   9.644079ms|   match|[97;46m POST    [0m /v1/kpi/listSaleItem   r:/v1/kpi/listSaleItem
+2020/05/21 20:37:58.036 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     42.665µs| nomatch|[90;47m OPTIONS [0m /v1/auth/checkLogin
+2020/05/21 20:37:58.037 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2020/05/21 20:37:58.040 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   3.621347ms|   match|[97;44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2020/05/21 20:37:58.051 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     42.156µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/listSaleItem
+2020/05/21 20:37:58.061 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   9.910852ms|   match|[97;46m POST    [0m /v1/kpi/listSaleItem   r:/v1/kpi/listSaleItem
+2020/05/21 20:38:25.484 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     59.027µs| nomatch|[90;47m OPTIONS [0m /v1/auth/checkLogin
+2020/05/21 20:38:25.485 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2020/05/21 20:38:25.489 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   3.501326ms|   match|[97;44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2020/05/21 20:38:25.498 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     41.126µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/listSaleItem
+2020/05/21 20:38:25.507 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   8.934548ms|   match|[97;46m POST    [0m /v1/kpi/listSaleItem   r:/v1/kpi/listSaleItem
+2020/05/21 20:38:33.871 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     42.387µs| nomatch|[90;47m OPTIONS [0m /v1/auth/checkLogin
+2020/05/21 20:38:33.871 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2020/05/21 20:38:33.875 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   3.357922ms|   match|[97;44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2020/05/21 20:38:33.888 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     40.673µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/listSaleItem
+2020/05/21 20:38:33.899 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|  10.045082ms|   match|[97;46m POST    [0m /v1/kpi/listSaleItem   r:/v1/kpi/listSaleItem
+2020/05/21 20:38:49.413 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     62.565µs| nomatch|[90;47m OPTIONS [0m /v1/auth/login
+2020/05/21 20:38:49.479 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|  64.574437ms|   match|[97;46m POST    [0m /v1/auth/login   r:/v1/auth/login
+2020/05/21 20:38:49.489 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     60.904µs| nomatch|[90;47m OPTIONS [0m /v1/auth/checkLogin
+2020/05/21 20:38:49.490 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2020/05/21 20:38:49.493 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   3.552602ms|   match|[97;44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2020/05/21 20:38:51.570 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2020/05/21 20:38:51.573 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   3.581466ms|   match|[97;44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2020/05/21 20:38:51.581 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     40.396µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/listnew
+2020/05/21 20:38:51.586 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   4.502284ms|   match|[97;46m POST    [0m /v1/kpi/listnew   r:/v1/kpi/listnew
+2020/05/21 20:38:56.739 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     51.231µs| nomatch|[90;47m OPTIONS [0m /v1/auth/checkLogin
+2020/05/21 20:38:56.740 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2020/05/21 20:38:56.743 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   3.562115ms|   match|[97;44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2020/05/21 20:38:56.747 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     56.071µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/listUser
+2020/05/21 20:38:56.752 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   3.822257ms|   match|[97;46m POST    [0m /v1/kpi/listUser   r:/v1/kpi/listUser
+2020/05/21 20:39:22.332 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     69.637µs| nomatch|[90;47m OPTIONS [0m /v1/auth/checkLogin
+2020/05/21 20:39:22.334 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2020/05/21 20:39:22.338 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|    4.05501ms|   match|[97;44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2020/05/21 20:39:22.361 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     46.743µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/listUser
+2020/05/21 20:39:22.365 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   3.763912ms|   match|[97;46m POST    [0m /v1/kpi/listUser   r:/v1/kpi/listUser
+2020/05/21 20:39:30.961 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     70.376µs| nomatch|[90;47m OPTIONS [0m /v1/auth/checkLogin
+2020/05/21 20:39:30.962 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2020/05/21 20:39:30.966 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|    4.20842ms|   match|[97;44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2020/05/21 20:39:30.984 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     101.15µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/listUser
+2020/05/21 20:39:30.990 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|    4.19512ms|   match|[97;46m POST    [0m /v1/kpi/listUser   r:/v1/kpi/listUser
+2020/05/21 20:39:45.398 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     72.566µs| nomatch|[90;47m OPTIONS [0m /v1/auth/checkLogin
+2020/05/21 20:39:45.399 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2020/05/21 20:39:45.402 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   3.794006ms|   match|[97;44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2020/05/21 20:39:45.444 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     61.047µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/listUser
+2020/05/21 20:39:45.450 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   4.198299ms|   match|[97;46m POST    [0m /v1/kpi/listUser   r:/v1/kpi/listUser
+2020/05/21 20:39:47.806 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2020/05/21 20:39:47.810 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   3.654371ms|   match|[97;44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2020/05/21 20:39:47.815 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     42.711µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/listSale
+2020/05/21 20:39:47.819 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   3.792079ms|   match|[97;46m POST    [0m /v1/kpi/listSale   r:/v1/kpi/listSale
+2020/05/21 20:39:50.094 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2020/05/21 20:39:50.098 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|    3.68619ms|   match|[97;44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2020/05/21 20:39:50.101 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     47.226µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/listSaleItem
+2020/05/21 20:39:50.111 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   9.504495ms|   match|[97;46m POST    [0m /v1/kpi/listSaleItem   r:/v1/kpi/listSaleItem
+2020/05/21 20:40:24.608 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     73.518µs| nomatch|[90;47m OPTIONS [0m /v1/auth/checkLogin
+2020/05/21 20:40:24.609 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2020/05/21 20:40:24.613 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   3.635186ms|   match|[97;44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2020/05/21 20:40:24.644 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   6.882772ms|   match|[97;44m GET     [0m /v1/resource/list   r:/v1/resource/list
+2020/05/21 20:40:32.793 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     46.178µs| nomatch|[90;47m OPTIONS [0m /v1/auth/checkLogin
+2020/05/21 20:40:32.794 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2020/05/21 20:40:32.797 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   3.705976ms|   match|[97;44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2020/05/21 20:40:32.803 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     52.944µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/listnew
+2020/05/21 20:40:32.809 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   4.665271ms|   match|[97;46m POST    [0m /v1/kpi/listnew   r:/v1/kpi/listnew
+2020/05/21 20:40:43.365 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     66.287µs| nomatch|[90;47m OPTIONS [0m /v1/auth/checkLogin
+2020/05/21 20:40:43.366 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2020/05/21 20:40:43.369 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   3.750592ms|   match|[97;44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2020/05/21 20:40:43.374 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     78.087µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/listUser
+2020/05/21 20:40:43.379 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   4.097273ms|   match|[97;46m POST    [0m /v1/kpi/listUser   r:/v1/kpi/listUser
+2020/05/21 20:41:06.859 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|    159.511µs| nomatch|[90;47m OPTIONS [0m /v1/auth/checkLogin
+2020/05/21 20:41:06.859 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2020/05/21 20:41:06.863 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   3.573799ms|   match|[97;44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2020/05/21 20:41:06.874 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     41.823µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/listUser
+2020/05/21 20:41:06.878 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   3.652277ms|   match|[97;46m POST    [0m /v1/kpi/listUser   r:/v1/kpi/listUser
+2020/05/21 20:41:09.565 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2020/05/21 20:41:09.568 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   3.774147ms|   match|[97;44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2020/05/21 20:41:09.573 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     48.977µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/listSale
+2020/05/21 20:41:09.577 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   3.668804ms|   match|[97;46m POST    [0m /v1/kpi/listSale   r:/v1/kpi/listSale
+2020/05/21 20:41:18.166 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     46.847µs| nomatch|[90;47m OPTIONS [0m /v1/auth/checkLogin
+2020/05/21 20:41:18.167 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2020/05/21 20:41:18.171 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   3.541992ms|   match|[97;44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2020/05/21 20:41:18.189 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     65.109µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/listSale
+2020/05/21 20:41:18.194 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   4.047017ms|   match|[97;46m POST    [0m /v1/kpi/listSale   r:/v1/kpi/listSale
+2020/05/21 20:41:20.980 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2020/05/21 20:41:20.983 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   3.699011ms|   match|[97;44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2020/05/21 20:41:20.987 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     60.133µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/listSaleItem
+2020/05/21 20:41:20.998 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|  10.072276ms|   match|[97;46m POST    [0m /v1/kpi/listSaleItem   r:/v1/kpi/listSaleItem
+2020/05/21 20:41:35.000 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|      67.23µs| nomatch|[90;47m OPTIONS [0m /v1/auth/checkLogin
+2020/05/21 20:41:35.001 [I] [value.go:460]  Check Login:  U1550639626724628891 true
+2020/05/21 20:41:35.005 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   3.674348ms|   match|[97;44m GET     [0m /v1/auth/checkLogin   r:/v1/auth/checkLogin
+2020/05/21 20:41:35.013 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|     42.308µs| nomatch|[90;47m OPTIONS [0m /v1/kpi/listSaleItem
+2020/05/21 20:41:35.023 [D] [server.go:2802]  |            ::1|[97;42m 200 [0m|   8.985641ms|   match|[97;46m POST    [0m /v1/kpi/listSaleItem   r:/v1/kpi/listSaleItem
