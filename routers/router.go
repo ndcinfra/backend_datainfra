@@ -64,8 +64,8 @@ func init() {
 		),
 
 		beego.NSNamespace("/reports",
-			beego.NSRouter("/clientlog", &controllers.KpiController{}, "post:GetClient"),
-			beego.NSRouter("/serverlog", &controllers.KpiController{}, "post:GetServer"),
+			beego.NSRouter("/cli", &controllers.KpiController{}, "post:GetClient"),
+			beego.NSRouter("/ser", &controllers.KpiController{}, "post:GetServer"),
 		),
 	)
 	beego.AddNamespace(ns)
