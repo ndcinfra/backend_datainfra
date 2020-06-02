@@ -1,5 +1,7 @@
 package libs
 
+import "github.com/astaxie/beego/logs"
+
 // ControllerError is controller error info structer.
 type ControllerError struct {
 	Status  int    `json:"status"`
@@ -86,4 +88,27 @@ var (
 func Abs(n int) int {
 	y := n >> 63
 	return (n ^ y) - y
+}
+
+// Logs ...
+// test
+func Logs(mode string, v ...interface{}) {
+	/*
+		msg := ""
+		if len(v) > 0 {
+			msg = fmt.Sprintf("%s", v...)
+		}
+	*/
+
+	switch mode {
+	case "error":
+		logs.Error(v)
+		break
+	case "info":
+		logs.Info(v)
+		break
+	default:
+		logs.Error(v)
+		break
+	}
 }

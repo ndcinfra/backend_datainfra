@@ -175,3 +175,10 @@ func (b *BaseController) ResponseSuccessBI(key string, value interface{}, value2
 
 	b.Ctx.Output.JSON(mresponse, true, true)
 }
+
+// logging 함수
+// !!! 사용 하지 말고, Beego 기본 로그 함수 사용 권장.
+func (b *BaseController) writeLog(mode string, v ...interface{}) {
+
+	libs.Logs(mode, b.Ctx.Request.URL, v)
+}
