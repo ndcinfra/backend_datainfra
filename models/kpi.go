@@ -49,9 +49,9 @@ type KpiGraph struct {
 	Korea    string `json:"korea"`
 	Namerica string `json:"namerica"`
 	Taiwan   string `json:"taiwan"`
-	Total    string `json:"total"`
 	Thailand string `json:"thailand"`
 	Vietnam  string `json:"vietnam"`
+	Total    string `json:"total"`
 }
 
 type UserKPI struct {

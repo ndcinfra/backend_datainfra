@@ -4,6 +4,8 @@ import (
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
+
+	"github.com/astaxie/beego/logs"
 )
 
 type ReportsController struct {
@@ -29,6 +31,8 @@ type InServerData struct {
 }
 
 func (k *ReportsController) GetClient() {
+
+	logs.Error("Error loading .env file")
 
 	var inclientdata InClientData
 
