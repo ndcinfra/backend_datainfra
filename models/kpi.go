@@ -44,9 +44,9 @@ type Kpi struct {
 // KpiGraph ...
 type KpiGraph struct {
 	Cdate    string `json:"cdate"`
+	Korea    string `json:"korea"`
 	China    string `json:"china"`
 	Japan    string `json:"japan"`
-	Korea    string `json:"korea"`
 	Namerica string `json:"namerica"`
 	Taiwan   string `json:"taiwan"`
 	Thailand string `json:"thailand"`
@@ -199,8 +199,8 @@ func (k *Kpi) GetNewKPI(from, to, country, kind, radio string, period string) ([
 					" ,sum(case when territory = 'KOREA' then rev else 0 end) KOREA" +
 					" ,sum(case when territory = 'CHINA' then rev else 0 end) CHINA" +
 					" ,sum(case when territory = 'JAPAN' then rev else 0 end) JAPAN" +
-					" ,sum(case when territory = 'TAIWAN' then rev else 0 end) TAIWAN" +
 					" ,sum(case when territory = 'NAMERICA' then rev else 0 end) NAMERICA" +
+					" ,sum(case when territory = 'TAIWAN' then rev else 0 end) TAIWAN" +
 					" ,sum(case when territory = 'THAILAND' then rev else 0 end) THAILAND" +
 					" ,sum(case when territory = 'VIETNAM' then rev else 0 end) VIETNAM" +
 					" ,sum(rev) TOTAL " +
@@ -241,8 +241,8 @@ func (k *Kpi) GetNewKPI(from, to, country, kind, radio string, period string) ([
 					" ,sum(case when territory = 'KOREA' then rev else 0 end) KOREA" +
 					" ,sum(case when territory = 'CHINA' then rev else 0 end) CHINA" +
 					" ,sum(case when territory = 'JAPAN' then rev else 0 end) JAPAN" +
-					" ,sum(case when territory = 'TAIWAN' then rev else 0 end) TAIWAN" +
 					" ,sum(case when territory = 'NAMERICA' then rev else 0 end) NAMERICA" +
+					" ,sum(case when territory = 'TAIWAN' then rev else 0 end) TAIWAN" +
 					" ,sum(case when territory = 'THAILAND' then rev else 0 end) THAILAND" +
 					" ,sum(case when territory = 'VIETNAM' then rev else 0 end) VIETNAM" +
 					" ,sum(rev) TOTAL " +
@@ -280,8 +280,8 @@ func (k *Kpi) GetNewKPI(from, to, country, kind, radio string, period string) ([
 					" ,sum(case when territory = 'KOREA' then rev else 0 end) KOREA" +
 					" ,sum(case when territory = 'CHINA' then rev else 0 end) CHINA" +
 					" ,sum(case when territory = 'JAPAN' then rev else 0 end) JAPAN" +
-					" ,sum(case when territory = 'TAIWAN' then rev else 0 end) TAIWAN" +
 					" ,sum(case when territory = 'NAMERICA' then rev else 0 end) NAMERICA" +
+					" ,sum(case when territory = 'TAIWAN' then rev else 0 end) TAIWAN" +
 					" ,sum(case when territory = 'THAILAND' then rev else 0 end) THAILAND" +
 					" ,sum(case when territory = 'VIETNAM' then rev else 0 end) VIETNAM" +
 					" ,sum(rev) TOTAL " +
@@ -322,8 +322,8 @@ func (k *Kpi) GetNewKPI(from, to, country, kind, radio string, period string) ([
 					" ,sum(case when territory = 'KOREA' then rev else 0 end) KOREA" +
 					" ,sum(case when territory = 'CHINA' then rev else 0 end) CHINA" +
 					" ,sum(case when territory = 'JAPAN' then rev else 0 end) JAPAN" +
-					" ,sum(case when territory = 'TAIWAN' then rev else 0 end) TAIWAN" +
 					" ,sum(case when territory = 'NAMERICA' then rev else 0 end) NAMERICA" +
+					" ,sum(case when territory = 'TAIWAN' then rev else 0 end) TAIWAN" +
 					" ,sum(case when territory = 'THAILAND' then rev else 0 end) THAILAND" +
 					" ,sum(case when territory = 'VIETNAM' then rev else 0 end) VIETNAM" +
 					" ,sum(rev) TOTAL " +
@@ -360,8 +360,8 @@ func (k *Kpi) GetNewKPI(from, to, country, kind, radio string, period string) ([
 					" ,sum(case when territory = 'KOREA' then rev else 0 end) KOREA" +
 					" ,sum(case when territory = 'CHINA' then rev else 0 end) CHINA" +
 					" ,sum(case when territory = 'JAPAN' then rev else 0 end) JAPAN" +
-					" ,sum(case when territory = 'TAIWAN' then rev else 0 end) TAIWAN" +
 					" ,sum(case when territory = 'NAMERICA' then rev else 0 end) NAMERICA" +
+					" ,sum(case when territory = 'TAIWAN' then rev else 0 end) TAIWAN" +
 					" ,sum(case when territory = 'THAILAND' then rev else 0 end) THAILAND" +
 					" ,sum(case when territory = 'VIETNAM' then rev else 0 end) VIETNAM" +
 					" ,sum(rev) TOTAL " +
@@ -394,8 +394,8 @@ func (k *Kpi) GetNewKPI(from, to, country, kind, radio string, period string) ([
 					" ,sum(case when territory = 'KOREA' then rev else 0 end) KOREA" +
 					" ,sum(case when territory = 'CHINA' then rev else 0 end) CHINA" +
 					" ,sum(case when territory = 'JAPAN' then rev else 0 end) JAPAN" +
-					" ,sum(case when territory = 'TAIWAN' then rev else 0 end) TAIWAN" +
 					" ,sum(case when territory = 'NAMERICA' then rev else 0 end) NAMERICA" +
+					" ,sum(case when territory = 'TAIWAN' then rev else 0 end) TAIWAN" +
 					" ,sum(case when territory = 'THAILAND' then rev else 0 end) THAILAND" +
 					" ,sum(case when territory = 'VIETNAM' then rev else 0 end) VIETNAM" +
 					" ,sum(rev) TOTAL " +
