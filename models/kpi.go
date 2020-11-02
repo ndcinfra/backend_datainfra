@@ -119,7 +119,7 @@ func (k *Kpi) GetKPI(from, to, country, kind, radio string) ([]Kpi, []KpiGraph, 
 	default:
 		scol = "rev_d"
 	}
-
+	//
 	if kind == "graph" {
 		sql = " select cdate " +
 			" ,sum(case when territory = 'KOREA' then rev else 0 end) KOREA" +
