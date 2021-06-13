@@ -134,7 +134,7 @@ func (k *Kpi) GetKPI(from, to, country, kind, radio string) ([]Kpi, []KpiGraph, 
 			"				date as cdate " +
 			"				, territory  " +
 			"				, " + scol + " as rev  " +
-			" 		from kpi where date >= ? and date <=  ? " +
+			" 		from kpi where date >= ? and date <=  ? and game = 'closers' " +
 			"			order by date, territory asc " +
 			"		) a " +
 			" group by cdate" +
@@ -147,7 +147,7 @@ func (k *Kpi) GetKPI(from, to, country, kind, radio string) ([]Kpi, []KpiGraph, 
 			"avg_d as avg, uu_d as uu, nru_d as nru, " +
 			"rev_d as rev, rev_ur_d as rev_ur, rev_pc_d as rev_pc, pu_d as pu, pur_d as pur, " +
 			"arppu_d as arppu, dt, mrppu_d as mrppu, rev_t, rev_rate, bu " +
-			"FROM kpi WHERE date >= ? and date <= ? "
+			"FROM kpi WHERE date >= ? and date <= ? and game = 'closers'  "
 		_, err = o.Raw(sql, from, to).QueryRows(&listKpi)
 	}
 
@@ -214,7 +214,7 @@ func (k *Kpi) GetNewKPI(from, to, country, kind, radio string, period string) ([
 					"               ON kpi.territory = shar.territory  " +
 					"               AND to_char(kpi.date,'YYYYMMDD') >= to_char(shar.start_date,'YYYYMMDD')  " +
 					"               AND to_char(kpi.date,'YYYYMMDD') <= to_char(shar.end_date,'YYYYMMDD') " +
-					"               where date(date_trunc('week', kpi.date))+6 >= ? and kpi.date <=  ? " +
+					"               where date(date_trunc('week', kpi.date))+6 >= ? and kpi.date <=  ? and game = 'closers' " +
 					"               ORDER BY kpi.date, kpi.territory asc " +
 					"		) a " +
 					" group by ROLLUP(cdate)" +
@@ -227,7 +227,7 @@ func (k *Kpi) GetNewKPI(from, to, country, kind, radio string, period string) ([
 					"avg_d as avg, uu_d as uu, nru_d as nru, " +
 					"rev_d as rev, rev_ur_d as rev_ur, rev_pc_d as rev_pc, pu_d as pu, pur_d as pur, " +
 					"arppu_d as arppu, dt, mrppu_d as mrppu, rev_t, rev_rate, bu " +
-					"FROM kpi WHERE date >= ? and date <= ? "
+					"FROM kpi WHERE date >= ? and date <= ? and game = 'closers' "
 				_, err = o.Raw(sql, from, to).QueryRows(&listKpi)
 			}
 		} else if period == "3" {
@@ -256,7 +256,7 @@ func (k *Kpi) GetNewKPI(from, to, country, kind, radio string, period string) ([
 					"               ON kpi.territory = shar.territory  " +
 					"               AND to_char(kpi.date,'YYYYMMDD') >= to_char(shar.start_date,'YYYYMMDD')  " +
 					"               AND to_char(kpi.date,'YYYYMMDD') <= to_char(shar.end_date,'YYYYMMDD') " +
-					"               where to_char(kpi.date,'YYYYMM') >= ? and to_char(kpi.date,'YYYYMM') <=  ? " +
+					"               where to_char(kpi.date,'YYYYMM') >= ? and to_char(kpi.date,'YYYYMM') <=  ? and game = 'closers' " +
 					"               ORDER BY kpi.date, kpi.territory asc " +
 					"		) a " +
 					" group by ROLLUP(cdate)" +
@@ -269,7 +269,7 @@ func (k *Kpi) GetNewKPI(from, to, country, kind, radio string, period string) ([
 					"avg_d as avg, uu_d as uu, nru_d as nru, " +
 					"rev_d as rev, rev_ur_d as rev_ur, rev_pc_d as rev_pc, pu_d as pu, pur_d as pur, " +
 					"arppu_d as arppu, dt, mrppu_d as mrppu, rev_t, rev_rate, bu " +
-					"FROM kpi WHERE date >= ? and date <= ? "
+					"FROM kpi WHERE date >= ? and date <= ? and game = 'closers' "
 				_, err = o.Raw(sql, from, to).QueryRows(&listKpi)
 			}
 		} else {
@@ -295,7 +295,7 @@ func (k *Kpi) GetNewKPI(from, to, country, kind, radio string, period string) ([
 					"               ON kpi.territory = shar.territory  " +
 					"               AND to_char(kpi.date,'YYYYMMDD') >= to_char(shar.start_date,'YYYYMMDD')  " +
 					"               AND to_char(kpi.date,'YYYYMMDD') <= to_char(shar.end_date,'YYYYMMDD') " +
-					"               where kpi.date >= ? and kpi.date <=  ? " +
+					"               where kpi.date >= ? and kpi.date <=  ? and game = 'closers' " +
 					"               ORDER BY kpi.date, kpi.territory asc " +
 					"		) a " +
 					" group by ROLLUP(cdate)" +
@@ -308,7 +308,7 @@ func (k *Kpi) GetNewKPI(from, to, country, kind, radio string, period string) ([
 					"avg_d as avg, uu_d as uu, nru_d as nru, " +
 					"rev_d as rev, rev_ur_d as rev_ur, rev_pc_d as rev_pc, pu_d as pu, pur_d as pur, " +
 					"arppu_d as arppu, dt, mrppu_d as mrppu, rev_t, rev_rate, bu " +
-					"FROM kpi WHERE date >= ? and date <= ? "
+					"FROM kpi WHERE date >= ? and date <= ? and game = 'closers' "
 				_, err = o.Raw(sql, from, to).QueryRows(&listKpi)
 			}
 		}
@@ -332,7 +332,7 @@ func (k *Kpi) GetNewKPI(from, to, country, kind, radio string, period string) ([
 					"				date(date_trunc('week', date))+6 as cdate " +
 					"				, territory  " +
 					"				, " + scol + " as rev  " +
-					" 		from kpi where date(date_trunc('week', date))+6 >= ? and date <=  ? " +
+					" 		from kpi where date(date_trunc('week', date))+6 >= ? and date <=  ? and game = 'closers' " +
 					"			order by date, territory asc " +
 					"		) a " +
 					" group by ROLLUP(cdate)" +
@@ -345,7 +345,7 @@ func (k *Kpi) GetNewKPI(from, to, country, kind, radio string, period string) ([
 					"avg_d as avg, uu_d as uu, nru_d as nru, " +
 					"rev_d as rev, rev_ur_d as rev_ur, rev_pc_d as rev_pc, pu_d as pu, pur_d as pur, " +
 					"arppu_d as arppu, dt, mrppu_d as mrppu, rev_t, rev_rate, bu " +
-					"FROM kpi WHERE date >= ? and date <= ? "
+					"FROM kpi WHERE date >= ? and date <= ? and game = 'closers' "
 				_, err = o.Raw(sql, from, to).QueryRows(&listKpi)
 			}
 		} else if period == "3" {
@@ -370,7 +370,7 @@ func (k *Kpi) GetNewKPI(from, to, country, kind, radio string, period string) ([
 					"				to_char(date,'YYYY-MM') as cdate " +
 					"				, territory  " +
 					"				, " + scol + " as rev  " +
-					" 		from kpi where to_char(date,'YYYYMM') >= ? and to_char(date,'YYYYMM') <=  ? " +
+					" 		from kpi where to_char(date,'YYYYMM') >= ? and to_char(date,'YYYYMM') <=  ? and game = 'closers' " +
 					"			order by date, territory asc " +
 					"		) a " +
 					" group by ROLLUP(cdate)" +
@@ -383,7 +383,7 @@ func (k *Kpi) GetNewKPI(from, to, country, kind, radio string, period string) ([
 					"avg_d as avg, uu_d as uu, nru_d as nru, " +
 					"rev_d as rev, rev_ur_d as rev_ur, rev_pc_d as rev_pc, pu_d as pu, pur_d as pur, " +
 					"arppu_d as arppu, dt, mrppu_d as mrppu, rev_t, rev_rate, bu " +
-					"FROM kpi WHERE date >= ? and date <= ? "
+					"FROM kpi WHERE date >= ? and date <= ? and game = 'closers' "
 				_, err = o.Raw(sql, from, to).QueryRows(&listKpi)
 			}
 		} else {
@@ -404,7 +404,7 @@ func (k *Kpi) GetNewKPI(from, to, country, kind, radio string, period string) ([
 					"				date as cdate " +
 					"				, territory  " +
 					"				, " + scol + " as rev  " +
-					" 		from kpi where date >= ? and date <=  ? " +
+					" 		from kpi where date >= ? and date <=  ? and game = 'closers' " +
 					"			order by date, territory asc " +
 					"		) a " +
 					" group by ROLLUP(cdate)" +
@@ -417,7 +417,7 @@ func (k *Kpi) GetNewKPI(from, to, country, kind, radio string, period string) ([
 					"avg_d as avg, uu_d as uu, nru_d as nru, " +
 					"rev_d as rev, rev_ur_d as rev_ur, rev_pc_d as rev_pc, pu_d as pu, pur_d as pur, " +
 					"arppu_d as arppu, dt, mrppu_d as mrppu, rev_t, rev_rate, bu " +
-					"FROM kpi WHERE date >= ? and date <= ? "
+					"FROM kpi WHERE date >= ? and date <= ? and game = 'closers' "
 				_, err = o.Raw(sql, from, to).QueryRows(&listKpi)
 			}
 		}
@@ -452,7 +452,7 @@ func (k *UserKPI) GetUserKPI(from, to, country, kind, radio, kindCalendar string
 			" , avg_d avg" +
 			" , gnru_d gnru" +
 			" from kpi " +
-			" where date >= ? and date <=  ? " +
+			" where date >= ? and date <=  ? and game = 'closers' " +
 			sCounty +
 			" order by 1;"
 
@@ -475,7 +475,7 @@ func (k *UserKPI) GetUserKPI(from, to, country, kind, radio, kindCalendar string
 			" , sum(avg_d) avg" +
 			" , sum(gnru_d) gnru" +
 			" from kpi " +
-			" where date >= ? and date <=  ? " +
+			" where date >= ? and date <=  ? and game = 'closers' " +
 			sCounty +
 			//" group by date_trunc('?',date)" +
 			" group by cdate " +
@@ -527,7 +527,7 @@ func (k *SaleKPI) GetSaleKPI(from, to, country, kind, radio, kindCalendar string
 			" , coalesce(charge_d, 0) charge " +
 			" , coalesce(charge_unique_user_d, 0) chargeuu " +
 			" from kpi " +
-			" where date >= ? and date <=  ? " +
+			" where date >= ? and date <=  ? and game = 'closers' " +
 			sCounty +
 			" order by 1;"
 
@@ -564,7 +564,7 @@ func (k *SaleKPI) GetSaleKPI(from, to, country, kind, radio, kindCalendar string
 			" , coalesce(sum(charge_d), 0) charge " +
 			" , coalesce(sum(charge_unique_user_d), 0) chargeuu " +
 			" from kpi " +
-			" where date >= ? and date <=  ? " +
+			" where date >= ? and date <=  ? and game = 'closers' " +
 			sCounty +
 			//" group by date_trunc('?',date)" +
 			" group by cdate " +
@@ -606,7 +606,7 @@ func (k *SaleItemKPI) GetSaleItemKPI(from, to, country, kind, radio, kindCalenda
 			" , sum(sales_count) count " +
 			" , sum(item_amount) amount " +
 			" from item_kpi " +
-			" where date >= ? and date <=  ? " +
+			" where date >= ? and date <=  ? and game = 'closers' " +
 			sCounty +
 			" group by itemid, itemname " +
 			" order by 3 desc "
@@ -633,7 +633,7 @@ func (k *SaleItemKPI) GetSaleItemKPI(from, to, country, kind, radio, kindCalenda
 				" , sum(sales_count) count" +
 				" , sum(item_amount) amount " +
 				" from item_kpi " +
-				" where date >= ? and date <=  ? " +
+				" where date >= ? and date <=  ? and game = 'closers' " +
 				sCounty +
 				//" group by date_trunc('?',date)" +
 				" group by itemid, itemname " +
