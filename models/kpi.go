@@ -403,7 +403,7 @@ func (k *Kpi) GetNewKPI(from, to, country, kind, radio string, period string) ([
 					"			select " +
 					"				date as cdate " +
 					"				, territory  " +
-					"				, " + scol + " as rev  " +
+					"				, cast(" + scol + " as varchar(100)) as rev  " +
 					" 		from kpi where date >= ? and date <=  ? and game = 'closers' " +
 					"			order by date, territory asc " +
 					"		) a " +
