@@ -403,7 +403,7 @@ func (k *Kpi) GetNewKPI(from, to, country, kind, radio string, period string) ([
 					"			select " +
 					"				date as cdate " +
 					"				, territory  " +
-					"				, cast(" + scol + " as varchar(100)) as rev  " +
+					"				, " + scol + " as rev  " +
 					" 		from kpi where date >= ? and date <=  ? and game = 'closers' " +
 					"			order by date, territory asc " +
 					"		) a " +
@@ -416,7 +416,7 @@ func (k *Kpi) GetNewKPI(from, to, country, kind, radio string, period string) ([
 				sql = "SELECT territory, to_char(date,'YYYY-MM-DD') as date, mcu_d as mcu, " +
 					"avg_d as avg, uu_d as uu, nru_d as nru, " +
 					"cast(rev_d as varchar(100)) as rev, rev_ur_d as rev_ur, rev_pc_d as rev_pc, pu_d as pu, pur_d as pur, " +
-					"arppu_d as arppu, dt, mrppu_d as mrppu, rev_t, rev_rate, bu " +
+					"arppu_d as arppu, dt, mrppu_d as mrppu, cast(rev_t as varchar(100)), rev_rate, bu " +
 					"FROM kpi WHERE date >= ? and date <= ? and game = 'closers' "
 				_, err = o.Raw(sql, from, to).QueryRows(&listKpi)
 			}
